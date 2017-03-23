@@ -1,0 +1,29 @@
+
+ff: parsing domain file
+domain 'EMERGENCY_SERVICES_LOGISTICS' defined
+ ... done.
+ff: parsing problem file
+problem 'EMERGENCY_SERVICES_LOGISTICS_PROBLEM_1' defined
+ ... done.
+
+
+
+Cueing down from goal distance:    3 into depth [1]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: CARRY DELIVERYBOY PIZZA DEPOT
+        1: MOVE DELIVERYBOY DEPOT BOBSHOUSE
+        2: GIVE DELIVERYBOY PIZZA BOB BOBSHOUSE
+     
+
+time spent:    0.00 seconds instantiating 8 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 11 facts and 6 actions
+               0.00 seconds creating final representation with 10 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 5 states, to a max depth of 1
+               0.00 seconds total time
+

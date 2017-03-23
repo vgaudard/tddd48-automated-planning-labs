@@ -1,0 +1,42 @@
+
+ff: parsing domain file
+domain 'EMERGENCY_SERVICES_LOGISTICS' defined
+ ... done.
+ff: parsing problem file
+problem 'EMERGENCY_SERVICES_LOGISTICS_PROBLEM_2' defined
+ ... done.
+
+
+
+Cueing down from goal distance:    8 into depth [1]
+                                   7            [1][2]
+                                   6            [1][2]
+                                   5            [1][2]
+                                   4            [1]
+                                   3            [1]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: CARRY SUPERCOPTER FOOD1 DEPOT
+        1: MOVE SUPERCOPTER DEPOT FIELD
+        2: GIVE SUPERCOPTER FOOD1 ALICE FIELD
+        3: MOVE SUPERCOPTER FIELD DEPOT
+        4: CARRY SUPERCOPTER MEDIC1 DEPOT
+        5: MOVE SUPERCOPTER DEPOT FIELD
+        6: GIVE SUPERCOPTER MEDIC1 ALICE FIELD
+        7: MOVE SUPERCOPTER FIELD DEPOT
+        8: CARRY SUPERCOPTER MEDIC2 DEPOT
+        9: MOVE SUPERCOPTER DEPOT SEA
+       10: GIVE SUPERCOPTER MEDIC2 BOB SEA
+     
+
+time spent:    0.00 seconds instantiating 36 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 25 facts and 15 actions
+               0.00 seconds creating final representation with 23 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 18 states, to a max depth of 2
+               0.00 seconds total time
+
