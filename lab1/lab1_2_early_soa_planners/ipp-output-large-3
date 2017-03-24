@@ -1,0 +1,137 @@
+
+ipp: parsing domain fileAdding type
+
+domain 'EMERGENCY_SERVICES_LOGISTICS' defined
+ ... done.
+ipp: parsing problem file
+problem 'EMERGENCY_SERVICES_LOGISTICS_PROBLEM_LARGE_3' defined
+ ... done.
+
+
+AND has only one son (anymore)
+instantiated 92 actions
+
+
+time:   0,    61 facts and       0 exclusive pairs (   35,       0 positives)
+              76 ops   and     157 exclusive pairs
+time:   1,   100 facts and     774 exclusive pairs (   50,     142 positives)
+             131 ops   and    2435 exclusive pairs
+time:   2,   100 facts and     604 exclusive pairs (   50,      98 positives)
+             192 ops   and    8126 exclusive pairs
+time:   3,   122 facts and    1549 exclusive pairs (   61,     329 positives)
+             214 ops   and   10919 exclusive pairs
+time:   4,   122 facts and    1164 exclusive pairs (   61,     285 positives)
+             214 ops   and    9330 exclusive pairs
+time:   5,   122 facts and     538 exclusive pairs (   61,     164 positives)
+             214 ops   and    7484 exclusive pairs
+time:   6,   122 facts and     318 exclusive pairs (   61,     109 positives)
+
+goals first reachable in 6 time steps
+
+
+graph has leveled off at time step 7
+
+             214 ops   and    7264 exclusive pairs
+time:   7,   122 facts and     318 exclusive pairs (   61,     109 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+expanding wave front to level    8
+expanding wave front to level    9
+expanding wave front to level   10
+expanding wave front to level   11
+expanding wave front to level   12
+expanding wave front to level   13
+expanding wave front to level   14
+expanding wave front to level   15
+expanding wave front to level   16
+expanding wave front to level   17
+expanding wave front to level   18
+expanding wave front to level   19
+expanding wave front to level   20
+expanding wave front to level   21
+expanding wave front to level   22
+expanding wave front to level   23
+expanding wave front to level   24
+expanding wave front to level   25
+expanding wave front to level   26
+expanding wave front to level   27
+expanding wave front to level   28
+expanding wave front to level   29
+expanding wave front to level   30
+expanding wave front to level   31
+expanding wave front to level   32
+expanding wave front to level   33
+expanding wave front to level   34
+expanding wave front to level   35
+expanding wave front to level   36
+expanding wave front to level   37
+expanding wave front to level   38
+expanding wave front to level   39
+
+
+found plan as follows:
+
+time step    0: PICK_UP SUPERCOPTER MEDIC5 DEPOT
+time step    1: MOVE SUPERCOPTER DEPOT MOUNTAIN
+time step    2: GIVE SUPERCOPTER MEDIC5 ERIN MOUNTAIN MEDICINE_CRATE
+time step    3: MOVE SUPERCOPTER MOUNTAIN DEPOT
+time step    4: PICK_UP SUPERCOPTER MEDIC4 DEPOT
+time step    5: MOVE SUPERCOPTER DEPOT MOUNTAIN
+time step    6: GIVE SUPERCOPTER MEDIC4 CARLOS MOUNTAIN MEDICINE_CRATE
+time step    7: MOVE SUPERCOPTER MOUNTAIN DEPOT
+time step    8: PICK_UP SUPERCOPTER FOOD5 DEPOT
+time step    9: MOVE SUPERCOPTER DEPOT MOUNTAIN
+time step   10: GIVE SUPERCOPTER FOOD5 CARLOS MOUNTAIN FOOD_CRATE
+time step   11: MOVE SUPERCOPTER MOUNTAIN DEPOT
+time step   12: PICK_UP SUPERCOPTER MEDIC3 DEPOT
+time step   13: MOVE SUPERCOPTER DEPOT SEA
+time step   14: GIVE SUPERCOPTER MEDIC3 FRANK SEA MEDICINE_CRATE
+time step   15: MOVE SUPERCOPTER SEA DEPOT
+time step   16: PICK_UP SUPERCOPTER MEDIC2 DEPOT
+time step   17: MOVE SUPERCOPTER DEPOT SEA
+time step   18: GIVE SUPERCOPTER MEDIC2 DAN SEA MEDICINE_CRATE
+time step   19: MOVE SUPERCOPTER SEA DEPOT
+time step   20: PICK_UP SUPERCOPTER MEDIC1 DEPOT
+time step   21: MOVE SUPERCOPTER DEPOT SEA
+time step   22: GIVE SUPERCOPTER MEDIC1 BOB SEA MEDICINE_CRATE
+time step   23: MOVE SUPERCOPTER SEA DEPOT
+time step   24: PICK_UP SUPERCOPTER FOOD4 DEPOT
+time step   25: MOVE SUPERCOPTER DEPOT SEA
+time step   26: GIVE SUPERCOPTER FOOD4 FRANK SEA FOOD_CRATE
+time step   27: MOVE SUPERCOPTER SEA DEPOT
+time step   28: PICK_UP SUPERCOPTER FOOD3 DEPOT
+time step   29: MOVE SUPERCOPTER DEPOT SEA
+time step   30: GIVE SUPERCOPTER FOOD3 DAN SEA FOOD_CRATE
+time step   31: MOVE SUPERCOPTER SEA DEPOT
+time step   32: PICK_UP SUPERCOPTER FOOD2 DEPOT
+time step   33: MOVE SUPERCOPTER DEPOT SEA
+time step   34: GIVE SUPERCOPTER FOOD2 BOB SEA FOOD_CRATE
+time step   35: MOVE SUPERCOPTER SEA DEPOT
+time step   36: PICK_UP SUPERCOPTER FOOD1 DEPOT
+time step   37: MOVE SUPERCOPTER DEPOT FIELD
+time step   38: GIVE SUPERCOPTER FOOD1 ALICE FIELD FOOD_CRATE
+
+
+
+number of actions tried:   24044188
+number of noops tried  :  359012683
+
+had 16794405 simple memoizing hits
+had       0 partial memoizing hits
+had  375765 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 92 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+             161.18 seconds searching graph
+             161.18 seconds total time
+
+Memory used:   0.11 MBytes for domain representation
+               3.09 MBytes for graph
+               0.15 MBytes for exclusions
+             264.36 MBytes for memoization
+             -1181.93 MBytes for wave front
+
+
+

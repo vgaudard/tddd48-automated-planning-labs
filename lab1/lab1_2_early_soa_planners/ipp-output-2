@@ -1,0 +1,54 @@
+
+ipp: parsing domain fileAdding type
+
+domain 'EMERGENCY_SERVICES_LOGISTICS' defined
+ ... done.
+ipp: parsing problem file
+problem 'EMERGENCY_SERVICES_LOGISTICS_PROBLEM_1' defined
+ ... done.
+
+
+AND has only one son (anymore)
+instantiated 4 actions
+
+
+time:   0,     8 facts and       0 exclusive pairs (    5,       0 positives)
+              10 ops   and       7 exclusive pairs
+time:   1,    14 facts and      22 exclusive pairs (    7,       5 positives)
+              17 ops   and      53 exclusive pairs
+time:   2,    14 facts and      14 exclusive pairs (    7,       4 positives)
+              18 ops   and      55 exclusive pairs
+time:   3,    16 facts and      25 exclusive pairs (    8,       8 positives)
+
+goals first reachable in 3 time steps
+
+
+found plan as follows:
+
+time step    0: PICK_UP DELIVERYBOY PIZZA DEPOT
+time step    1: MOVE DELIVERYBOY DEPOT BOBSHOUSE
+time step    2: GIVE DELIVERYBOY PIZZA BOB BOBSHOUSE FOOD_CRATE
+
+
+
+number of actions tried:          3
+number of noops tried  :          2
+
+had       0 simple memoizing hits
+had       0 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 4 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.00 seconds searching graph
+               0.00 seconds total time
+
+Memory used:   0.01 MBytes for domain representation
+               0.24 MBytes for graph
+               0.00 MBytes for exclusions
+               0.00 MBytes for memoization
+               0.00 MBytes for wave front
+
+
+

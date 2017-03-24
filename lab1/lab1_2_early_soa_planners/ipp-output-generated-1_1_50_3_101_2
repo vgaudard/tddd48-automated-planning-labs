@@ -1,0 +1,91 @@
+
+ipp: parsing domain fileAdding type
+
+domain 'EMERGENCY_SERVICES_LOGISTICS' defined
+ ... done.
+ipp: parsing problem file
+problem 'HELICOPTER_PROBLEM_1_1_50_3_101_2' defined
+ ... done.
+
+
+AND has only one son (anymore)
+instantiated 2853 actions
+
+
+time:   0,   363 facts and       0 exclusive pairs (  208,       0 positives)
+             514 ops   and   11829 exclusive pairs
+time:   1,   718 facts and   63138 exclusive pairs (  359,   11678 positives)
+            3369 ops   and 4507477 exclusive pairs
+time:   2,   718 facts and   47634 exclusive pairs (  359,    6628 positives)
+            3571 ops   and 4360496 exclusive pairs
+time:   3,   726 facts and   49799 exclusive pairs (  363,    7242 positives)
+            3579 ops   and 4374993 exclusive pairs
+time:   4,   726 facts and   24141 exclusive pairs (  363,    7042 positives)
+            3579 ops   and 4308327 exclusive pairs
+time:   5,   726 facts and   22113 exclusive pairs (  363,    6638 positives)
+            3579 ops   and 4305087 exclusive pairs
+time:   6,   726 facts and   22089 exclusive pairs (  363,    6632 positives)
+
+goals first reachable in 6 time steps
+
+
+graph has leveled off at time step 7
+
+            3579 ops   and 4305063 exclusive pairs
+time:   7,   726 facts and   22089 exclusive pairs (  363,    6632 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+expanding wave front to level    8
+expanding wave front to level    9
+expanding wave front to level   10
+expanding wave front to level   11
+expanding wave front to level   12
+expanding wave front to level   13
+expanding wave front to level   14
+expanding wave front to level   15
+expanding wave front to level   16
+
+
+found plan as follows:
+
+time step    0: PICK_UP HELICOPTER1 CRATE2 DEPOT
+time step    1: MOVE HELICOPTER1 DEPOT LOC30
+time step    2: GIVE HELICOPTER1 CRATE2 PERSON1 LOC30 FOOD_CRATE
+time step    3: MOVE HELICOPTER1 LOC30 DEPOT
+time step    4: PICK_UP HELICOPTER1 CRATE38 DEPOT
+time step    5: MOVE HELICOPTER1 DEPOT LOC28
+time step    6: GIVE HELICOPTER1 CRATE38 PERSON3 LOC28 MEDICINE_CRATE
+time step    7: MOVE HELICOPTER1 LOC28 DEPOT
+time step    8: PICK_UP HELICOPTER1 CRATE1 DEPOT
+time step    9: MOVE HELICOPTER1 DEPOT LOC28
+time step   10: GIVE HELICOPTER1 CRATE1 PERSON3 LOC28 FOOD_CRATE
+time step   11: MOVE HELICOPTER1 LOC28 DEPOT
+time step   12: PICK_UP HELICOPTER1 CRATE37 DEPOT
+time step   13: MOVE HELICOPTER1 DEPOT LOC21
+time step   14: GIVE HELICOPTER1 CRATE37 PERSON2 LOC21 MEDICINE_CRATE
+time step   15: MOVE HELICOPTER1 LOC21 DEPOT
+
+
+
+number of actions tried:  155698632
+number of noops tried  :  630775367
+
+had 62645285 simple memoizing hits
+had       0 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.06 seconds instantiating 2853 operators
+               0.03 seconds building graph
+               2.24 seconds calculating exclusions
+             987.54 seconds searching graph
+             989.87 seconds total time
+
+Memory used:   1.76 MBytes for domain representation
+              31.03 MBytes for graph
+             101.32 MBytes for exclusions
+             177.07 MBytes for memoization
+             1740.37 MBytes for wave front
+
+
+

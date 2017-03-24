@@ -1,23 +1,20 @@
 (define (domain EMERGENCY_SERVICES_LOGISTICS)
   (:requirements :strips :typing)
   (:types
-    helicopter victim crate - object
-    crate_type
-    location
+    phys_object location crate_type - object
+    helicopter victim crate - phys_object
     )
   (:constants
     food_crate medicine_crate - crate_type
     depot - location
     )
   (:predicates
-    (at ?o - object ?l - location)
-    (has_crate ?v - victim ?c - crate)
-    (needs ?v - victim ?c - crate)           ; v needs crate c but does not have it
+    (at ?o - phys_object ?l - location)
+    (has_crate ?v - victim ?t - crate_type)
+    (needs ?v - victim ?t - crate_type)           ; v needs a crate of type t but does not have one
     (carries ?h - helicopter ?c - crate)
-    (carries_sth ?h - helicopter)
-    (no_carries_sth ?h - helicopter)
-    (is_carried ?c - crate)
-    (no_is_carried ?c - crate)
+    (empty ?h - helicopter)
+    (can_be_taken ?c - crate)
     (is_type ?c - crate ?t - crate_type)
     )
 
@@ -34,40 +31,40 @@
     )
    )
 
-  (:action carry
+  (:action pick_up
    :parameters (?h - helicopter ?c - crate ?l - location)
    :precondition
    (and
     (at ?h ?l)
     (at ?c ?l)
-    (no_carries_sth ?h)
-    (no_is_carried ?c))
+    (empty ?h)
+    (can_be_taken ?c))
    :effect 
    (and 
     (not
-    (no_carries_sth ?h))
-    (carries_sth ?h)
-    (is_carried ?c) (not (no_is_carried ?c))
+    (empty ?h))
+    (not (can_be_taken ?c))
     (carries ?h ?c)
     (not (at ?c ?l))
     )
    )
 
   (:action give
-   :parameters (?h - helicopter ?c - crate ?v - victim ?l - location)
+   :parameters (?h - helicopter ?c - crate ?v - victim ?l - location ?t - crate_type)
    :precondition
    (and 
     (carries ?h ?c)
+    (is_type ?c ?t)
     (at ?h ?l) (at ?v ?l)
-    (needs ?v ?c)
+    (needs ?v ?t)
     )
    :effect
-   (and 
-    (not (carries_sth ?h)) (no_carries_sth ?h)
-    (not (is_carried ?c)) (no_is_carried ?c)
+   (and
+    (empty ?h)
+    (can_be_taken ?c)
     (not (carries ?h ?c))
-    (not (needs ?v ?c))
-    (has_crate ?v ?c)
+    (not (needs ?v ?t))
+    (has_crate ?v ?t)
     )
    )
   )
