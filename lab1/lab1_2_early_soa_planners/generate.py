@@ -269,7 +269,7 @@ for x in range(options.persons):
 		if need[x][y]:
 			person_name = person[x]
 			content_name = crate_contents[y]
-			f.write("\t(needs " + person_name + " " + content_name + ")\n")
+			#f.write("\t(needs " + person_name + " " + content_name + ")\n")
 
 f.write(")\n")
 

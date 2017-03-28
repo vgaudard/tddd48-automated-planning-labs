@@ -11,7 +11,7 @@
   (:predicates
     (at ?o - phys_object ?l - location)
     (has_crate ?v - victim ?t - crate_type)
-    (needs ?v - victim ?t - crate_type)           ; v needs a crate of type t but does not have one
+    ;(needs ?v - victim ?t - crate_type)           ; v needs a crate of type t but does not have one
     (carries ?h - helicopter ?c - crate)
     (empty ?h - helicopter)
     (can_be_taken ?c - crate)
@@ -56,14 +56,14 @@
     (carries ?h ?c)
     (is_type ?c ?t)
     (at ?h ?l) (at ?v ?l)
-    (needs ?v ?t)
+    ;(needs ?v ?t)
     )
    :effect
    (and
     (empty ?h)
     (can_be_taken ?c)
     (not (carries ?h ?c))
-    (not (needs ?v ?t))
+    ;(not (needs ?v ?t))
     (has_crate ?v ?t)
     )
    )
