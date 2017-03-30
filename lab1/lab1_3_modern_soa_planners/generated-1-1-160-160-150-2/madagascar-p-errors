@@ -1,0 +1,1 @@
+/home/TDDD48/planners/ipc2011/seq-sat/seq-sat-madagascar-p/plan: line 2:  1977 Segmentation fault      "$(dirname "$0")"/nplan/nplan $1 $2 -o $3 -Q

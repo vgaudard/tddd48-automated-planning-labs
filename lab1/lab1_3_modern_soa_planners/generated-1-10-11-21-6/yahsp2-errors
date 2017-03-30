@@ -1,0 +1,23 @@
+suboptimal yahsp search, threads : 1, teams : 1, strategy : 0
+anytime behavior
+domain file : emergency-domain.pddl
+problem file : generated-1-10-11-21-6/helicopter_problem_1_1_10_11_21_2.pddl
+output file : generated-1-10-11-21-6/yahsp2-solution
+
+Parsing domain.................... done : 0.00          
+Parsing problem................... done : 0.00          
+domain : emergency_services_logistics
+problem : helicopter_problem_1_1_10_11_21_2
+Instantiating operators........... done : 0.02          
+Creating initial structures....... done : 0.00          
+Computing bound................... done : 0.00          
+Refreshing structures............. done : 0.00          
+Finalizing structures............. done : 0.00          
+plan found : length 27 -- search time 0.00 -- total time 0.03
+plan found : length 26 -- search time 0.02 -- total time 0.04
+plan found : length 25 -- search time 0.17 -- total time 0.19
+plan found : length 24 -- search time 25.34 -- total time 25.36
+
+
+User interruption...
+

@@ -1,0 +1,12 @@
+suboptimal yahsp search, threads : 1, teams : 1, strategy : 0
+anytime behavior
+domain file : emergency-domain.pddl
+problem file : helicopter_problem_1_1_160_160_150_2.pddl
+output file : yahsp2-solution
+
+Parsing domain.................... done : 0.00          
+Parsing problem................... done : 0.00          
+domain : emergency_services_logistics
+problem : helicopter_problem_1_1_160_160_150_2
+Instantiating operators........... done : 13.45          
+Creating initial structures......./home/TDDD48/planners/ipc2011/seq-sat/seq-sat-yahsp2/plan: line 3:  2155 Killed                  "$(dirname "$0")"/bin/cpt -y 1 -N -o "$1" -f "$2" -out "$3"

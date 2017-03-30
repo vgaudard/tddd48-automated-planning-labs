@@ -1,0 +1,103 @@
+ipp: parsing domain fileAdding type
+
+domain 'EMERGENCY_SERVICES_LOGISTICS' defined
+ ... done.
+ipp: parsing problem file
+problem 'HELICOPTER_PROBLEM_1_1_10_11_21_2' defined
+ ... done.
+
+
+AND has only one son (anymore)
+instantiated 362 actions
+
+
+time:   0,    97 facts and       0 exclusive pairs (   44,       0 positives)
+             128 ops   and     569 exclusive pairs
+time:   1,   172 facts and    2838 exclusive pairs (   75,     538 positives)
+             345 ops   and   30598 exclusive pairs
+time:   2,   176 facts and    2335 exclusive pairs (   79,     458 positives)
+             538 ops   and   89997 exclusive pairs
+time:   3,   194 facts and    2413 exclusive pairs (   97,    1117 positives)
+             556 ops   and   90527 exclusive pairs
+time:   4,   194 facts and    1948 exclusive pairs (   97,     859 positives)
+             556 ops   and   87884 exclusive pairs
+time:   5,   194 facts and    1174 exclusive pairs (   97,     481 positives)
+             556 ops   and   83141 exclusive pairs
+time:   6,   194 facts and    1021 exclusive pairs (   97,     328 positives)
+
+goals first reachable in 6 time steps
+
+
+graph has leveled off at time step 7
+
+             556 ops   and   82988 exclusive pairs
+time:   7,   194 facts and    1021 exclusive pairs (   97,     328 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+expanding wave front to level    8
+expanding wave front to level    9
+expanding wave front to level   10
+expanding wave front to level   11
+expanding wave front to level   12
+expanding wave front to level   13
+expanding wave front to level   14
+expanding wave front to level   15
+expanding wave front to level   16
+expanding wave front to level   17
+expanding wave front to level   18
+expanding wave front to level   19
+expanding wave front to level   20
+expanding wave front to level   21
+expanding wave front to level   22
+
+
+found plan as follows:
+
+time step    0: PICK_UP HELICOPTER1 CRATE10 DEPOT
+time step    1: GIVE HELICOPTER1 CRATE10 PERSON5 DEPOT MEDICINE_CRATE
+time step    2: PICK_UP HELICOPTER1 CRATE5 DEPOT
+time step    3: MOVE HELICOPTER1 DEPOT LOC9
+time step    4: GIVE HELICOPTER1 CRATE5 PERSON9 LOC9 FOOD_CRATE
+time step    5: MOVE HELICOPTER1 LOC9 DEPOT
+time step    6: PICK_UP HELICOPTER1 CRATE4 DEPOT
+time step    7: MOVE HELICOPTER1 DEPOT LOC8
+time step    8: GIVE HELICOPTER1 CRATE4 PERSON2 LOC8 FOOD_CRATE
+time step    9: MOVE HELICOPTER1 LOC8 DEPOT
+time step   10: PICK_UP HELICOPTER1 CRATE3 DEPOT
+time step   11: MOVE HELICOPTER1 DEPOT LOC7
+time step   12: GIVE HELICOPTER1 CRATE3 PERSON1 LOC7 FOOD_CRATE
+time step   13: MOVE HELICOPTER1 LOC7 DEPOT
+time step   14: PICK_UP HELICOPTER1 CRATE2 DEPOT
+time step   15: MOVE HELICOPTER1 DEPOT LOC5
+time step   16: GIVE HELICOPTER1 CRATE2 PERSON11 LOC5 FOOD_CRATE
+time step   17: MOVE HELICOPTER1 LOC5 DEPOT
+time step   18: PICK_UP HELICOPTER1 CRATE1 DEPOT
+time step   19: MOVE HELICOPTER1 DEPOT LOC1
+time step   20: GIVE HELICOPTER1 CRATE1 PERSON10 LOC1 FOOD_CRATE
+time step   21: MOVE HELICOPTER1 LOC1 DEPOT
+
+
+
+number of actions tried:   14043735
+number of noops tried  :   70059648
+
+had 9183019 simple memoizing hits
+had   79596 partial memoizing hits
+had 1286724 subset memoizing hits
+
+time spent:    0.01 seconds instantiating 362 operators
+               0.00 seconds building graph
+               0.02 seconds calculating exclusions
+              60.70 seconds searching graph
+              60.73 seconds total time
+
+Memory used:   0.39 MBytes for domain representation
+               6.11 MBytes for graph
+               1.81 MBytes for exclusions
+              53.06 MBytes for memoization
+             -1087.16 MBytes for wave front
+
+
+
+

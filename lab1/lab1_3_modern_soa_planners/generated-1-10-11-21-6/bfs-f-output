@@ -1,0 +1,118 @@
+ --- OK.
+ Match tree built with 362 nodes.
+
+Try allocate size: 0.000757813 MB
+
+Caption
+{#goals, #UNnachieved,  #Achieved} -> IW(max_w)
+
+{7/6/0}:IW(inf) -> [2][3]Try allocate size: 0.000757813 MB
+
+{7/5/1}:IW(1) -> [2][3]Try allocate size: 0.0735078 MB
+
+{7/5/1}:IW(2) -> [2][3][4]Try allocate size: 0.000757813 MB
+
+{7/4/2}:IW(1) -> [2][3][4]Try allocate size: 0.0735078 MB
+
+{7/4/2}:IW(2) -> [2][3][4][5]Try allocate size: 0.000757813 MB
+
+{7/3/3}:IW(1) -> [2][3][4]Try allocate size: 0.0735078 MB
+
+{7/3/3}:IW(2) -> [2][3][4][5]Try allocate size: 0.000757813 MB
+
+{7/2/4}:IW(1) -> [2][3][4]Try allocate size: 0.0735078 MB
+
+{7/2/4}:IW(2) -> [2][3][4][5]Try allocate size: 0.000757813 MB
+
+{7/1/5}:IW(1) -> [2][3][4]Try allocate size: 0.0735078 MB
+
+{7/1/5}:IW(2) -> [2][3][4][5]Try allocate size: 0.000757813 MB
+
+{7/1/6}:IW(1) -> [2]Try allocate size: 0.000757813 MB
+SIW search completed in 0.004 secs 
+found plan cost = 22
+(AT HELICOPTER1 LOC1)gn land for (HAS_CRATE PERSON6 MEDICINE_CRATE)
+(AT HELICOPTER1 LOC3)gn land for (HAS_CRATE PERSON9 MEDICINE_CRATE)
+(AT HELICOPTER1 LOC8)gn land for (HAS_CRATE PERSON1 FOOD_CRATE)
+(AT HELICOPTER1 LOC1)gn land for (HAS_CRATE PERSON6 FOOD_CRATE)
+(AT HELICOPTER1 LOC10)gn land for (HAS_CRATE PERSON10 FOOD_CRATE)
+1. (HAS_CRATE PERSON10 FOOD_CRATE)
+	Preceded by: (AT HELICOPTER1 LOC10)
+	GN Preceded by: 
+	Required by: (AT HELICOPTER1 DEPOT)
+	GN Required by: 
+2. (HAS_CRATE PERSON9 MEDICINE_CRATE)
+	Preceded by: (AT HELICOPTER1 LOC3)
+	GN Preceded by: 
+	Required by: (AT HELICOPTER1 DEPOT)
+	GN Required by: 
+3. (HAS_CRATE PERSON6 MEDICINE_CRATE)
+	Preceded by: (AT HELICOPTER1 LOC1)
+	GN Preceded by: 
+	Required by: (AT HELICOPTER1 DEPOT)
+	GN Required by: 
+4. (HAS_CRATE PERSON6 FOOD_CRATE)
+	Preceded by: (AT HELICOPTER1 LOC1)
+	GN Preceded by: 
+	Required by: (AT HELICOPTER1 DEPOT)
+	GN Required by: 
+5. (HAS_CRATE PERSON5 FOOD_CRATE)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: 
+	GN Required by: 
+6. (HAS_CRATE PERSON1 FOOD_CRATE)
+	Preceded by: (AT HELICOPTER1 LOC8)
+	GN Preceded by: 
+	Required by: (AT HELICOPTER1 DEPOT)
+	GN Required by: 
+7. (AT HELICOPTER1 DEPOT)
+	Preceded by: (HAS_CRATE PERSON10 FOOD_CRATE), (HAS_CRATE PERSON9 MEDICINE_CRATE), (HAS_CRATE PERSON6 MEDICINE_CRATE), (HAS_CRATE PERSON6 FOOD_CRATE), (HAS_CRATE PERSON1 FOOD_CRATE)
+	GN Preceded by: 
+	Required by: 
+	GN Required by: 
+8. (AT HELICOPTER1 LOC10)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: (HAS_CRATE PERSON10 FOOD_CRATE)
+	GN Required by: 
+9. (AT HELICOPTER1 LOC3)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: (HAS_CRATE PERSON9 MEDICINE_CRATE)
+	GN Required by: 
+10. (AT HELICOPTER1 LOC1)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: (HAS_CRATE PERSON6 MEDICINE_CRATE), (HAS_CRATE PERSON6 FOOD_CRATE)
+	GN Required by: 
+11. (AT HELICOPTER1 LOC8)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: (HAS_CRATE PERSON1 FOOD_CRATE)
+	GN Required by: 
+--[inf / 17]--
+--[21 / 17]--
+--[20 / 17]--
+--[20 / 15]--
+--[19 / 15]--
+--[19 / 14]--
+--[17 / 14]--
+--[17 / 12]--
+--[15 / 12]--
+--[14 / 12]--
+--[14 / 9]--
+--[14 / 8]--
+--[12 / 8]--
+--[11 / 8]--
+--[11 / 6]--
+--[11 / 5]--
+--[9 / 5]--
+--[9 / 4]--
+--[8 / 4]--
+--[8 / 3]--
+--[8 / 2]--
+--[8 / 1]--
+--[6 / 1]--
+--[6 / 0]--
+--[0 / 0]--

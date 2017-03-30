@@ -77,8 +77,8 @@ def flight_cost(location_num1,location_num2):
 # is a list of crates containing crate_contents[0] (in our
 # example "food"), and so on.
 
+num_crates_with_contents = []
 def setup_crate_contents():
-	num_crates_with_contents = []
 	crates_left = options.crates
 	for x in range(len(crate_contents)-1):
 		num = random.randint(1,crates_left-(len(crate_contents)-x+1))
@@ -205,9 +205,10 @@ location_coords = setup_location_coords()
 need = setup_person_needs()
 
 # Define a problem name
+# include the crate distribution in the problem name
 problem_name ="helicopter_problem_"+str(options.helicopters)+"_"+str(options.carriers)+\
 "_"+str(options.locations)+"_"+str(options.persons)+"_"+str(options.crates)+\
-"_"+str(len(crate_contents))
+"c"+("c".join([str(x) for x in num_crates_with_contents]))+"_"+str(options.goals)
 
 # Open output file
 f = open(problem_name+".pddl", 'w')

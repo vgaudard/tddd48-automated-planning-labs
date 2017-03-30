@@ -1,0 +1,13 @@
+Madagascar v0.998 16/02/2012 11:52:16
+Options: file:emergency-domain.pddl file:helicopter_problem_1_1_160_160_150_2.pddl -o madagascar-p-solution
+Special no-VSIDS version.
+Domain: emergency_services_logistics
+Problem: helicopter_problem_1_1_160_160_150_2
+Increased max. actions to 200000.
+Increased max. actions to 400000.
+Increased max. actions to 800000.
+Increased max. actions to 1600000.
+Increased max. actions to 3200000.
+Increased max. actions to 6400000.
+Parser: 3914071 ground actions and 50842 state variables
+Invariants: 0 1 2 3
