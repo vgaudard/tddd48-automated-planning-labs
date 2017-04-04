@@ -25,3 +25,32 @@ generated problem, which is why no solution is given.
 Note 2: `yahsp2` was interrupted after more than 7 minutes on the generated
 problem, with quite a bad solution (using several successive moves).
 
+## Lab 2.2
+
+### Use of action costs in plans
+
+#### BFS(f)
+
+`BFS(f)` did not use the carriers, even if the cost to travel from the depot to
+another location was increased (from 100 to 10000).
+
+#### madagascar-p
+
+`madagascar-p` apparently does not support action costs:
+
+```
+WARNING: will ignore action costs
+```
+
+#### yahsp2
+
+`yahsp2` did not use the carriers, even if the travel costs were increased
+
+#### ff and ipp
+
+Neither `ff` nor `ipp` seemed to support action costs:
+
+```
+emergency-domain.pddl: syntax error in line 2, ':ACTION-COSTS':
+domain definition expected
+```
