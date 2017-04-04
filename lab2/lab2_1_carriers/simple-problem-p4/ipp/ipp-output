@@ -1,0 +1,91 @@
+
+ipp: parsing domain fileAdding type
+
+domain 'EMERGENCY_SERVICES_LOGISTICS' defined
+ ... done.
+ipp: parsing problem file
+problem 'SIMPLE-PROBLEM-P4' defined
+ ... done.
+
+
+AND has only one son (anymore)
+instantiated 220 actions
+
+
+time:   0,    36 facts and       0 exclusive pairs (   11,       0 positives)
+              48 ops   and     100 exclusive pairs
+time:   1,    54 facts and     165 exclusive pairs (   19,      44 positives)
+              82 ops   and    1079 exclusive pairs
+time:   2,    54 facts and     100 exclusive pairs (   19,      28 positives)
+              98 ops   and    1726 exclusive pairs
+time:   3,    58 facts and     150 exclusive pairs (   23,      66 positives)
+             102 ops   and    1912 exclusive pairs
+time:   4,    58 facts and     100 exclusive pairs (   23,      50 positives)
+             102 ops   and    1718 exclusive pairs
+time:   5,    58 facts and      64 exclusive pairs (   23,      34 positives)
+             102 ops   and    1634 exclusive pairs
+time:   6,    58 facts and      58 exclusive pairs (   23,      28 positives)
+
+goals first reachable in 6 time steps
+
+
+graph has leveled off at time step 7
+
+             102 ops   and    1628 exclusive pairs
+time:   7,    58 facts and      58 exclusive pairs (   23,      28 positives)
+
+graph has leveled off! wave front mechanism is taking over
+
+expanding wave front to level    8
+expanding wave front to level    9
+expanding wave front to level   10
+expanding wave front to level   11
+expanding wave front to level   12
+expanding wave front to level   13
+expanding wave front to level   14
+expanding wave front to level   15
+expanding wave front to level   16
+
+
+found plan as follows:
+
+time step    0: PICK_UP H C4 DEPOT
+time step    1: MOVE H DEPOT L4
+time step    2: GIVE H C4 P4 L4 FOOD_CRATE
+time step    3: MOVE H L4 DEPOT
+time step    4: PICK_UP H C3 DEPOT
+time step    5: MOVE H DEPOT L3
+time step    6: GIVE H C3 P3 L3 FOOD_CRATE
+time step    7: MOVE H L3 DEPOT
+time step    8: PICK_UP H C2 DEPOT
+time step    9: MOVE H DEPOT L2
+time step   10: GIVE H C2 P2 L2 FOOD_CRATE
+time step   11: MOVE H L2 DEPOT
+time step   12: PICK_UP H C1 DEPOT
+time step   13: MOVE H DEPOT L1
+time step   14: GIVE H C1 P1 L1 FOOD_CRATE
+time step   15: MOVE H L1 DEPOT
+
+
+
+number of actions tried:       5106
+number of noops tried  :      17322
+
+had    2635 simple memoizing hits
+had       0 partial memoizing hits
+had       0 subset memoizing hits
+
+time spent:    0.00 seconds instantiating 220 operators
+               0.00 seconds building graph
+               0.00 seconds calculating exclusions
+               0.02 seconds searching graph
+               0.02 seconds total time
+
+Memory used:   0.20 MBytes for domain representation
+               1.52 MBytes for graph
+               0.03 MBytes for exclusions
+               0.15 MBytes for memoization
+               2.29 MBytes for wave front
+
+
+

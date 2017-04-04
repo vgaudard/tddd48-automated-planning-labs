@@ -1,7 +1,7 @@
 (define (domain EMERGENCY_SERVICES_LOGISTICS)
   (:requirements :strips :typing)
   (:types
-    phys_object location crate_type number - object
+    phys_object location crate_type number container - object
     helicopter victim crate carrier - phys_object
     helicopter carrier - container
     )
@@ -95,6 +95,7 @@
     :parameters (?h - helicopter ?r - carrier ?from - location ?to - location)
     :precondition
     (and
+      (empty ?h)
       (at ?h ?from)
       (at ?r ?from)
       )

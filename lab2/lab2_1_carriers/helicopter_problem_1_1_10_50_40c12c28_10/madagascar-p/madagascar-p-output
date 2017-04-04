@@ -1,0 +1,32 @@
+Madagascar v0.998 16/02/2012 11:52:16
+Options: file:emergency-domain.pddl file:helicopter_problem_1_1_10_50_40c12c28_10.pddl -o madagascar-p-solution
+Special no-VSIDS version.
+Domain: emergency_services_logistics
+Problem: helicopter_problem_1_1_10_50_40c12c28_10
+Parser: 26202 ground actions and 1282 state variables
+Invariants: 0 1 2 3  0.15 secs
+Goal: conjunctive
+Simplified: 2160 ground actions and 232 state variables
+Actions: STRIPS
+Disabling graph: .. 0.03 secs
+Plan type: E-step
+Horizon 0
+0 UNSAT (0 decisions 0 conflicts)
+Horizon 5
+Allocated a 32 MB block (memory used 275 MB).
+Horizon 10
+Horizon 15
+Horizon 20
+Horizon 25
+SAT (52 decisions 0 conflicts)
+PLAN FOUND: 25 steps
+43 actions in the plan.
+total time 0.45 preprocess 0.25 
+total size 293.36 MB
+t val conflicts decisions
+0 0 0 0
+5 -1 360 445
+10 -1 240 305
+15 -1 180 239
+20 -1 120 169
+25 1 0 52

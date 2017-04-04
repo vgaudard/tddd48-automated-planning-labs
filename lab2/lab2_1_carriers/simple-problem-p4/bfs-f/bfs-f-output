@@ -1,0 +1,93 @@
+ --- OK.
+ Match tree built with 40 nodes.
+
+Try allocate size: 0.000179688 MB
+
+Caption
+{#goals, #UNnachieved,  #Achieved} -> IW(max_w)
+
+{5/4/0}:IW(inf) -> [2][3][4]Try allocate size: 0.000179688 MB
+
+{5/3/1}:IW(1) -> [2][3]Try allocate size: 0.00413281 MB
+
+{5/3/1}:IW(2) -> [2][3][4][5]Try allocate size: 0.000179688 MB
+
+{5/2/2}:IW(1) -> [2][3]Try allocate size: 0.00413281 MB
+
+{5/2/2}:IW(2) -> [2][3][4][5]Try allocate size: 0.000179688 MB
+
+{5/1/3}:IW(1) -> [2][3]Try allocate size: 0.00413281 MB
+
+{5/1/3}:IW(2) -> [2][3][4][5]Try allocate size: 0.000179688 MB
+
+{5/1/4}:IW(1) -> [2]Try allocate size: 0.000179688 MB
+SIW search completed in -1.8999e-10 secs 
+found plan cost = 16
+(AT H L1)gn land for (HAS_CRATE P1 FOOD_CRATE)
+(AT H L2)gn land for (HAS_CRATE P2 FOOD_CRATE)
+(AT H L3)gn land for (HAS_CRATE P3 FOOD_CRATE)
+(AT H L4)gn land for (HAS_CRATE P4 FOOD_CRATE)
+1. (HAS_CRATE P4 FOOD_CRATE)
+	Preceded by: (AT H L4)
+	GN Preceded by: 
+	Required by: (AT H DEPOT)
+	GN Required by: 
+2. (HAS_CRATE P3 FOOD_CRATE)
+	Preceded by: (AT H L3)
+	GN Preceded by: 
+	Required by: (AT H DEPOT)
+	GN Required by: 
+3. (HAS_CRATE P2 FOOD_CRATE)
+	Preceded by: (AT H L2)
+	GN Preceded by: 
+	Required by: (AT H DEPOT)
+	GN Required by: 
+4. (HAS_CRATE P1 FOOD_CRATE)
+	Preceded by: (AT H L1)
+	GN Preceded by: 
+	Required by: (AT H DEPOT)
+	GN Required by: 
+5. (AT H DEPOT)
+	Preceded by: (HAS_CRATE P4 FOOD_CRATE), (HAS_CRATE P3 FOOD_CRATE), (HAS_CRATE P2 FOOD_CRATE), (HAS_CRATE P1 FOOD_CRATE)
+	GN Preceded by: 
+	Required by: 
+	GN Required by: 
+6. (AT H L4)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: (HAS_CRATE P4 FOOD_CRATE)
+	GN Required by: 
+7. (AT H L3)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: (HAS_CRATE P3 FOOD_CRATE)
+	GN Required by: 
+8. (AT H L2)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: (HAS_CRATE P2 FOOD_CRATE)
+	GN Required by: 
+9. (AT H L1)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: (HAS_CRATE P1 FOOD_CRATE)
+	GN Required by: 
+--[inf / 12]--
+--[17 / 12]--
+--[16 / 12]--
+--[16 / 8]--
+--[14 / 8]--
+--[13 / 8]--
+--[13 / 6]--
+--[11 / 6]--
+--[10 / 6]--
+--[10 / 4]--
+--[8 / 4]--
+--[7 / 4]--
+--[7 / 3]--
+--[7 / 2]--
+--[7 / 1]--
+--[5 / 1]--
+--[5 / 0]--
+--[0 / 0]--
+RWA* search!

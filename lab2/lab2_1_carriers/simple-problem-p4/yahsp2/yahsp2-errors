@@ -1,0 +1,26 @@
+suboptimal yahsp search, threads : 1, teams : 1, strategy : 0
+anytime behavior
+domain file : emergency-domain.pddl
+problem file : simple-problem-p4.pddl
+output file : yahsp2-solution
+
+Parsing domain.................... done : 0.00          
+Parsing problem................... done : 0.00          
+domain : emergency_services_logistics
+problem : simple-problem-p4
+Instantiating operators........... done : 0.00          
+Creating initial structures....... done : 0.00          
+Computing bound................... done : 0.00          
+Refreshing structures............. done : 0.00          
+Finalizing structures............. done : 0.00          
+plan found : length 20 -- search time 0.00 -- total time 0.00
+Computed nodes : 10702
+Evaluated nodes : 1848
+Expanded nodes : 1806
+Evaluated nodes/sec : 184800.00
+Search us time : 0.02
+Search wc time : 0.02
+Core utility : 62.46
+Total us time : 0.02
+Total wc time : 0.04
+

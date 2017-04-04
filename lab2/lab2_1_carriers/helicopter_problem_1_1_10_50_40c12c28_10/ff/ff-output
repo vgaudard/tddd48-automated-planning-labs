@@ -1,0 +1,89 @@
+
+ff: parsing domain file
+domain 'EMERGENCY_SERVICES_LOGISTICS' defined
+ ... done.
+ff: parsing problem file
+problem 'HELICOPTER_PROBLEM_1_1_10_50_40C12C28_10' defined
+ ... done.
+
+
+
+Cueing down from goal distance:   19 into depth [1]
+                                  18            [1][2][3]
+                                  17            [1]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :   19
+                          18
+                          17
+                          16
+                          15
+                          14
+                          13
+                          12
+                          11
+                          10
+                           9
+                           8
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: PICK_UP HELICOPTER1 CRATE40 DEPOT
+        1: MOVE HELICOPTER1 DEPOT LOC8
+        2: GIVE HELICOPTER1 CRATE40 PERSON41 LOC8 MEDICINE_CRATE
+        3: MOVE HELICOPTER1 LOC8 DEPOT
+        4: PICK_UP HELICOPTER1 CRATE39 DEPOT
+        5: MOVE HELICOPTER1 DEPOT LOC2
+        6: GIVE HELICOPTER1 CRATE39 PERSON48 LOC2 MEDICINE_CRATE
+        7: MOVE HELICOPTER1 LOC2 DEPOT
+        8: PICK_UP HELICOPTER1 CRATE38 DEPOT
+        9: MOVE HELICOPTER1 DEPOT LOC9
+       10: GIVE HELICOPTER1 CRATE38 PERSON43 LOC9 MEDICINE_CRATE
+       11: MOVE HELICOPTER1 LOC9 DEPOT
+       12: PICK_UP HELICOPTER1 CRATE12 DEPOT
+       13: MOVE HELICOPTER1 DEPOT LOC9
+       14: GIVE HELICOPTER1 CRATE12 PERSON32 LOC9 FOOD_CRATE
+       15: MOVE HELICOPTER1 LOC9 DEPOT
+       16: PICK_UP HELICOPTER1 CRATE11 DEPOT
+       17: MOVE HELICOPTER1 DEPOT LOC7
+       18: GIVE HELICOPTER1 CRATE11 PERSON22 LOC7 FOOD_CRATE
+       19: MOVE HELICOPTER1 LOC7 DEPOT
+       20: PICK_UP HELICOPTER1 CRATE10 DEPOT
+       21: MOVE HELICOPTER1 DEPOT LOC4
+       22: GIVE HELICOPTER1 CRATE10 PERSON31 LOC4 FOOD_CRATE
+       23: MOVE HELICOPTER1 LOC4 DEPOT
+       24: PICK_UP HELICOPTER1 CRATE9 DEPOT
+       25: MOVE HELICOPTER1 DEPOT LOC6
+       26: GIVE HELICOPTER1 CRATE9 PERSON16 LOC6 FOOD_CRATE
+       27: MOVE HELICOPTER1 LOC6 DEPOT
+       28: PICK_UP HELICOPTER1 CRATE8 DEPOT
+       29: MOVE HELICOPTER1 DEPOT LOC6
+       30: GIVE HELICOPTER1 CRATE8 PERSON5 LOC6 FOOD_CRATE
+       31: MOVE HELICOPTER1 LOC6 DEPOT
+       32: PICK_UP HELICOPTER1 CRATE7 DEPOT
+       33: MOVE HELICOPTER1 DEPOT LOC3
+       34: GIVE HELICOPTER1 CRATE7 PERSON38 LOC3 FOOD_CRATE
+       35: MOVE HELICOPTER1 LOC3 DEPOT
+       36: PICK_UP HELICOPTER1 CRATE6 DEPOT
+       37: MOVE HELICOPTER1 DEPOT LOC3
+       38: GIVE HELICOPTER1 CRATE6 PERSON1 LOC3 FOOD_CRATE
+       39: MOVE HELICOPTER1 LOC3 DEPOT
+     
+
+time spent:    0.00 seconds instantiating 26202 easy, 0 hard action templates
+               0.01 seconds reachability analysis, yielding 283 facts and 2172 actions
+               0.00 seconds creating final representation with 233 relevant facts
+               0.00 seconds building connectivity graph
+               0.50 seconds searching, evaluating 7415 states, to a max depth of 3
+               0.51 seconds total time
+

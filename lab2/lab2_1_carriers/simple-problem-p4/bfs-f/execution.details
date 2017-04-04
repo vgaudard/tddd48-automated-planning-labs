@@ -1,0 +1,50 @@
+PDDL problem description loaded: 
+	Domain: EMERGENCY_SERVICES_LOGISTICS
+	Problem: SIMPLE-PROBLEM-P4
+	#Actions: 40
+	#Fluents: 23
+Stage #1: SIW
+Landmarks found: 5
+Plan found with cost: 16
+1. (PICK_UP H C1 DEPOT)
+2. (MOVE H DEPOT L4)
+3. (GIVE H C1 P4 L4 FOOD_CRATE)
+4. (MOVE H L4 DEPOT)
+5. (PICK_UP H C2 DEPOT)
+6. (MOVE H DEPOT L3)
+7. (GIVE H C2 P3 L3 FOOD_CRATE)
+8. (MOVE H L3 DEPOT)
+9. (PICK_UP H C3 DEPOT)
+10. (MOVE H DEPOT L2)
+11. (GIVE H C3 P2 L2 FOOD_CRATE)
+12. (MOVE H L2 DEPOT)
+13. (PICK_UP H C4 DEPOT)
+14. (MOVE H DEPOT L1)
+15. (GIVE H C4 P1 L1 FOOD_CRATE)
+16. (MOVE H L1 DEPOT)
+Time: 0
+Generated: 103
+Expanded: 62
+Total time: -1.8999e-10
+Nodes generated during search: 104
+Nodes expanded during search: 62
+Nodes pruned by bound: 27
+Average ef. width: 1.4
+Max ef. width: 2
+SIW search completed in -1.8999e-10 secs, found plan cost = 16
+Landmarks and edges found: 17
+Stage #2: BFS(f)
+Total time: 0.116
+Nodes generated during search: 12334
+Nodes expanded during search: 2755
+Nodes pruned by bound: 1131
+BFS(f) search completed in 0.116 secs, found plan cost = inf
+Stage #3: RWA* 
+Branch & Bound search: Initial Bound = 16
+Total time: 0.02
+Nodes generated during search: 3729
+Nodes expanded during search: 1863
+Nodes pruned by bound: 1
+Dead-end nodes: 0
+Nodes in OPEN replaced: 41
+RWA search completed in 0.02 secs, found plan cost = inf

@@ -1,0 +1,55 @@
+
+ff: parsing domain file
+domain 'EMERGENCY_SERVICES_LOGISTICS' defined
+ ... done.
+ff: parsing problem file
+problem 'SIMPLE-PROBLEM-P4' defined
+ ... done.
+
+
+
+Cueing down from goal distance:    9 into depth [1]
+                                   8            [1][2][3]
+                                   7            [1]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :    9
+                           8
+                           7
+                           6
+                           5
+                           4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: PICK_UP H C4 DEPOT
+        1: MOVE H DEPOT L4
+        2: GIVE H C4 P4 L4 FOOD_CRATE
+        3: MOVE H L4 DEPOT
+        4: PICK_UP H C3 DEPOT
+        5: MOVE H DEPOT L3
+        6: GIVE H C3 P3 L3 FOOD_CRATE
+        7: MOVE H L3 DEPOT
+        8: PICK_UP H C2 DEPOT
+        9: MOVE H DEPOT L2
+       10: GIVE H C2 P2 L2 FOOD_CRATE
+       11: MOVE H L2 DEPOT
+       12: PICK_UP H C1 DEPOT
+       13: MOVE H DEPOT L1
+       14: GIVE H C1 P1 L1 FOOD_CRATE
+       15: MOVE H L1 DEPOT
+     
+
+time spent:    0.00 seconds instantiating 310 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 27 facts and 50 actions
+               0.00 seconds creating final representation with 23 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 119 states, to a max depth of 3
+               0.00 seconds total time
+
