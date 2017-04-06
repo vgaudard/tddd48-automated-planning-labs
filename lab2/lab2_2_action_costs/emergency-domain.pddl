@@ -97,6 +97,7 @@
      (not (contains ?h ?c))
      (contains ?r ?c)
      (increase (total-cost) 10)
+     (empty ?h)
      )
    )
 
@@ -110,8 +111,8 @@
       )
     :effect
     (and
-      (not (at ?h ?to)) (at ?h ?from)
-      (not (at ?r ?to)) (at ?r ?from)
+      (not (at ?h ?from)) (at ?h ?to)
+      (not (at ?r ?from)) (at ?r ?to)
       (increase (total-cost) (fly-cost ?from ?to))
       )
     )
@@ -130,6 +131,7 @@
     :effect
     (and
       (not (contains ?r ?c))
+      (not (empty ?h))
       (contains ?h ?c)
       (not (nb_loaded_crates ?r ?nb_loaded)) (nb_loaded_crates ?r ?new_nb_loaded)
       (increase (total-cost) 10)

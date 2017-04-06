@@ -4,9 +4,9 @@ Special no-VSIDS version.
 Domain: emergency_services_logistics
 Problem: simple-problem-p4
 Parser: 310 ground actions and 80 state variables
-Invariants: 0 1 2 3 4  0.00 secs
+Invariants: 0 1 2 3  0.00 secs
 Goal: conjunctive
-Simplified: 220 ground actions and 36 state variables
+Simplified: 44 ground actions and 22 state variables
 Actions: STRIPS
 Disabling graph:  0.00 secs
 Plan type: E-step
@@ -15,15 +15,12 @@ Horizon 0
 Horizon 5
 Allocated a 32 MB block (memory used 273 MB).
 Horizon 10
-5 UNSAT (139 decisions 129 conflicts)
-Horizon 15
-SAT (17 decisions 2 conflicts)
-PLAN FOUND: 15 steps
+SAT (10 decisions 0 conflicts)
+PLAN FOUND: 10 steps
 18 actions in the plan.
 total time 0.01 preprocess 0.00 
-total size 237.12 MB
+total size 235.51 MB
 t val conflicts decisions
 0 0 0 0
-5 0 129 139
-10 -1 120 136
-15 1 2 17
+5 -1 180 200
+10 1 0 10

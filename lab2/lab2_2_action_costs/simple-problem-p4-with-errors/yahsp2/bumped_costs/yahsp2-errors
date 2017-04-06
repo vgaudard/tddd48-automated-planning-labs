@@ -13,14 +13,14 @@ Creating initial structures....... done : 0.00
 Computing bound................... done : 0.00          
 Refreshing structures............. done : 0.00          
 Finalizing structures............. done : 0.00          
-plan found : cost 920 -- search time 0.00 -- total time 0.00
-Computed nodes : 139051
-Evaluated nodes : 22827
-Expanded nodes : 22649
-Evaluated nodes/sec : 81525.00
-Search us time : 0.29
-Search wc time : 0.29
-Core utility : 97.06
-Total us time : 0.29
-Total wc time : 0.31
+plan found : cost 40520 -- search time 0.00 -- total time 0.00
+Computed nodes : 8404
+Evaluated nodes : 1439
+Expanded nodes : 1424
+Evaluated nodes/sec : 143900.00
+Search us time : 0.02
+Search wc time : 0.02
+Core utility : 81.61
+Total us time : 0.02
+Total wc time : 0.03
 

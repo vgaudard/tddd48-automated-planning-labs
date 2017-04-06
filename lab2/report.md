@@ -29,10 +29,17 @@ problem, with quite a bad solution (using several successive moves).
 
 ### Use of action costs in plans
 
+The folder `simple-problem-p4-with-errors` contains results before an error in
+the domain was corrected (`at` in the effects of `fly-carrier` had its
+arguments in the wrong order)
+
 #### BFS(f)
 
-`BFS(f)` did not use the carriers, even if the cost to travel from the depot to
-another location was increased (from 100 to 10000).
+`BFS(f)` could not solve the problem `simple-problem-p4` with action costs:
+
+```
+*** Error in `/home/TDDD48/planners/ipc2014/seq-sat/seq-sat-bfs-f/at_bfs_f': double free or corruption (out): 0x00000000047e8630 ***
+```
 
 #### madagascar-p
 
@@ -44,7 +51,8 @@ WARNING: will ignore action costs
 
 #### yahsp2
 
-`yahsp2` did not use the carriers, even if the travel costs were increased
+Even with the error corrected and with the costs of flying from the depot
+bumped up to 10000, `yahsp2` does not use the carriers.
 
 #### ff and ipp
 
