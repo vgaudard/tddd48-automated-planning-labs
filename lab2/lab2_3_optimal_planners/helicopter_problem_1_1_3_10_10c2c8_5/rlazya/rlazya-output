@@ -1,0 +1,605 @@
+1. Running translator
+Second argument is a file name: use two translator arguments.
+Parsing...
+Parsing: [0.000s CPU, 0.005s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.023s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 59 rules.
+Computing model... [0.010s CPU, 0.008s wall-clock]
+349 relevant atoms
+435 auxiliary atoms
+784 final queue length
+1106 total queue pushes
+Completing instantiation... [0.010s CPU, 0.006s wall-clock]
+Instantiating: [0.030s CPU, 0.040s wall-clock]
+Computing fact groups...
+Finding invariants...
+16 initial candidates
+Finding invariants: [0.000s CPU, 0.006s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.010s CPU, 0.003s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+41 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.011s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.010s CPU, 0.006s wall-clock]
+0 implied effects removed
+20 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+32 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.001s wall-clock]
+Translator variables: 43
+Translator derived variables: 0
+Translator facts: 90
+Translator mutex groups: 24
+Translator total mutex groups size: 56
+Translator operators: 134
+Translator task size: 983
+Translator peak memory: 40992 KB
+Writing output... [0.000s CPU, 0.011s wall-clock]
+Done! [0.050s CPU, 0.076s wall-clock]
+
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+28 variables of 43 necessary
+10 of 24 mutex groups necessary.
+134 of 134 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor facts: 60
+Preprocessor derived variables: 0
+Preprocessor task size: 830
+Writing output...
+done
+
+
+3. Running search
+Dispatcher selected state size 1.
+This is a nonunit task.
+Conditional effects: 0
+Simplifying transitions... done!
+Initializing Exploration...
+Initializing Exploration...
+H_m_Landmarks(1)
+Using 60 P^m fluents.
+Level 1 completed.
+Level 2 completed.
+h^m landmarks computed.
+Removed 0 reasonable or obedient reasonable orders
+Calculating achievers.
+Landmarks generation time: 0.000810397s
+Discovered 9 landmarks, of which 0 are disjunctive and 0 are conjunctive 
+12 edges
+Initializing Exploration...
+Generating landmarks using the RPG/SAS+ approach
+Switch from bucket-based to heap-based queue at key = 172, num_pushes = 28
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.00138439s
+Discovered 15 landmarks, of which 1 are disjunctive and 0 are conjunctive 
+16 edges
+Initializing Exploration...
+Merging 2 landmark graphs
+Adding simple landmarks
+Adding disjunctive landmarks
+Adding orderings
+Removed 0 reasonable or obedient reasonable orders
+Switch from bucket-based to heap-based queue at key = 172, num_pushes = 28
+Landmarks generation time: 0.000373961s
+Discovered 15 landmarks, of which 1 are disjunctive and 0 are conjunctive 
+21 edges
+Initializing landmarks count heuristic...
+7 initial landmarks, 6 goal landmarks
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+Using iterated heuristic computation with 2 heuristics
+f = 243 [1 evaluated, 0 expanded, t=0s]
+Initializing landmark cut heuristic...
+Checking for conditional effects...
+No conditional effects detected
+Switch from bucket-based to heap-based queue at key = 172, num_pushes = 29
+f = 417 [1 evaluated, 0 expanded, t=0s]
+f = 427 [67 evaluated, 11 expanded, t=0.01s]
+f = 437 [564 evaluated, 111 expanded, t=0.01s]
+f = 447 [1701 evaluated, 355 expanded, t=0.03s]
+f = 457 [4165 evaluated, 895 expanded, t=0.07s]
+f = 467 [8001 evaluated, 1739 expanded, t=0.12s]
+f = 472 [14063 evaluated, 3083 expanded, t=0.2s]
+f = 477 [14063 evaluated, 3109 expanded, t=0.22s]
+f = 482 [21637 evaluated, 4789 expanded, t=0.33s]
+f = 487 [21637 evaluated, 4849 expanded, t=0.33s]
+f = 492 [30905 evaluated, 6907 expanded, t=0.45s]
+f = 497 [30905 evaluated, 7007 expanded, t=0.48s]
+f = 502 [40439 evaluated, 9121 expanded, t=0.61s]
+f = 507 [40439 evaluated, 9221 expanded, t=0.63s]
+f = 512 [49567 evaluated, 11237 expanded, t=0.77s]
+f = 517 [49567 evaluated, 11349 expanded, t=0.82s]
+f = 527 [57449 evaluated, 13085 expanded, t=0.98s]
+f = 537 [63225 evaluated, 14345 expanded, t=1.13s]
+f = 547 [67477 evaluated, 15269 expanded, t=1.25s]
+f = 557 [69726 evaluated, 15749 expanded, t=1.35s]
+f = 567 [71157 evaluated, 16053 expanded, t=1.43s]
+f = 577 [71625 evaluated, 16149 expanded, t=1.5s]
+f = 581 [71859 evaluated, 16197 expanded, t=1.55s]
+f = 589 [71862 evaluated, 16209 expanded, t=1.57s]
+f = 591 [71873 evaluated, 16221 expanded, t=1.62s]
+f = 596 [71903 evaluated, 16331 expanded, t=1.65s]
+f = 599 [71916 evaluated, 16343 expanded, t=1.65s]
+f = 601 [72015 evaluated, 16469 expanded, t=1.73s]
+f = 603 [72093 evaluated, 16739 expanded, t=1.75s]
+f = 606 [72493 evaluated, 16819 expanded, t=1.75s]
+f = 609 [72618 evaluated, 16940 expanded, t=1.76s]
+f = 611 [72893 evaluated, 17298 expanded, t=1.84s]
+f = 612 [73073 evaluated, 17898 expanded, t=1.87s]
+f = 613 [73073 evaluated, 17906 expanded, t=1.87s]
+f = 616 [74845 evaluated, 18302 expanded, t=1.91s]
+f = 619 [75261 evaluated, 18614 expanded, t=1.92s]
+f = 621 [75825 evaluated, 19414 expanded, t=2.01s]
+f = 622 [76125 evaluated, 20358 expanded, t=2.06s]
+f = 623 [76125 evaluated, 20402 expanded, t=2.06s]
+f = 626 [79661 evaluated, 21246 expanded, t=2.11s]
+f = 629 [80469 evaluated, 21910 expanded, t=2.12s]
+f = 630 [81365 evaluated, 23190 expanded, t=2.21s]
+f = 631 [81365 evaluated, 23191 expanded, t=2.23s]
+f = 632 [81869 evaluated, 24703 expanded, t=2.29s]
+f = 633 [81869 evaluated, 24803 expanded, t=2.29s]
+f = 636 [87427 evaluated, 26147 expanded, t=2.37s]
+f = 638 [88835 evaluated, 27243 expanded, t=2.4s]
+f = 639 [88835 evaluated, 27244 expanded, t=2.4s]
+f = 640 [90137 evaluated, 29204 expanded, t=2.47s]
+f = 641 [90137 evaluated, 29214 expanded, t=2.48s]
+f = 642 [90809 evaluated, 31118 expanded, t=2.57s]
+f = 643 [90809 evaluated, 31286 expanded, t=2.57s]
+f = 646 [97711 evaluated, 32966 expanded, t=2.64s]
+f = 648 [99657 evaluated, 34686 expanded, t=2.74s]
+f = 649 [99657 evaluated, 34696 expanded, t=2.74s]
+f = 650 [101323 evaluated, 37188 expanded, t=2.82s]
+f = 651 [101323 evaluated, 37214 expanded, t=2.84s]
+f = 652 [102205 evaluated, 39566 expanded, t=2.92s]
+f = 653 [102205 evaluated, 39790 expanded, t=2.92s]
+f = 656 [110591 evaluated, 41848 expanded, t=3.02s]
+f = 658 [113251 evaluated, 44102 expanded, t=3.06s]
+f = 659 [113251 evaluated, 44128 expanded, t=3.06s]
+f = 660 [115225 evaluated, 47124 expanded, t=3.13s]
+f = 661 [115225 evaluated, 47184 expanded, t=3.15s]
+f = 662 [116191 evaluated, 49620 expanded, t=3.25s]
+f = 663 [116191 evaluated, 49914 expanded, t=3.25s]
+f = 666 [124759 evaluated, 52028 expanded, t=3.35s]
+f = 668 [127811 evaluated, 54870 expanded, t=3.39s]
+f = 669 [127811 evaluated, 54930 expanded, t=3.39s]
+f = 670 [129883 evaluated, 58038 expanded, t=3.45s]
+f = 671 [129883 evaluated, 58138 expanded, t=3.48s]
+f = 672 [130891 evaluated, 60490 expanded, t=3.57s]
+f = 673 [130891 evaluated, 60812 expanded, t=3.57s]
+f = 676 [139011 evaluated, 62828 expanded, t=3.65s]
+f = 678 [142315 evaluated, 65810 expanded, t=3.7s]
+f = 679 [142315 evaluated, 65910 expanded, t=3.7s]
+f = 680 [144331 evaluated, 68878 expanded, t=3.75s]
+f = 681 [144331 evaluated, 69046 expanded, t=3.78s]
+f = 682 [145255 evaluated, 71090 expanded, t=3.86s]
+f = 683 [145255 evaluated, 71426 expanded, t=3.87s]
+f = 686 [152213 evaluated, 73162 expanded, t=3.94s]
+f = 688 [155419 evaluated, 76032 expanded, t=3.98s]
+f = 689 [155419 evaluated, 76200 expanded, t=3.98s]
+f = 690 [157169 evaluated, 78748 expanded, t=4.02s]
+f = 691 [157169 evaluated, 78972 expanded, t=4.05s]
+f = 692 [157925 evaluated, 80484 expanded, t=4.1s]
+f = 693 [157925 evaluated, 80792 expanded, t=4.1s]
+f = 696 [162945 evaluated, 82052 expanded, t=4.16s]
+f = 698 [165689 evaluated, 84516 expanded, t=4.21s]
+f = 699 [165689 evaluated, 84740 expanded, t=4.21s]
+f = 700 [167221 evaluated, 87012 expanded, t=4.23s]
+f = 701 [167221 evaluated, 87306 expanded, t=4.25s]
+f = 702 [167809 evaluated, 89074 expanded, t=4.27s]
+f = 703 [167809 evaluated, 89326 expanded, t=4.27s]
+f = 706 [171473 evaluated, 90250 expanded, t=4.3s]
+f = 708 [174529 evaluated, 92792 expanded, t=4.32s]
+f = 709 [174529 evaluated, 93408 expanded, t=4.33s]
+f = 710 [175697 evaluated, 94984 expanded, t=4.34s]
+f = 711 [175697 evaluated, 95306 expanded, t=4.36s]
+f = 712 [176057 evaluated, 96066 expanded, t=4.37s]
+f = 713 [176057 evaluated, 96122 expanded, t=4.37s]
+f = 715 [177946 evaluated, 96602 expanded, t=4.39s]
+f = 716 [177946 evaluated, 96603 expanded, t=4.39s]
+f = 718 [179414 evaluated, 98363 expanded, t=4.4s]
+f = 719 [179414 evaluated, 98700 expanded, t=4.4s]
+f = 720 [180044 evaluated, 99456 expanded, t=4.42s]
+f = 721 [180044 evaluated, 99793 expanded, t=4.42s]
+f = 723 [180284 evaluated, 100225 expanded, t=4.43s]
+f = 725 [181475 evaluated, 100529 expanded, t=4.44s]
+f = 726 [181475 evaluated, 100539 expanded, t=4.44s]
+f = 728 [182255 evaluated, 101609 expanded, t=4.45s]
+f = 729 [182255 evaluated, 101938 expanded, t=4.45s]
+f = 730 [182669 evaluated, 102418 expanded, t=4.46s]
+f = 731 [182669 evaluated, 102747 expanded, t=4.46s]
+f = 733 [182765 evaluated, 102907 expanded, t=4.47s]
+f = 735 [183137 evaluated, 103003 expanded, t=4.47s]
+f = 736 [183137 evaluated, 103029 expanded, t=4.47s]
+f = 738 [183661 evaluated, 103775 expanded, t=4.48s]
+f = 739 [183661 evaluated, 104121 expanded, t=4.48s]
+f = 740 [183829 evaluated, 104281 expanded, t=4.48s]
+f = 741 [183829 evaluated, 104627 expanded, t=4.48s]
+f = 743 [183877 evaluated, 104691 expanded, t=4.48s]
+f = 745 [184063 evaluated, 104739 expanded, t=4.49s]
+f = 746 [184103 evaluated, 104810 expanded, t=4.49s]
+f = 748 [184279 evaluated, 105174 expanded, t=4.49s]
+f = 749 [184279 evaluated, 105554 expanded, t=4.49s]
+f = 750 [184363 evaluated, 105634 expanded, t=4.49s]
+f = 755 [184363 evaluated, 105818 expanded, t=4.5s]
+f = 756 [184724 evaluated, 106018 expanded, t=4.5s]
+f = 758 [184812 evaluated, 106222 expanded, t=4.5s]
+f = 760 [184812 evaluated, 106694 expanded, t=4.51s]
+f = 761 [184812 evaluated, 107046 expanded, t=4.51s]
+f = 765 [184852 evaluated, 107057 expanded, t=4.51s]
+f = 766 [185733 evaluated, 107469 expanded, t=4.52s]
+f = 768 [185733 evaluated, 107549 expanded, t=4.54s]
+f = 770 [185733 evaluated, 108189 expanded, t=4.54s]
+f = 771 [185733 evaluated, 108666 expanded, t=4.54s]
+f = 775 [186094 evaluated, 108766 expanded, t=4.55s]
+f = 776 [188070 evaluated, 109541 expanded, t=4.58s]
+f = 778 [188070 evaluated, 109573 expanded, t=4.59s]
+f = 780 [188070 evaluated, 110348 expanded, t=4.59s]
+f = 781 [188070 evaluated, 111044 expanded, t=4.6s]
+f = 782 [188951 evaluated, 111288 expanded, t=4.61s]
+f = 785 [189151 evaluated, 111412 expanded, t=4.61s]
+f = 786 [192950 evaluated, 112759 expanded, t=4.67s]
+f = 788 [192950 evaluated, 112775 expanded, t=4.7s]
+f = 790 [192950 evaluated, 113614 expanded, t=4.71s]
+f = 791 [192950 evaluated, 114424 expanded, t=4.72s]
+f = 792 [194886 evaluated, 114964 expanded, t=4.75s]
+f = 795 [195746 evaluated, 115544 expanded, t=4.76s]
+f = 798 [203751 evaluated, 118058 expanded, t=5.04s]
+f = 800 [203751 evaluated, 118946 expanded, t=5.05s]
+f = 801 [203751 evaluated, 119874 expanded, t=5.05s]
+f = 802 [206763 evaluated, 120718 expanded, t=5.09s]
+f = 805 [208435 evaluated, 121914 expanded, t=5.11s]
+f = 808 [220407 evaluated, 125522 expanded, t=5.31s]
+f = 810 [220407 evaluated, 126386 expanded, t=5.33s]
+f = 811 [220407 evaluated, 127340 expanded, t=5.34s]
+f = 812 [225167 evaluated, 128684 expanded, t=5.41s]
+f = 815 [227687 evaluated, 130546 expanded, t=5.43s]
+f = 818 [245651 evaluated, 135744 expanded, t=5.7s]
+f = 820 [245651 evaluated, 136472 expanded, t=5.72s]
+f = 821 [245651 evaluated, 137368 expanded, t=5.73s]
+f = 822 [251559 evaluated, 139048 expanded, t=5.81s]
+f = 825 [254555 evaluated, 141330 expanded, t=5.84s]
+f = 828 [275709 evaluated, 147364 expanded, t=6.17s]
+f = 830 [275709 evaluated, 147980 expanded, t=6.23s]
+f = 831 [275709 evaluated, 148820 expanded, t=6.23s]
+f = 832 [282877 evaluated, 150878 expanded, t=6.33s]
+f = 835 [286447 evaluated, 153636 expanded, t=6.37s]
+f = 836 [311633 evaluated, 160510 expanded, t=6.67s]
+f = 837 [312153 evaluated, 161002 expanded, t=6.68s]
+f = 838 [313581 evaluated, 162766 expanded, t=6.7s]
+f = 840 [313581 evaluated, 163222 expanded, t=6.7s]
+f = 841 [313721 evaluated, 164112 expanded, t=6.82s]
+f = 842 [321015 evaluated, 166226 expanded, t=6.93s]
+f = 845 [324655 evaluated, 169040 expanded, t=6.96s]
+f = 846 [350345 evaluated, 176348 expanded, t=7.26s]
+f = 847 [351335 evaluated, 177560 expanded, t=7.27s]
+f = 848 [353009 evaluated, 179198 expanded, t=7.3s]
+f = 850 [353009 evaluated, 179538 expanded, t=7.3s]
+f = 851 [354873 evaluated, 183450 expanded, t=7.33s]
+f = 852 [361733 evaluated, 185466 expanded, t=7.42s]
+f = 855 [364289 evaluated, 186838 expanded, t=7.43s]
+f = 856 [388821 evaluated, 194079 expanded, t=7.72s]
+f = 857 [390265 evaluated, 195487 expanded, t=7.73s]
+f = 858 [392221 evaluated, 196965 expanded, t=7.75s]
+f = 860 [392221 evaluated, 197130 expanded, t=7.75s]
+f = 861 [396117 evaluated, 202413 expanded, t=8.05s]
+f = 862 [402347 evaluated, 204485 expanded, t=8.13s]
+f = 865 [403383 evaluated, 204989 expanded, t=8.13s]
+f = 866 [425125 evaluated, 211107 expanded, t=8.38s]
+f = 867 [426973 evaluated, 213221 expanded, t=8.39s]
+f = 868 [428418 evaluated, 214257 expanded, t=8.4s]
+f = 870 [428418 evaluated, 214360 expanded, t=8.41s]
+f = 871 [433300 evaluated, 220715 expanded, t=8.45s]
+f = 872 [438116 evaluated, 222143 expanded, t=8.51s]
+f = 875 [438873 evaluated, 222403 expanded, t=8.52s]
+f = 876 [454697 evaluated, 227336 expanded, t=8.7s]
+f = 877 [456821 evaluated, 229566 expanded, t=8.71s]
+f = 878 [457604 evaluated, 230127 expanded, t=8.72s]
+f = 880 [457604 evaluated, 230155 expanded, t=8.72s]
+f = 881 [462770 evaluated, 237211 expanded, t=8.78s]
+f = 884 [466270 evaluated, 238387 expanded, t=8.82s]
+f = 885 [466294 evaluated, 238395 expanded, t=8.83s]
+f = 886 [478790 evaluated, 241874 expanded, t=8.95s]
+f = 887 [481022 evaluated, 244568 expanded, t=8.97s]
+f = 888 [481493 evaluated, 244887 expanded, t=8.99s]
+f = 889 [481493 evaluated, 244897 expanded, t=8.99s]
+f = 890 [481493 evaluated, 244905 expanded, t=8.99s]
+f = 891 [486720 evaluated, 251957 expanded, t=9.05s]
+f = 894 [488502 evaluated, 252662 expanded, t=9.08s]
+f = 895 [488634 evaluated, 252706 expanded, t=9.09s]
+f = 896 [495466 evaluated, 254954 expanded, t=9.15s]
+f = 897 [497600 evaluated, 257494 expanded, t=9.17s]
+f = 898 [497776 evaluated, 257606 expanded, t=9.17s]
+f = 899 [497809 evaluated, 257617 expanded, t=9.21s]
+f = 900 [497809 evaluated, 257619 expanded, t=9.21s]
+f = 901 [502375 evaluated, 264095 expanded, t=9.25s]
+f = 904 [503503 evaluated, 264494 expanded, t=9.27s]
+f = 905 [503803 evaluated, 264650 expanded, t=9.3s]
+f = 906 [508084 evaluated, 265873 expanded, t=9.34s]
+f = 907 [510150 evaluated, 268967 expanded, t=9.37s]
+f = 908 [510214 evaluated, 269009 expanded, t=9.37s]
+f = 909 [510418 evaluated, 269077 expanded, t=9.41s]
+f = 910 [510418 evaluated, 269151 expanded, t=9.41s]
+f = 911 [514217 evaluated, 274729 expanded, t=9.46s]
+f = 915 [514573 evaluated, 275125 expanded, t=9.52s]
+f = 916 [516296 evaluated, 275742 expanded, t=9.55s]
+f = 917 [517264 evaluated, 277976 expanded, t=9.56s]
+f = 919 [517280 evaluated, 278002 expanded, t=9.64s]
+f = 920 [517280 evaluated, 278060 expanded, t=9.64s]
+f = 921 [518515 evaluated, 281607 expanded, t=9.67s]
+f = 924 [518694 evaluated, 281673 expanded, t=9.75s]
+f = 925 [518724 evaluated, 281861 expanded, t=9.76s]
+f = 926 [519499 evaluated, 282163 expanded, t=9.78s]
+f = 927 [520467 evaluated, 284383 expanded, t=9.81s]
+f = 929 [520470 evaluated, 284518 expanded, t=9.93s]
+f = 930 [520470 evaluated, 284904 expanded, t=9.95s]
+f = 931 [521149 evaluated, 285230 expanded, t=10s]
+f = 933 [521437 evaluated, 285598 expanded, t=10.02s]
+f = 934 [521437 evaluated, 285616 expanded, t=10.1s]
+f = 935 [521620 evaluated, 285880 expanded, t=10.11s]
+f = 936 [521798 evaluated, 285988 expanded, t=10.12s]
+f = 937 [522683 evaluated, 288173 expanded, t=10.16s]
+f = 939 [522710 evaluated, 288500 expanded, t=10.3s]
+f = 940 [522710 evaluated, 288944 expanded, t=10.31s]
+f = 941 [522878 evaluated, 289255 expanded, t=10.35s]
+f = 943 [524294 evaluated, 289695 expanded, t=10.37s]
+f = 944 [524295 evaluated, 289901 expanded, t=10.47s]
+f = 945 [524671 evaluated, 290533 expanded, t=10.48s]
+f = 946 [524671 evaluated, 290917 expanded, t=10.49s]
+f = 947 [525637 evaluated, 293298 expanded, t=10.52s]
+f = 949 [525973 evaluated, 294068 expanded, t=10.7s]
+f = 950 [525973 evaluated, 295372 expanded, t=10.71s]
+f = 951 [525975 evaluated, 295544 expanded, t=10.72s]
+f = 953 [528987 evaluated, 296656 expanded, t=10.76s]
+f = 954 [528996 evaluated, 297334 expanded, t=10.88s]
+f = 955 [529724 evaluated, 298416 expanded, t=10.88s]
+f = 956 [529724 evaluated, 298768 expanded, t=10.9s]
+f = 957 [530732 evaluated, 300963 expanded, t=10.93s]
+f = 959 [532393 evaluated, 302745 expanded, t=11.15s]
+f = 960 [532393 evaluated, 304641 expanded, t=11.16s]
+f = 961 [532763 evaluated, 305283 expanded, t=11.17s]
+f = 963 [537811 evaluated, 306707 expanded, t=11.23s]
+f = 964 [537827 evaluated, 307975 expanded, t=11.33s]
+f = 965 [538904 evaluated, 309622 expanded, t=11.34s]
+f = 966 [538904 evaluated, 310574 expanded, t=11.36s]
+f = 967 [539828 evaluated, 312442 expanded, t=11.39s]
+f = 969 [543243 evaluated, 316183 expanded, t=11.63s]
+f = 970 [543243 evaluated, 318043 expanded, t=11.73s]
+f = 971 [543403 evaluated, 318307 expanded, t=11.73s]
+f = 973 [553411 evaluated, 321011 expanded, t=11.86s]
+f = 974 [553747 evaluated, 323267 expanded, t=11.96s]
+f = 975 [554526 evaluated, 325237 expanded, t=12.01s]
+f = 976 [554526 evaluated, 325909 expanded, t=12.06s]
+f = 977 [555282 evaluated, 326833 expanded, t=12.09s]
+f = 978 [560452 evaluated, 331389 expanded, t=12.2s]
+f = 979 [561324 evaluated, 331597 expanded, t=12.37s]
+f = 980 [561324 evaluated, 335645 expanded, t=12.52s]
+f = 981 [561604 evaluated, 335925 expanded, t=12.52s]
+f = 983 [577440 evaluated, 340143 expanded, t=12.68s]
+f = 984 [577888 evaluated, 343223 expanded, t=12.72s]
+f = 985 [579686 evaluated, 345021 expanded, t=12.82s]
+f = 986 [579686 evaluated, 346197 expanded, t=12.88s]
+f = 987 [580274 evaluated, 347289 expanded, t=12.92s]
+f = 988 [586532 evaluated, 354879 expanded, t=13.06s]
+f = 989 [589024 evaluated, 355523 expanded, t=13.23s]
+f = 990 [589024 evaluated, 360815 expanded, t=13.39s]
+f = 991 [589206 evaluated, 361235 expanded, t=13.39s]
+f = 993 [610542 evaluated, 367199 expanded, t=13.63s]
+f = 994 [611130 evaluated, 371007 expanded, t=13.67s]
+f = 995 [612250 evaluated, 371693 expanded, t=13.74s]
+f = 996 [612250 evaluated, 373457 expanded, t=13.79s]
+f = 997 [612610 evaluated, 374161 expanded, t=13.81s]
+f = 998 [620142 evaluated, 383683 expanded, t=13.96s]
+f = 999 [622634 evaluated, 384411 expanded, t=14.1s]
+f = 1000 [622634 evaluated, 390725 expanded, t=14.28s]
+f = 1001 [622774 evaluated, 390879 expanded, t=14.28s]
+f = 1003 [646224 evaluated, 397515 expanded, t=14.52s]
+f = 1004 [646868 evaluated, 402093 expanded, t=14.54s]
+f = 1005 [646868 evaluated, 402513 expanded, t=14.59s]
+f = 1006 [646868 evaluated, 404865 expanded, t=14.6s]
+f = 1007 [647108 evaluated, 405654 expanded, t=14.61s]
+f = 1008 [654822 evaluated, 417566 expanded, t=14.74s]
+f = 1009 [659134 evaluated, 418799 expanded, t=14.87s]
+f = 1010 [659134 evaluated, 427143 expanded, t=14.91s]
+f = 1011 [659134 evaluated, 427311 expanded, t=14.91s]
+f = 1012 [686336 evaluated, 434907 expanded, t=15.19s]
+f = 1013 [686336 evaluated, 435173 expanded, t=15.19s]
+f = 1014 [687008 evaluated, 439849 expanded, t=15.22s]
+f = 1015 [687008 evaluated, 440452 expanded, t=15.24s]
+f = 1016 [687008 evaluated, 442104 expanded, t=15.26s]
+f = 1017 [687104 evaluated, 442342 expanded, t=15.26s]
+f = 1018 [694328 evaluated, 453108 expanded, t=15.38s]
+f = 1019 [698640 evaluated, 454503 expanded, t=15.49s]
+f = 1020 [698640 evaluated, 460915 expanded, t=15.52s]
+f = 1021 [698640 evaluated, 461139 expanded, t=15.52s]
+f = 1022 [720774 evaluated, 467327 expanded, t=15.74s]
+f = 1023 [720774 evaluated, 467593 expanded, t=15.74s]
+f = 1024 [721390 evaluated, 471891 expanded, t=15.76s]
+f = 1025 [721390 evaluated, 472238 expanded, t=15.78s]
+f = 1026 [721390 evaluated, 473470 expanded, t=15.79s]
+f = 1027 [721438 evaluated, 473795 expanded, t=15.79s]
+f = 1028 [727612 evaluated, 483460 expanded, t=15.89s]
+f = 1029 [732162 evaluated, 485006 expanded, t=15.97s]
+f = 1031 [732162 evaluated, 490294 expanded, t=16s]
+f = 1032 [754870 evaluated, 496636 expanded, t=16.22s]
+f = 1033 [754870 evaluated, 496874 expanded, t=16.22s]
+f = 1034 [755374 evaluated, 500304 expanded, t=16.24s]
+f = 1035 [755374 evaluated, 500654 expanded, t=16.26s]
+f = 1036 [755374 evaluated, 501606 expanded, t=16.26s]
+f = 1037 [755374 evaluated, 501914 expanded, t=16.26s]
+f = 1038 [760058 evaluated, 510156 expanded, t=16.34s]
+f = 1039 [764608 evaluated, 511721 expanded, t=16.41s]
+f = 1040 [764608 evaluated, 515617 expanded, t=16.43s]
+f = 1041 [764608 evaluated, 515625 expanded, t=16.43s]
+f = 1042 [778635 evaluated, 519633 expanded, t=16.57s]
+f = 1043 [778635 evaluated, 519871 expanded, t=16.57s]
+f = 1044 [779027 evaluated, 522391 expanded, t=16.59s]
+f = 1045 [779027 evaluated, 522629 expanded, t=16.6s]
+f = 1046 [779027 evaluated, 523325 expanded, t=16.6s]
+f = 1047 [779027 evaluated, 523787 expanded, t=16.6s]
+f = 1048 [782246 evaluated, 529559 expanded, t=16.66s]
+f = 1049 [785214 evaluated, 530844 expanded, t=16.69s]
+f = 1051 [785270 evaluated, 533856 expanded, t=16.72s]
+f = 1052 [798022 evaluated, 537471 expanded, t=17.41s]
+f = 1053 [798022 evaluated, 537611 expanded, t=17.42s]
+f = 1054 [798262 evaluated, 539199 expanded, t=17.42s]
+f = 1055 [798262 evaluated, 539355 expanded, t=17.43s]
+f = 1056 [798262 evaluated, 539759 expanded, t=17.44s]
+f = 1057 [798262 evaluated, 540249 expanded, t=17.44s]
+f = 1058 [800204 evaluated, 544432 expanded, t=17.47s]
+f = 1059 [803200 evaluated, 545236 expanded, t=17.5s]
+f = 1060 [803288 evaluated, 546968 expanded, t=17.52s]
+f = 1061 [803504 evaluated, 547488 expanded, t=17.52s]
+f = 1062 [809484 evaluated, 549232 expanded, t=17.57s]
+f = 1063 [809484 evaluated, 549344 expanded, t=17.57s]
+f = 1064 [809644 evaluated, 550260 expanded, t=17.58s]
+f = 1065 [810876 evaluated, 552590 expanded, t=17.59s]
+f = 1066 [810932 evaluated, 552899 expanded, t=17.59s]
+f = 1067 [810932 evaluated, 553697 expanded, t=17.6s]
+f = 1068 [812300 evaluated, 555974 expanded, t=17.62s]
+f = 1069 [813500 evaluated, 556292 expanded, t=17.63s]
+f = 1070 [813998 evaluated, 557573 expanded, t=17.65s]
+f = 1071 [814338 evaluated, 558029 expanded, t=17.65s]
+f = 1073 [818941 evaluated, 559343 expanded, t=17.69s]
+f = 1074 [818953 evaluated, 559791 expanded, t=17.69s]
+f = 1075 [820017 evaluated, 561603 expanded, t=17.71s]
+f = 1076 [820633 evaluated, 561994 expanded, t=17.71s]
+f = 1077 [820633 evaluated, 562933 expanded, t=17.72s]
+f = 1078 [821043 evaluated, 564218 expanded, t=17.73s]
+f = 1079 [822243 evaluated, 564528 expanded, t=17.73s]
+f = 1080 [822959 evaluated, 565310 expanded, t=17.75s]
+f = 1081 [823231 evaluated, 565661 expanded, t=17.75s]
+f = 1083 [824833 evaluated, 566138 expanded, t=17.77s]
+f = 1084 [824849 evaluated, 566322 expanded, t=17.77s]
+f = 1085 [825653 evaluated, 567557 expanded, t=17.77s]
+f = 1086 [825831 evaluated, 567834 expanded, t=17.79s]
+f = 1087 [825831 evaluated, 568620 expanded, t=17.79s]
+f = 1088 [826038 evaluated, 569120 expanded, t=17.79s]
+f = 1089 [826311 evaluated, 569212 expanded, t=17.79s]
+f = 1090 [826939 evaluated, 569571 expanded, t=17.81s]
+f = 1091 [827011 evaluated, 569655 expanded, t=17.81s]
+f = 1093 [827845 evaluated, 569905 expanded, t=17.83s]
+f = 1094 [827845 evaluated, 569951 expanded, t=17.83s]
+f = 1095 [828167 evaluated, 570420 expanded, t=17.83s]
+f = 1096 [828531 evaluated, 570961 expanded, t=17.83s]
+f = 1097 [828559 evaluated, 571793 expanded, t=17.84s]
+f = 1098 [828598 evaluated, 572001 expanded, t=17.84s]
+f = 1099 [828847 evaluated, 572150 expanded, t=17.84s]
+f = 1100 [829019 evaluated, 572281 expanded, t=17.85s]
+f = 1101 [829115 evaluated, 572491 expanded, t=17.85s]
+f = 1102 [829301 evaluated, 572565 expanded, t=17.85s]
+f = 1104 [829301 evaluated, 572573 expanded, t=17.85s]
+f = 1105 [829499 evaluated, 572814 expanded, t=17.85s]
+f = 1106 [830087 evaluated, 573402 expanded, t=17.86s]
+f = 1107 [830087 evaluated, 573912 expanded, t=17.86s]
+f = 1108 [830087 evaluated, 573948 expanded, t=17.86s]
+f = 1109 [830087 evaluated, 574072 expanded, t=17.86s]
+f = 1110 [830219 evaluated, 574153 expanded, t=17.87s]
+f = 1111 [830219 evaluated, 574209 expanded, t=17.87s]
+f = 1112 [830451 evaluated, 574501 expanded, t=17.87s]
+f = 1113 [830451 evaluated, 574529 expanded, t=17.88s]
+f = 1114 [830843 evaluated, 574638 expanded, t=17.88s]
+f = 1115 [830883 evaluated, 574688 expanded, t=17.88s]
+f = 1116 [832011 evaluated, 576060 expanded, t=17.89s]
+f = 1118 [832067 evaluated, 576728 expanded, t=17.89s]
+f = 1119 [832067 evaluated, 576980 expanded, t=17.89s]
+f = 1120 [832079 evaluated, 576992 expanded, t=17.89s]
+f = 1121 [832149 evaluated, 577272 expanded, t=17.89s]
+f = 1122 [832725 evaluated, 577820 expanded, 56 reopened, t=17.9s]
+f = 1123 [832725 evaluated, 577948 expanded, 56 reopened, t=17.9s]
+f = 1124 [834877 evaluated, 578552 expanded, 56 reopened, t=17.93s]
+f = 1125 [834877 evaluated, 578580 expanded, 56 reopened, t=17.93s]
+f = 1126 [836681 evaluated, 580646 expanded, 56 reopened, t=17.94s]
+f = 1128 [836681 evaluated, 581186 expanded, 56 reopened, t=17.94s]
+f = 1129 [836681 evaluated, 581614 expanded, 56 reopened, t=17.95s]
+f = 1130 [837083 evaluated, 581733 expanded, 56 reopened, t=17.95s]
+f = 1131 [837083 evaluated, 581901 expanded, 56 reopened, t=17.95s]
+f = 1132 [838201 evaluated, 583177 expanded, 56 reopened, t=17.96s]
+f = 1133 [838273 evaluated, 583565 expanded, 140 reopened, t=17.96s]
+f = 1134 [842021 evaluated, 584617 expanded, 140 reopened, t=18.01s]
+f = 1135 [842021 evaluated, 584645 expanded, 140 reopened, t=18.01s]
+f = 1136 [844921 evaluated, 587727 expanded, 140 reopened, t=18.04s]
+f = 1138 [844991 evaluated, 589037 expanded, 140 reopened, t=18.04s]
+f = 1139 [845047 evaluated, 589731 expanded, 140 reopened, t=18.04s]
+f = 1140 [847199 evaluated, 590335 expanded, 140 reopened, t=18.07s]
+f = 1141 [847255 evaluated, 590895 expanded, 140 reopened, t=18.08s]
+f = 1142 [848839 evaluated, 592373 expanded, 140 reopened, t=18.09s]
+f = 1143 [849091 evaluated, 592989 expanded, 252 reopened, t=18.1s]
+f = 1144 [856484 evaluated, 595142 expanded, 252 reopened, t=18.19s]
+f = 1145 [856484 evaluated, 595198 expanded, 252 reopened, t=18.19s]
+f = 1146 [860472 evaluated, 600332 expanded, 252 reopened, t=18.22s]
+f = 1148 [860472 evaluated, 601359 expanded, 252 reopened, t=18.23s]
+f = 1149 [860544 evaluated, 602203 expanded, 252 reopened, t=18.23s]
+f = 1150 [864292 evaluated, 603255 expanded, 252 reopened, t=18.28s]
+f = 1151 [864300 evaluated, 603803 expanded, 252 reopened, t=18.28s]
+f = 1152 [866148 evaluated, 605917 expanded, 252 reopened, t=18.3s]
+f = 1153 [866408 evaluated, 606443 expanded, 322 reopened, t=18.31s]
+f = 1154 [876716 evaluated, 609371 expanded, 322 reopened, t=18.44s]
+f = 1155 [876716 evaluated, 609427 expanded, 322 reopened, t=18.44s]
+f = 1156 [881478 evaluated, 615399 expanded, 322 reopened, t=18.48s]
+f = 1158 [881534 evaluated, 616362 expanded, 322 reopened, t=18.49s]
+f = 1159 [881654 evaluated, 617548 expanded, 322 reopened, t=18.49s]
+f = 1160 [888654 evaluated, 619592 expanded, 322 reopened, t=18.58s]
+Solution found!
+Actual search time: 18.58s [t=18.58s]
+pick_up helicopter1 crate10 depot (10)
+move helicopter1 depot loc1 (172)
+give helicopter1 crate10 person1 loc1 medicine_crate (10)
+move helicopter1 loc1 depot (172)
+pick_up helicopter1 crate3 depot (10)
+give helicopter1 crate3 person5 depot medicine_crate (10)
+pick_up helicopter1 crate1 depot (10)
+give helicopter1 crate1 person5 depot food_crate (10)
+pick_up helicopter1 crate2 depot (10)
+move helicopter1 depot loc2 (179)
+give helicopter1 crate2 person2 loc2 food_crate (10)
+move helicopter1 loc2 depot (179)
+pick_up helicopter1 crate4 depot (10)
+move helicopter1 depot loc2 (179)
+give helicopter1 crate4 person4 loc2 medicine_crate (10)
+move helicopter1 loc2 depot (179)
+Plan length: 16 step(s).
+Plan cost: 1160
+Expanded 619593 state(s).
+Reopened 322 state(s).
+Evaluated 888654 state(s).
+Evaluations: 1323855
+Generated 3354106 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 619592 state(s).
+Reopened until last jump: 322 state(s).
+Evaluated until last jump: 888654 state(s).
+Generated until last jump: 3354106 state(s).
+Search space hash size: 888654
+Search space hash bucket count: 1572869
+Number of evaluations (h0): 888654
+Number of evaluations (h1): 435201
+Time spent on (h0): 2.84396s
+Time spent on (h1): 10.3104s
+RLA_compute_decisions: 435201
+RLA_skip_decisions: 217167
+Search time: 18.58s
+Total time: 18.58s
+Peak memory: 213296 KB
+

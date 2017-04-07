@@ -1,0 +1,105 @@
+begin_groups
+22
+group
+3
+6 1 contains 2 r c4 
+6 2 contains 2 h c4 
+14 0 at 2 c4 depot 
+group
+3
+5 0 contains 2 r c3 
+5 1 contains 2 h c3 
+8 0 at 2 c3 depot 
+group
+1
+8 0 at 2 c3 depot 
+group
+5
+1 1 at 2 h depot 
+1 0 at 2 h l1 
+1 4 at 2 h l2 
+1 3 at 2 h l3 
+1 2 at 2 h l4 
+group
+5
+2 1 nb_loaded_crates 2 r n0 
+2 3 nb_loaded_crates 2 r n1 
+2 2 nb_loaded_crates 2 r n2 
+2 0 nb_loaded_crates 2 r n3 
+2 4 nb_loaded_crates 2 r n4 
+group
+3
+6 0 can_be_taken 1 c4 
+6 1 contains 2 r c4 
+6 2 contains 2 h c4 
+group
+3
+5 2 can_be_taken 1 c3 
+5 0 contains 2 r c3 
+5 1 contains 2 h c3 
+group
+5
+1 1 at 2 h depot 
+1 0 at 2 h l1 
+1 4 at 2 h l2 
+1 3 at 2 h l3 
+1 2 at 2 h l4 
+group
+3
+15 0 can_be_taken 1 c1 
+4 2 contains 2 r c1 
+4 1 contains 2 h c1 
+group
+1
+4 0 at 2 c1 depot 
+group
+3
+3 2 contains 2 r c2 
+3 0 contains 2 h c2 
+12 0 at 2 c2 depot 
+group
+5
+0 2 at 2 r depot 
+0 4 at 2 r l1 
+0 1 at 2 r l2 
+0 0 at 2 r l3 
+0 3 at 2 r l4 
+group
+5
+0 2 at 2 r depot 
+0 4 at 2 r l1 
+0 1 at 2 r l2 
+0 0 at 2 r l3 
+0 3 at 2 r l4 
+group
+1
+14 0 at 2 c4 depot 
+group
+3
+4 2 contains 2 r c1 
+4 1 contains 2 h c1 
+4 0 at 2 c1 depot 
+group
+1
+12 0 at 2 c2 depot 
+group
+3
+3 1 can_be_taken 1 c2 
+3 2 contains 2 r c2 
+3 0 contains 2 h c2 
+group
+1
+7 0 has_crate 2 p2 food_crate 
+group
+1
+9 0 has_crate 2 p3 food_crate 
+group
+1
+10 0 empty 1 h 
+group
+1
+11 0 has_crate 2 p1 food_crate 
+group
+1
+13 0 has_crate 2 p4 food_crate 
+end_groups

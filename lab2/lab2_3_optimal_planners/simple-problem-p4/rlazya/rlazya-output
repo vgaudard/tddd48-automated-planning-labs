@@ -1,0 +1,185 @@
+1. Running translator
+Second argument is a file name: use two translator arguments.
+Parsing...
+Parsing: [0.010s CPU, 0.004s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.010s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 59 rules.
+Computing model... [0.000s CPU, 0.008s wall-clock]
+357 relevant atoms
+343 auxiliary atoms
+700 final queue length
+1203 total queue pushes
+Completing instantiation... [0.020s CPU, 0.012s wall-clock]
+Instantiating: [0.030s CPU, 0.032s wall-clock]
+Computing fact groups...
+Finding invariants...
+16 initial candidates
+Finding invariants: [0.000s CPU, 0.006s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+13 uncovered facts
+Choosing groups: [0.010s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.008s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.001s wall-clock]
+Translating task: [0.010s CPU, 0.012s wall-clock]
+0 implied effects removed
+88 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+15 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.002s wall-clock]
+Translator variables: 16
+Translator derived variables: 0
+Translator facts: 45
+Translator mutex groups: 13
+Translator total mutex groups size: 49
+Translator operators: 220
+Translator task size: 1783
+Translator peak memory: 41636 KB
+Writing output... [0.000s CPU, 0.011s wall-clock]
+Done! [0.060s CPU, 0.071s wall-clock]
+
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+16 variables of 16 necessary
+4 of 13 mutex groups necessary.
+220 of 220 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor facts: 45
+Preprocessor derived variables: 0
+Preprocessor task size: 1746
+Writing output...
+done
+
+
+3. Running search
+Dispatcher selected state size 1.
+This is a nonunit task.
+Conditional effects: 0
+Simplifying transitions... done!
+Initializing Exploration...
+Initializing Exploration...
+H_m_Landmarks(1)
+Using 45 P^m fluents.
+Level 1 completed.
+Level 2 completed.
+Level 3 completed.
+Level 4 completed.
+Level 5 completed.
+Level 6 completed.
+h^m landmarks computed.
+Removed 0 reasonable or obedient reasonable orders
+Calculating achievers.
+Landmarks generation time: 0.000896172s
+Discovered 10 landmarks, of which 0 are disjunctive and 0 are conjunctive 
+12 edges
+Initializing Exploration...
+Generating landmarks using the RPG/SAS+ approach
+Switch from bucket-based to heap-based queue at key = 100, num_pushes = 16
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.0013364s
+Discovered 15 landmarks, of which 1 are disjunctive and 0 are conjunctive 
+18 edges
+Initializing Exploration...
+Merging 2 landmark graphs
+Adding simple landmarks
+Adding disjunctive landmarks
+Adding orderings
+Removed 0 reasonable or obedient reasonable orders
+Switch from bucket-based to heap-based queue at key = 100, num_pushes = 16
+Landmarks generation time: 0.000558382s
+Discovered 15 landmarks, of which 1 are disjunctive and 0 are conjunctive 
+22 edges
+Initializing landmarks count heuristic...
+6 initial landmarks, 5 goal landmarks
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+Using iterated heuristic computation with 2 heuristics
+f = 90 [1 evaluated, 0 expanded, t=0.01s]
+Initializing landmark cut heuristic...
+Checking for conditional effects...
+No conditional effects detected
+Switch from bucket-based to heap-based queue at key = 100, num_pushes = 17
+f = 180 [1 evaluated, 0 expanded, t=0.01s]
+f = 200 [33 evaluated, 5 expanded, t=0.01s]
+f = 220 [131 evaluated, 21 expanded, t=0.01s]
+f = 240 [243 evaluated, 39 expanded, t=0.01s]
+f = 260 [296 evaluated, 47 expanded, t=0.01s]
+f = 280 [304 evaluated, 48 expanded, t=0.01s]
+f = 290 [336 evaluated, 72 expanded, t=0.01s]
+f = 300 [400 evaluated, 148 expanded, t=0.02s]
+f = 310 [608 evaluated, 244 expanded, t=0.03s]
+f = 320 [1104 evaluated, 644 expanded, t=0.05s]
+f = 330 [1536 evaluated, 932 expanded, t=0.07s]
+f = 340 [3768 evaluated, 2012 expanded, t=0.16s]
+f = 350 [4748 evaluated, 3188 expanded, t=0.22s]
+f = 360 [8460 evaluated, 4980 expanded, t=0.36s]
+f = 370 [11428 evaluated, 7452 expanded, t=0.49s]
+f = 380 [15036 evaluated, 9872 expanded, t=0.64s]
+f = 390 [17928 evaluated, 12320 expanded, t=0.76s]
+Solution found!
+Actual search time: 0.75s [t=0.76s]
+pick_up h c1 depot (10)
+load_crate_on_carrier h r c1 depot n0 n1 (10)
+pick_up h c2 depot (10)
+load_crate_on_carrier h r c2 depot n1 n2 (10)
+pick_up h c3 depot (10)
+load_crate_on_carrier h r c3 depot n2 n3 (10)
+pick_up h c4 depot (10)
+load_crate_on_carrier h r c4 depot n3 n4 (10)
+fly_carrier h r depot l1 (100)
+take_crate_from_carrier h r c1 l1 n4 n3 (10)
+give h c1 p1 l1 food_crate (10)
+fly_carrier h r l1 l2 (10)
+take_crate_from_carrier h r c2 l2 n3 n2 (10)
+give h c2 p2 l2 food_crate (10)
+fly_carrier h r l2 l3 (10)
+take_crate_from_carrier h r c3 l3 n2 n1 (10)
+give h c3 p3 l3 food_crate (10)
+take_crate_from_carrier h r c4 l3 n1 n0 (10)
+move h l3 l4 (10)
+give h c4 p4 l4 food_crate (10)
+move h l4 depot (100)
+Plan length: 21 step(s).
+Plan cost: 390
+Expanded 12326 state(s).
+Reopened 0 state(s).
+Evaluated 17944 state(s).
+Evaluations: 34094
+Generated 65329 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 12320 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 17928 state(s).
+Generated until last jump: 65300 state(s).
+Search space hash size: 17944
+Search space hash bucket count: 24593
+Number of evaluations (h0): 17944
+Number of evaluations (h1): 16150
+Time spent on (h0): 0.0734646s
+Time spent on (h1): 0.607156s
+RLA_compute_decisions: 16150
+RLA_skip_decisions: 0
+Search time: 0.75s
+Total time: 0.76s
+Peak memory: 7752 KB
+

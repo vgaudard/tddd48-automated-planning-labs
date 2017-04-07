@@ -18,6 +18,8 @@
     r - carrier
 
     h - helicopter
+    
+    food_crate medicine_crate - crate_type
     )
   (:init
     (next n0 n1) (next n1 n2) (next n2 n3) (next n3 n4)

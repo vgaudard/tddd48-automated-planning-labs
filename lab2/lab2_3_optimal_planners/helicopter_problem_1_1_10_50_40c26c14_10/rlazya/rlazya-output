@@ -1,0 +1,123 @@
+1. Running translator
+Second argument is a file name: use two translator arguments.
+Parsing...
+Parsing: [0.000s CPU, 0.007s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.010s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.010s wall-clock]
+Preparing model... [0.010s CPU, 0.005s wall-clock]
+Generated 59 rules.
+Computing model... [0.060s CPU, 0.069s wall-clock]
+3044 relevant atoms
+3812 auxiliary atoms
+6856 final queue length
+13099 total queue pushes
+Completing instantiation... [0.120s CPU, 0.123s wall-clock]
+Instantiating: [0.200s CPU, 0.211s wall-clock]
+Computing fact groups...
+Finding invariants...
+16 initial candidates
+Finding invariants: [0.010s CPU, 0.007s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.001s wall-clock]
+Instantiating groups... [0.050s CPU, 0.045s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+191 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.060s CPU, 0.059s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.001s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.010s CPU, 0.006s wall-clock]
+Translating task: [0.100s CPU, 0.099s wall-clock]
+0 implied effects removed
+80 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+142 propositions removed
+Detecting unreachable propositions: [0.020s CPU, 0.019s wall-clock]
+Translator variables: 183
+Translator derived variables: 0
+Translator facts: 384
+Translator mutex groups: 84
+Translator total mutex groups size: 204
+Translator operators: 2260
+Translator task size: 14092
+Translator peak memory: 54836 KB
+Writing output... [0.030s CPU, 0.069s wall-clock]
+Done! [0.420s CPU, 0.474s wall-clock]
+
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+93 variables of 183 necessary
+40 of 84 mutex groups necessary.
+2260 of 2260 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Preprocessor facts: 204
+Preprocessor derived variables: 0
+Preprocessor task size: 11898
+Writing output...
+done
+
+
+3. Running search
+Dispatcher selected state size 1.
+This is a nonunit task.
+Conditional effects: 0
+Simplifying transitions... done!
+Initializing Exploration...
+Initializing Exploration...
+H_m_Landmarks(1)
+Using 204 P^m fluents.
+Level 1 completed.
+Level 2 completed.
+h^m landmarks computed.
+Removed 0 reasonable or obedient reasonable orders
+Calculating achievers.
+Landmarks generation time: 0.00453689s
+Discovered 19 landmarks, of which 0 are disjunctive and 0 are conjunctive 
+27 edges
+Initializing Exploration...
+Generating landmarks using the RPG/SAS+ approach
+Switch from bucket-based to heap-based queue at key = 145, num_pushes = 94
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.0109272s
+Discovered 28 landmarks, of which 0 are disjunctive and 0 are conjunctive 
+27 edges
+Initializing Exploration...
+Merging 2 landmark graphs
+Adding simple landmarks
+Adding disjunctive landmarks
+Adding orderings
+Removed 0 reasonable or obedient reasonable orders
+Switch from bucket-based to heap-based queue at key = 145, num_pushes = 94
+Landmarks generation time: 0.00554702s
+Discovered 29 landmarks, of which 0 are disjunctive and 0 are conjunctive 
+37 edges
+Initializing landmarks count heuristic...
+12 initial landmarks, 11 goal landmarks
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+Using iterated heuristic computation with 2 heuristics
+f = 449 [1 evaluated, 0 expanded, t=0.05s]
+Initializing landmark cut heuristic...
+Checking for conditional effects...
+No conditional effects detected
+Switch from bucket-based to heap-based queue at key = 145, num_pushes = 95
+f = 637 [1 evaluated, 0 expanded, t=0.05s]
+f = 657 [501 evaluated, 41 expanded, t=0.35s]
+f = 677 [19241 evaluated, 1641 expanded, t=10.93s]
+f = 697 [370761 evaluated, 32061 expanded, t=203.83s]
+Peak memory: 456936 KB
+caught signal 2 -- exiting

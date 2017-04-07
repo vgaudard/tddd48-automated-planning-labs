@@ -1,0 +1,62 @@
+var0:
+  0: Atom at(r, l3)
+  1: Atom at(r, l2)
+  2: Atom at(r, depot)
+  3: Atom at(r, l4)
+  4: Atom at(r, l1)
+var1:
+  0: Atom at(h, l1)
+  1: Atom at(h, depot)
+  2: Atom at(h, l4)
+  3: Atom at(h, l3)
+  4: Atom at(h, l2)
+var2:
+  0: Atom nb_loaded_crates(r, n3)
+  1: Atom nb_loaded_crates(r, n0)
+  2: Atom nb_loaded_crates(r, n2)
+  3: Atom nb_loaded_crates(r, n1)
+  4: Atom nb_loaded_crates(r, n4)
+var3:
+  0: Atom contains(h, c2)
+  1: Atom can_be_taken(c2)
+  2: Atom contains(r, c2)
+var4:
+  0: Atom at(c1, depot)
+  1: Atom contains(h, c1)
+  2: Atom contains(r, c1)
+  3: <none of those>
+var5:
+  0: Atom contains(r, c3)
+  1: Atom contains(h, c3)
+  2: Atom can_be_taken(c3)
+var6:
+  0: Atom can_be_taken(c4)
+  1: Atom contains(r, c4)
+  2: Atom contains(h, c4)
+var7:
+  0: Atom has_crate(p2, food_crate)
+  1: <none of those>
+var8:
+  0: Atom at(c3, depot)
+  1: <none of those>
+var9:
+  0: Atom has_crate(p3, food_crate)
+  1: <none of those>
+var10:
+  0: Atom empty(h)
+  1: <none of those>
+var11:
+  0: Atom has_crate(p1, food_crate)
+  1: <none of those>
+var12:
+  0: Atom at(c2, depot)
+  1: <none of those>
+var13:
+  0: Atom has_crate(p4, food_crate)
+  1: <none of those>
+var14:
+  0: Atom at(c4, depot)
+  1: <none of those>
+var15:
+  0: Atom can_be_taken(c1)
+  1: <none of those>

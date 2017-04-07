@@ -62,3 +62,48 @@ Neither `ff` nor `ipp` seemed to support action costs:
 emergency-domain.pddl: syntax error in line 2, ':ACTION-COSTS':
 domain definition expected
 ```
+
+## Lab 2.3
+
+### Solutions
+
+The planners below all gave a solution of cost 390.
+
+#### AllPACA
+
+`AllPACA` properly handled constructs, and gave an optimal solution using carriers to the
+problem `simple-problem-p4`.
+
+#### fd-autotune
+
+`fd-autotune` handled it correctly too, and gave a different solution, although
+optimal too.
+
+#### Rational Lazy A\*
+
+`Rational Lazy A*` gave a similar solution to the problem and had no problem
+with the PDDL constructs.
+
+### Performance
+
+The solver `Rational Lazy A*` was interrupted during test
+`helicopter_problem_1_1_10_50_40c26c14_10` after 12 minutes without giving a
+solution. For this reason, the test was then done with the problem
+`helicopter_problem_1_1_3_10_10c2c8_5`.
+
+|------|----------|------------|----------|
+|      | `rlazya` | `all-paca` | `yahsp2` |
+|------|----------|------------|----------|
+| time | 18.58s   | 24.55s     | 9.02s    |
+|------|----------|------------|----------|
+| cost | 1160     | 1160       | 1160     |
+|------|----------|------------|----------|
+
+Exceptionally, the satisfying planner `yahsp2` gave an optimal plan. Moreover,
+it is faster than the others.
+
+### Usefulness of optimal planners
+
+Satisfying planners tested in lab 2.2 did not use the carriers, and thus were
+far from optimal. For this reason, optimal planners are worth it for this
+domain and problem combination.
