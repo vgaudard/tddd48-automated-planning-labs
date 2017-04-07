@@ -1,0 +1,101 @@
+ --- OK.
+ Match tree built with 568 nodes.
+
+Try allocate size: 0.0008125 MB
+
+Caption
+{#goals, #UNnachieved,  #Achieved} -> IW(max_w)
+
+{9/9/0}:IW(inf) -> Try allocate size: 0.0008125 MB
+
+{9/6/3}:IW(1) -> [153][157][235]Try allocate size: 0.0845 MB
+
+{9/6/3}:IW(2) -> [153][157][235][305][309][387][391][469][514]Try allocate size: 0.0008125 MB
+
+{9/5/4}:IW(1) -> [59][83][157][235]Try allocate size: 0.0845 MB
+
+{9/5/4}:IW(2) -> [59][83][157][235][293][309][313][391][469][543][547][625]Try allocate size: 0.0008125 MB
+
+{9/4/5}:IW(1) -> [124][235][245]Try allocate size: 0.0845 MB
+
+{9/4/5}:IW(2) -> [124][235][276][280][358][387][391][469][592][621][625][703][713]Try allocate size: 0.0008125 MB
+
+{9/3/6}:IW(1) -> [153][157][235]Try allocate size: 0.0845 MB
+
+{9/3/6}:IW(2) -> [153][157][235][305][309][387][391][469][539][621]Try allocate size: 0.0008125 MB
+
+{9/2/7}:IW(1) -> [153][157][235]Try allocate size: 0.0845 MB
+
+{9/2/7}:IW(2) -> [153][157][235][305][309][387][391][469][539][621]Try allocate size: 0.0008125 MB
+
+{9/1/8}:IW(1) -> [153][157][235]Try allocate size: 0.0008125 MB
+SIW search completed in 0.216 secs 
+found plan cost = 1964
+1. (HAS_CRATE PERSON10 MEDICINE_CRATE)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: 
+	GN Required by: 
+2. (HAS_CRATE PERSON9 MEDICINE_CRATE)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: 
+	GN Required by: 
+3. (HAS_CRATE PERSON9 FOOD_CRATE)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: 
+	GN Required by: 
+4. (HAS_CRATE PERSON6 FOOD_CRATE)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: 
+	GN Required by: 
+5. (HAS_CRATE PERSON3 MEDICINE_CRATE)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: 
+	GN Required by: 
+6. (AT HELICOPTER4 DEPOT)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: 
+	GN Required by: 
+7. (AT HELICOPTER3 DEPOT)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: 
+	GN Required by: 
+8. (AT HELICOPTER2 DEPOT)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: 
+	GN Required by: 
+9. (AT HELICOPTER1 DEPOT)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: 
+	GN Required by: 
+--[inf / 1032]--
+--[5 / 1032]--
+--[5 / 1012]--
+--[5 / 1002]--
+--[5 / 982]--
+--[5 / 793]--
+--[5 / 756]--
+--[5 / 736]--
+--[5 / 584]--
+--[4 / 584]--
+--[4 / 553]--
+--[3 / 553]--
+--[3 / 549]--
+--[3 / 539]--
+--[3 / 498]--
+--[2 / 498]--
+--[2 / 488]--
+--[2 / 478]--
+--[2 / 244]--
+--[1 / 244]--
+--[1 / 234]--
+--[1 / 0]--
+--[0 / 0]--

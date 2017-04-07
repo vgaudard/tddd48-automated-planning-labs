@@ -1,0 +1,163 @@
+ --- OK.
+ Match tree built with 7248 nodes.
+
+Try allocate size: 0.00272656 MB
+
+Caption
+{#goals, #UNnachieved,  #Achieved} -> IW(max_w)
+
+{14/14/0}:IW(inf) -> Try allocate size: 0.00272656 MB
+
+{14/11/3}:IW(1) -> [176][247][262]Try allocate size: 0.00272656 MB
+
+{14/10/4}:IW(1) -> [176][247][262]Try allocate size: 0.95157 MB
+
+{14/10/4}:IW(2) -> [176][247][262][351][422][437][493][508][523][610][637]Try allocate size: 0.00272656 MB
+
+{14/9/5}:IW(1) -> [176][247][262]Try allocate size: 0.95157 MB
+
+{14/9/5}:IW(2) -> [176][247][262][351][422][437][493][508][523][550][556][610][637][647][649][663][692][698][837]Try allocate size: 0.00272656 MB
+
+{14/8/6}:IW(1) -> [176][247][262]Try allocate size: 0.95157 MB
+
+{14/8/6}:IW(2) -> [176][247][262][351][422][437][493][508][523][550][556][610][637][647][649][663][692][698][837]Try allocate size: 0.00272656 MB
+
+{14/7/7}:IW(1) -> [176][247][262]Try allocate size: 0.95157 MB
+
+{14/7/7}:IW(2) -> [176][247][262][351][422][437][493][508][523][550][556][610][637][647][649][663][692][698][837]Try allocate size: 0.00272656 MB
+
+{14/6/8}:IW(1) -> [176][247][262]Try allocate size: 0.95157 MB
+
+{14/6/8}:IW(2) -> [176][247][262][351][422][437][493][508][523][550][556][610][637][647][649][663][692][698][837]Try allocate size: 0.00272656 MB
+
+{14/5/9}:IW(1) -> [176][247][262]Try allocate size: 0.95157 MB
+
+{14/5/9}:IW(2) -> [176][247][262][351][422][437][493][508][523][550][556][610][637][647][649][663][692][698][837]Try allocate size: 0.00272656 MB
+
+{14/4/10}:IW(1) -> [176][247][262]Try allocate size: 0.95157 MB
+
+{14/4/10}:IW(2) -> [176][247][262][351][422][437][493][508][523][550][556][610][637][647][649][663][692][698][837]Try allocate size: 0.00272656 MB
+
+{14/3/11}:IW(1) -> [176][247][262]Try allocate size: 0.95157 MB
+
+{14/3/11}:IW(2) -> [176][247][262][351][422][437][493][508][523][550][556][610][637][647][649][663][692][698][837]Try allocate size: 0.00272656 MB
+
+{14/2/12}:IW(1) -> [176][247][262]Try allocate size: 0.95157 MB
+
+{14/2/12}:IW(2) -> [176][247][262][351][422][437][493][508][523][550][556][610][637][647][649][663][692][698][837]Try allocate size: 0.00272656 MB
+
+{14/1/13}:IW(1) -> [176][247][262]Try allocate size: 0.00272656 MB
+SIW search completed in 72.116 secs 
+found plan cost = 3286
+1. (HAS_CRATE PERSON29 MEDICINE_CRATE)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: 
+	GN Required by: 
+2. (HAS_CRATE PERSON28 MEDICINE_CRATE)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: 
+	GN Required by: 
+3. (HAS_CRATE PERSON23 FOOD_CRATE)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: 
+	GN Required by: 
+4. (HAS_CRATE PERSON15 MEDICINE_CRATE)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: 
+	GN Required by: 
+5. (HAS_CRATE PERSON13 MEDICINE_CRATE)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: 
+	GN Required by: 
+6. (HAS_CRATE PERSON12 MEDICINE_CRATE)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: 
+	GN Required by: 
+7. (HAS_CRATE PERSON11 MEDICINE_CRATE)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: 
+	GN Required by: 
+8. (HAS_CRATE PERSON9 MEDICINE_CRATE)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: 
+	GN Required by: 
+9. (HAS_CRATE PERSON8 MEDICINE_CRATE)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: 
+	GN Required by: 
+10. (HAS_CRATE PERSON1 MEDICINE_CRATE)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: 
+	GN Required by: 
+11. (AT HELICOPTER4 DEPOT)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: 
+	GN Required by: 
+12. (AT HELICOPTER3 DEPOT)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: 
+	GN Required by: 
+13. (AT HELICOPTER2 DEPOT)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: 
+	GN Required by: 
+14. (AT HELICOPTER1 DEPOT)
+	Preceded by: 
+	GN Preceded by: 
+	Required by: 
+	GN Required by: 
+--[inf / 1743]--
+--[10 / 1743]--
+--[10 / 1733]--
+--[10 / 1653]--
+--[10 / 1643]--
+--[10 / 1138]--
+--[10 / 975]--
+--[9 / 975]--
+--[9 / 955]--
+--[9 / 945]--
+--[9 / 925]--
+--[8 / 925]--
+--[8 / 913]--
+--[8 / 903]--
+--[8 / 883]--
+--[7 / 883]--
+--[7 / 873]--
+--[7 / 853]--
+--[6 / 853]--
+--[6 / 843]--
+--[6 / 835]--
+--[6 / 805]--
+--[5 / 805]--
+--[5 / 788]--
+--[5 / 670]--
+--[4 / 670]--
+--[4 / 661]--
+--[4 / 651]--
+--[4 / 641]--
+--[4 / 585]--
+--[3 / 585]--
+--[3 / 565]--
+--[3 / 497]--
+--[3 / 448]--
+--[2 / 448]--
+--[2 / 438]--
+--[2 / 428]--
+--[2 / 256]--
+--[1 / 256]--
+--[1 / 246]--
+--[1 / 0]--
+--[0 / 0]--

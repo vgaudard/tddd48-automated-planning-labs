@@ -1,0 +1,18 @@
+suboptimal yahsp search, threads : 1, teams : 1, strategy : 0
+anytime behavior
+domain file : emergency-domain.pddl
+problem file : helicopter_problem_4_1_3_10_10c7c3_5.pddl
+output file : yahsp2-solution
+
+Parsing domain.................... done : 0.00          
+Parsing problem................... done : 0.00          
+domain : emergency_services_logistics
+problem : helicopter_problem_4_1_3_10_10c7c3_5
+Instantiating operators........... done : 0.00          
+Creating initial structures....... done : 0.01          
+Computing bound................... done : 0.00          
+Refreshing structures............. done : 0.00          
+Finalizing structures............. done : 0.00          
+plan found : cost 2333 -- search time 0.00 -- total time 0.02
+plan found : cost 2183 -- search time 44.89 -- total time 44.90
+/home/TDDD48/planners/ipc2011/seq-sat/seq-sat-yahsp2/plan: line 3: 27325 Terminated              "$(dirname "$0")"/bin/cpt -y 1 -N -o "$1" -f "$2" -out "$3"
