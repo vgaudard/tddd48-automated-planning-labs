@@ -1,0 +1,2127 @@
+TOPSAT: Temporal Optimal Planner using SATisfiability
+        for PDDL 2.1 level 3 durative actions
+Copyright 2011-2012, Sharif University of Technology.
+Part of this work is based on VAL: PDDL Plan Validator.
+
+Using SAT Solver : precosat
+Parsing input file: emergency-domain.pddl
+Parsing input file: helicopter_problem_4_1_20_20_20c14c6_5.pddl
+Input files parsed successfully.
+Grounding operator: move  -1  3
+Grounding operator: pick_up  10  3
+Grounding operator: give  10  5
+Grounding operator: load_crate_on_carrier  10  6
+Grounding operator: fly_carrier  -1  4
+Grounding operator: take_crate_from_carrier  10  6
+Domain: emergency_services_logistics Objects: 73
+Predicates: 8 Operators: 6
+Propositions: 1138 Actions: 52164
+Time taken : 0.468 secs
+
+Process started:
+
+
+Ration of Relevant Actions: 1
+
+Number of Actons: 52164    Number of Propositions: 1138
+
+Number of Relevant Actons: 52164    Number of Relevant Propositions: 1059
+
+COMPRESSION STARTED
+Ratio of Compressed Actions:  0.937121Trying with T=1... 
+Variables: total=158610	prop=2118	action= 156492
+Total Mutex Clauses=742492	ratio=0.385235
+Total Event Clauses=114252	Total Clauses=1927374
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    3.5  219067  549371  79828      0      0       0      0    0.0  0  126
+c   0    3.5  141887  549371 157008      0      0       1      0    0.0  0  127
+Instance Unsatisfiable
+Time: 333.008 secs
+
+
+Trying with T=4... 
+Variables: total=631263	prop=5295	action= 625968
+Total Mutex Clauses=2969968	ratio=0.485941
+Total Event Clauses=466848	Total Clauses=6111789
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    4.2 1003059 2604400 189344      0      0       0      0    0.0  0  532
+c   s    9.6   33228  140500 564562 514151  77628       0      0    0.0  0  401
+c   l    9.6   33228  140500 564562 514151  77628       0   5000    0.0  0  401
+c   R    9.6   33228  140500 564562 514151  77628      11     11 2118.5  2  401c  2R    9.6   33228  140500 564562 514151  77628      22     20 1934.8  3  401
+c   1    9.9   33121  140526 564669 514151  77628     160    121 1379.6  0  402
+Satisfied!
+A plan found with layers = 4
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+1: (move_S helicopter1 loc15 loc19) :-0.01
+1: (move_E helicopter1 loc15 loc20) :-0.01
+2: (move_S helicopter1 loc20 depot) :-177
+2: (move_E helicopter1 loc20 depot) :-0.01
+2: (move_E helicopter1 loc14 loc20) :-0.01
+3: (move_S helicopter1 loc20 depot) :-177
+3: (move_E helicopter1 loc20 depot) :-0.01
+3: (move_E helicopter1 loc7 loc20) :157
+2: (move_S helicopter1 loc7 loc20) :-0.01
+3: (move_E helicopter1 loc7 loc8) :-0.01
+3: (move_S helicopter1 loc8 loc11) :-57
+3: (move_E helicopter1 loc8 loc11) :-0.01
+3: (move_S helicopter1 loc11 loc12) :-131
+3: (move_E helicopter1 loc11 loc12) :-0.01
+3: (move_S helicopter1 loc12 loc15) :-16
+3: (move_E helicopter1 loc12 loc15) :-0.01
+3: (move_S helicopter1 loc15 loc16) :-0.01
+3: (move_E helicopter1 loc15 loc19) :133
+---------------
+1 event(s) have been removed from negative cycle
+New negative cycle:
+1: (move_S helicopter1 loc15 loc19) :-0.01
+1: (move_E helicopter1 loc15 loc20) :-0.01
+2: (move_S helicopter1 loc20 depot) :-177
+2: (move_E helicopter1 loc20 depot) :-0.01
+2: (move_E helicopter1 loc14 loc20) :-0.01
+3: (move_S helicopter1 loc20 depot) :-177
+3: (move_E helicopter1 loc20 depot) :-0.01
+3: (move_E helicopter1 loc7 loc20) :157
+2: (move_S helicopter1 loc7 loc20) :-0.01
+3: (move_E helicopter1 loc7 loc8) :-0.01
+3: (move_S helicopter1 loc8 loc11) :-57
+3: (move_E helicopter1 loc8 loc11) :-0.01
+3: (move_S helicopter1 loc11 loc12) :-131
+3: (move_E helicopter1 loc11 loc12) :-0.01
+3: (move_S helicopter1 loc12 loc15) :-16
+3: (move_E helicopter1 loc12 loc15) :-0.01
+3: (move_E helicopter1 loc15 loc19) :133
+restart # 1
+Time: 9.94 secs
+
+
+Trying with T=4... 
+Variables: total=631263	prop=5295	action= 625968
+Total Mutex Clauses=2969968	ratio=0.485941
+Total Event Clauses=466848	Total Clauses=6111789
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    4.4 1004247 2606731 189431      0      0       0      0    0.0  0  532
+c   s    9.9   33484  141555 564373 510636  81277       0      0    0.0  0  400
+c   l    9.9   33484  141555 564373 510636  81277       0   5000    0.0  0  400
+c   R   10.0   33484  141555 564373 510636  81277      11     11 2120.5  2  401c  2R   10.0   33484  141555 564373 510636  81277      22     20 1936.4  2  401
+c   1   10.2   33376  141577 564481 510636  81277     114     77 1342.2  0  402
+Satisfied!
+A plan found with layers = 4
+Trying to find a satisfying timed plan:
+Valid Timed Plan found!
+======================
+49 redundant actions have been removed from the plan.
+Writing final plan to file: itsat-solution.1 , makespan = 941.08 , elapsed time = 353.568
+Time: 10.228 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    4.4 1265875 3292413 225936      0      0       0      0    0.0  0  573
+c   s   11.4   43345  188717 701635 610894 131957       0      0    0.0  0  405
+c   l   11.4   43345  188717 701635 610894 131957       0   5000    0.0  0  405
+c   R   11.4   43345  188717 701635 610894 131957      10     10 3234.0  2  406c  2R   11.5   43294  188726 701686 610894 131957      41     29 3347.2  2  407c  3R   11.5   43294  188729 701686 610894 131957     106     91 3143.8  2  407c  4R   11.6   43294  188731 701686 610894 131957     271    251 3030.8  3  407
+c   1   11.9   43294  188753 701686 610894 131957     484    454 2889.9  0  408
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter1 loc2 loc15) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc2 loc12) :-141
+0: (fly_carrier_E helicopter1 carrier1 loc2 loc12) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc12 loc14) :-92
+0: (fly_carrier_E helicopter1 carrier1 loc12 loc14) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc14 loc15) :-102
+0: (fly_carrier_E helicopter1 carrier1 loc14 loc15) :-0.01
+1: (move_S helicopter1 loc15 depot) :-176
+1: (move_E helicopter1 loc15 depot) :-0.01
+1: (move_E helicopter1 loc2 loc15) :155
+restart # 2
+Time: 11.956 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    4.5 1266740 3294108 225988      0      0       0      0    0.0  0  573
+c   s   10.8   43393  189251 701784 628727 114708       0      0    0.0  0  405
+c   l   10.8   43393  189251 701784 628727 114708       0   5000    0.0  0  405
+c   R   10.8   43393  189251 701784 628727 114708      10     10 2206.7  1  406c  2R   10.8   43393  189251 701784 628727 114708      20     19 2170.2  2  406c  3R   11.0   43393  189254 701784 628727 114708      94     78 2924.0  3  407c  4R   11.1   43393  189260 701784 628727 114708     259    222 2922.3  6  407
+c   B   11.7   41790  189668 703223 628891 114708    1000    910 2684.6  1  412
+c   1   12.1   41784  189781 703229 628891 114708    1428   1315 2597.1  0  413
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter3 loc10 loc20) :-0.01
+1: (move_E helicopter3 loc10 depot) :-0.01
+1: (move_S helicopter3 depot loc20) :-177
+1: (move_E helicopter3 depot loc20) :-0.01
+2: (move_S helicopter3 loc20 loc4) :-71
+2: (move_E helicopter3 loc20 loc4) :-0.01
+2: (move_E helicopter3 loc10 loc20) :177
+restart # 3
+Time: 12.168 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    4.6 1267030 3294678 226006      0      0       0      0    0.0  0  573
+c   s   11.4   43429  189488 701799 605586 138055       0      0    0.0  0  405
+c   l   11.4   43429  189488 701799 605586 138055       0   5000    0.0  0  405
+c   R   11.4   43429  189488 701799 605586 138055      10     10 2205.2  1  406c  2R   11.4   43429  189488 701799 605586 138055      20     19 2168.7  2  406c  3R   11.5   43429  189503 701799 605586 138055      97     78 3005.4  2  406c  4R   11.6   43429  189509 701799 605586 138055     276    248 2743.1  9  407
+c   1   11.8   43429  189511 701799 605586 138055     379    341 2877.9  0  408
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter4 loc8 loc14) :-0.01
+1: (move_E helicopter4 loc8 loc11) :-0.01
+1: (move_S helicopter4 loc11 loc13) :-154
+1: (move_E helicopter4 loc11 loc13) :-0.01
+1: (move_S helicopter4 loc13 loc14) :-98
+1: (move_E helicopter4 loc13 loc14) :-0.01
+1: (move_S helicopter4 loc14 loc15) :-102
+1: (move_E helicopter4 loc14 loc15) :-0.01
+2: (move_E helicopter4 loc8 loc14) :59
+restart # 4
+Time: 11.872 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    4.4 1267265 3295138 226021      0      0       0      0    0.0  0  573
+c   s   10.7   43439  189505 701760 634321 109507       0      0    0.0  0  405
+c   l   10.7   43439  189505 701760 634321 109507       0   5000    0.0  0  405
+c   R   10.8   43439  189505 701760 634321 109507      10     10 2209.7  1  406c  2R   10.8   43439  189505 701760 634321 109507      20     19 2173.3  2  406c  3R   10.9   43407  189548 701792 634321 109507     206    153 2871.0  4  407c  4R   11.0   43407  189556 701792 634321 109507     368    308 2963.3  3  407
+c   1   11.6   41578  189966 703275 634667 109507     714    641 2727.6  0  412
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter1 loc8 loc13) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc8 loc9) :-106
+0: (fly_carrier_E helicopter1 carrier1 loc8 loc9) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc9 loc13) :-91
+0: (fly_carrier_E helicopter1 carrier1 loc9 loc13) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc13 loc17) :-10
+0: (fly_carrier_E helicopter1 carrier1 loc13 loc17) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc17 loc19) :-122
+0: (fly_carrier_E helicopter1 carrier1 loc17 loc19) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc19 loc20) :-77
+0: (fly_carrier_E helicopter1 carrier1 loc19 loc20) :-0.01
+1: (fly_carrier_S helicopter2 carrier1 loc20 loc3) :-70
+1: (fly_carrier_E helicopter2 carrier1 loc20 loc3) :-0.01
+1: (fly_carrier_S helicopter4 carrier1 loc3 loc5) :-161
+1: (fly_carrier_E helicopter4 carrier1 loc3 loc5) :-0.01
+1: (fly_carrier_S helicopter4 carrier1 loc5 loc18) :-16
+1: (fly_carrier_E helicopter4 carrier1 loc5 loc18) :-0.01
+2: (move_S helicopter4 loc18 loc16) :-0.01
+2: (fly_carrier_S helicopter4 carrier1 loc18 depot) :-102
+2: (fly_carrier_E helicopter4 carrier1 loc18 depot) :-0.01
+2: (fly_carrier_S helicopter3 carrier1 depot loc2) :-91
+2: (fly_carrier_E helicopter3 carrier1 depot loc2) :-0.01
+2: (fly_carrier_S helicopter2 carrier1 loc2 loc3) :-152
+2: (fly_carrier_E helicopter2 carrier1 loc2 loc3) :-0.01
+2: (fly_carrier_S helicopter3 carrier1 loc3 loc4) :-4
+2: (fly_carrier_E helicopter3 carrier1 loc3 loc4) :-0.01
+2: (fly_carrier_S helicopter1 carrier1 loc4 loc5) :-164
+2: (fly_carrier_E helicopter1 carrier1 loc4 loc5) :-0.01
+3: (move_S helicopter1 loc5 loc1) :-112
+3: (move_E helicopter1 loc5 loc1) :-0.01
+3: (move_E helicopter1 loc13 loc5) :179
+2: (move_S helicopter1 loc13 loc5) :-0.01
+2: (move_E helicopter1 loc13 loc12) :-0.01
+2: (move_E helicopter1 loc8 loc13) :145
+---------------
+1 event(s) have been removed from negative cycle
+New negative cycle:
+0: (move_S helicopter1 loc8 loc13) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc8 loc9) :-106
+0: (fly_carrier_E helicopter1 carrier1 loc8 loc9) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc9 loc13) :-91
+0: (fly_carrier_E helicopter1 carrier1 loc9 loc13) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc13 loc17) :-10
+0: (fly_carrier_E helicopter1 carrier1 loc13 loc17) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc17 loc19) :-122
+0: (fly_carrier_E helicopter1 carrier1 loc17 loc19) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc19 loc20) :-77
+0: (fly_carrier_E helicopter1 carrier1 loc19 loc20) :-0.01
+1: (fly_carrier_S helicopter2 carrier1 loc20 loc3) :-70
+1: (fly_carrier_E helicopter2 carrier1 loc20 loc3) :-0.01
+1: (fly_carrier_S helicopter4 carrier1 loc3 loc5) :-161
+1: (fly_carrier_E helicopter4 carrier1 loc3 loc5) :-0.01
+1: (fly_carrier_S helicopter4 carrier1 loc5 loc18) :-16
+1: (fly_carrier_E helicopter4 carrier1 loc5 loc18) :-0.01
+2: (fly_carrier_S helicopter4 carrier1 loc18 depot) :-102
+2: (fly_carrier_E helicopter4 carrier1 loc18 depot) :-0.01
+2: (fly_carrier_S helicopter3 carrier1 depot loc2) :-91
+2: (fly_carrier_E helicopter3 carrier1 depot loc2) :-0.01
+2: (fly_carrier_S helicopter2 carrier1 loc2 loc3) :-152
+2: (fly_carrier_E helicopter2 carrier1 loc2 loc3) :-0.01
+2: (fly_carrier_S helicopter3 carrier1 loc3 loc4) :-4
+2: (fly_carrier_E helicopter3 carrier1 loc3 loc4) :-0.01
+2: (fly_carrier_S helicopter1 carrier1 loc4 loc5) :-164
+2: (fly_carrier_E helicopter1 carrier1 loc4 loc5) :-0.01
+3: (move_S helicopter1 loc5 loc1) :-112
+3: (move_E helicopter1 loc5 loc1) :-0.01
+3: (move_E helicopter1 loc13 loc5) :179
+2: (move_S helicopter1 loc13 loc5) :-0.01
+2: (move_E helicopter1 loc13 loc12) :-0.01
+2: (move_E helicopter1 loc8 loc13) :145
+restart # 5
+Time: 11.664 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    6.1 1458210 3676982 226111      0      0       0      0    0.0  0  599
+c   s   13.5   46750  207460 701839 602307 296511       0      0    0.0  0  413
+c   l   13.5   46750  207460 701839 602307 296511       0   5000    0.0  0  413
+c   R   13.5   46750  207460 701839 602307 296511      10     10 3178.5  2  414c  2R   13.6   46750  207460 701839 602307 296511      21     21 3392.5  1  414c  3R   13.7   46730  207536 701859 602307 296511     173    148 2961.5  2  415
+c   1   14.1   46727  207546 701862 602307 296511     403    361 3057.2  0  422
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter3 loc4 loc10) :-0.01
+0: (fly_carrier_S helicopter3 carrier1 loc4 loc7) :-185
+0: (fly_carrier_E helicopter3 carrier1 loc4 loc7) :-0.01
+0: (fly_carrier_S helicopter3 carrier1 loc7 loc9) :-153
+0: (fly_carrier_E helicopter3 carrier1 loc7 loc9) :-0.01
+0: (fly_carrier_S helicopter3 carrier1 loc9 loc10) :-151
+0: (fly_carrier_E helicopter3 carrier1 loc9 loc10) :-0.01
+0: (fly_carrier_S helicopter3 carrier1 loc10 loc11) :-0.01
+2: (move_E helicopter3 loc4 loc10) :171
+restart # 6
+Time: 14.128 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    6.1 1460795 3682130 226146      0      0       0      0    0.0  0  599
+c   s   12.2   46711  208770 701989 600865 300378       0      0    0.0  0  413
+c   l   12.2   46711  208770 701989 600865 300378       0   5000    0.0  0  413
+c   R   12.2   46711  208770 701989 600865 300378      12     12  674.0  1  414c  2R   12.2   46711  208771 701989 600865 300378      22     22  582.1  1  414c  3R   12.2   46711  208771 701989 600865 300378      85     83  491.4  4  414c  4R   12.3   46711  208793 701989 600865 300378     248    231 1660.7  5  415
+c   B   13.1   45028  209222 703460 601077 300378    1001    952 2618.0  5  420
+c   R   13.1   45028  209223 703460 601077 300378    1071   1022 2614.7  3  420
+c   B   13.6   45016  209445 703472 601077 300378    2001   1909 2576.5  5  422
+c   R   13.6   45016  209445 703472 601077 300378    2068   1974 2559.5  5  422
+c   1   14.0   45016  209458 703472 601077 300378    2677   2569 2618.1  0  428
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter2 loc3 loc9) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc3 loc4) :-4
+0: (fly_carrier_E helicopter2 carrier1 loc3 loc4) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc4 loc20) :-71
+0: (fly_carrier_E helicopter2 carrier1 loc4 loc20) :-0.01
+1: (move_S helicopter2 loc20 loc3) :-70
+1: (move_E helicopter2 loc20 loc3) :-0.01
+1: (move_S helicopter2 loc3 loc6) :-0.01
+1: (move_E helicopter2 loc3 loc9) :34
+---------------
+1 event(s) have been removed from negative cycle
+New negative cycle:
+0: (move_S helicopter2 loc3 loc9) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc3 loc4) :-4
+0: (fly_carrier_E helicopter2 carrier1 loc3 loc4) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc4 loc20) :-71
+0: (fly_carrier_E helicopter2 carrier1 loc4 loc20) :-0.01
+1: (move_S helicopter2 loc20 loc3) :-70
+1: (move_E helicopter2 loc20 loc3) :-0.01
+1: (move_E helicopter2 loc3 loc9) :34
+restart # 7
+Time: 14.056 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    6.3 1698285 4157067 226283      0      0       0      0    0.0  0  632
+c   s   13.6   47030  210384 702196 602978 528604       0      0    0.0  0  428
+c   l   13.6   47030  210384 702196 602978 528604       0   5000    0.0  0  428
+c   R   13.6   47030  210384 702196 602978 528604      12     12 3066.5  2  429c  2R   13.6   47030  210384 702196 602978 528604      22     22 3173.8  3  429c  3R   13.6   47030  210390 702196 602978 528604      83     78 2747.5  1  429
+c   1   14.0   47030  210455 702196 602978 528604     238    227 2743.1  0  438
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter1 loc2 loc5) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc2 loc3) :-152
+0: (fly_carrier_E helicopter1 carrier1 loc2 loc3) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc3 loc5) :-161
+0: (fly_carrier_E helicopter1 carrier1 loc3 loc5) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc5 loc11) :-70
+0: (fly_carrier_E helicopter1 carrier1 loc5 loc11) :-0.01
+1: (move_S helicopter1 loc11 loc1) :-59
+1: (move_E helicopter1 loc11 loc1) :-0.01
+1: (move_S helicopter1 loc1 loc2) :-87
+1: (move_E helicopter1 loc1 loc2) :-0.01
+1: (move_S helicopter1 loc2 loc3) :-0.01
+1: (move_E helicopter1 loc2 loc5) :26
+---------------
+1 event(s) have been removed from negative cycle
+New negative cycle:
+0: (move_S helicopter1 loc2 loc5) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc2 loc3) :-152
+0: (fly_carrier_E helicopter1 carrier1 loc2 loc3) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc3 loc5) :-161
+0: (fly_carrier_E helicopter1 carrier1 loc3 loc5) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc5 loc11) :-70
+0: (fly_carrier_E helicopter1 carrier1 loc5 loc11) :-0.01
+1: (move_S helicopter1 loc11 loc1) :-59
+1: (move_E helicopter1 loc11 loc1) :-0.01
+1: (move_S helicopter1 loc1 loc2) :-87
+1: (move_E helicopter1 loc1 loc2) :-0.01
+1: (move_E helicopter1 loc2 loc5) :26
+restart # 8
+Time: 14.136 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    6.5 1699070 4158611 226331      0      0       0      0    0.0  0  632
+c   s   14.2   47307  211598 702053 569394 562805       0      0    0.0  0  427
+c   l   14.2   47307  211598 702053 569394 562805       0   5000    0.0  0  427
+c   R   14.2   47307  211598 702053 569394 562805      10     10 3054.0  2  428c  2R   14.2   47307  211598 702053 569394 562805      27     26 3167.7  3  428c  3R   14.4   47298  211681 702062 569394 562805     195    181 2861.5  4  429c  4R   15.0   45752  211964 703478 569524 562805     553    513 2663.7  4  433
+c   1   15.3   45752  212009 703478 569524 562805     778    731 2707.0  0  441
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter4 loc1 loc4) :-0.01
+0: (fly_carrier_S helicopter4 carrier1 loc1 loc2) :-87
+0: (fly_carrier_E helicopter4 carrier1 loc1 loc2) :-0.01
+0: (fly_carrier_S helicopter4 carrier1 loc2 loc3) :-152
+0: (fly_carrier_E helicopter4 carrier1 loc2 loc3) :-0.01
+0: (fly_carrier_S helicopter4 carrier1 loc3 loc4) :-4
+0: (fly_carrier_E helicopter4 carrier1 loc3 loc4) :-0.01
+0: (fly_carrier_S helicopter4 carrier1 loc4 loc6) :-0.01
+1: (move_E helicopter4 loc1 loc4) :160
+restart # 9
+Time: 15.372 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    6.4 1777970 4316378 226405      0      0       0      0    0.0  0  642
+c   s   14.2   47548  217306 702170 591971 611987       0      0    0.0  0  428
+c   l   14.2   47548  217306 702170 591971 611987       0   5000    0.0  0  428
+c   R   14.2   47548  217306 702170 591971 611987      11     11  940.8  1  429c  2R   14.2   47548  217306 702170 591971 611987      22     22  812.0  3  429c  3R   14.3   47548  217325 702170 591971 611987      87     86 1948.4  2  430
+c   1   14.6   47548  217345 702170 591971 611987     154    151 2441.3  0  438
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter2 loc3 loc4) :-0.01
+1: (move_E helicopter2 loc3 loc19) :-0.01
+2: (move_S helicopter2 loc19 loc2) :-89
+2: (move_E helicopter2 loc19 loc2) :-0.01
+2: (move_S helicopter2 loc2 loc3) :-0.01
+2: (fly_carrier_S helicopter2 carrier1 loc2 loc3) :-152
+2: (fly_carrier_E helicopter2 carrier1 loc2 loc3) :-0.01
+3: (move_S helicopter2 loc3 depot) :-226
+3: (move_E helicopter2 loc3 depot) :-0.01
+3: (move_E helicopter2 loc1 loc3) :-0.01
+3: (move_E helicopter2 loc3 loc4) :4
+---------------
+1 event(s) have been removed from negative cycle
+New negative cycle:
+0: (move_S helicopter2 loc3 loc4) :-0.01
+1: (move_E helicopter2 loc3 loc19) :-0.01
+2: (move_S helicopter2 loc19 loc2) :-89
+2: (move_E helicopter2 loc19 loc2) :-0.01
+2: (fly_carrier_S helicopter2 carrier1 loc2 loc3) :-152
+2: (fly_carrier_E helicopter2 carrier1 loc2 loc3) :-0.01
+3: (move_S helicopter2 loc3 depot) :-226
+3: (move_E helicopter2 loc3 depot) :-0.01
+3: (move_E helicopter2 loc1 loc3) :-0.01
+3: (move_E helicopter2 loc3 loc4) :4
+restart # 10
+Time: 14.728 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    6.4 1778585 4317582 226441      0      0       0      0    0.0  0  642
+c   s   14.2   47512  217103 702243 576455 627980       0      0    0.0  0  428
+c   l   14.2   47512  217103 702243 576455 627980       0   5000    0.0  0  428
+c   R   14.2   47512  217103 702243 576455 627980      11     11 1306.9  1  428c  2R   14.2   47512  217103 702243 576455 627980      22     22 1283.8  1  428c  3R   14.3   47512  217105 702243 576455 627980      83     83 1795.9  2  429c  4R   14.4   47512  217110 702243 576455 627980     249    232 2010.8  6  429
+c   1   15.2   45949  217517 703633 576628 627980     746    684 2424.7  0  442
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter3 depot loc17) :-0.01
+1: (move_E helicopter3 depot loc7) :-0.01
+1: (fly_carrier_S helicopter3 carrier1 loc7 loc2) :-33
+1: (fly_carrier_E helicopter3 carrier1 loc7 loc2) :-0.01
+1: (fly_carrier_S helicopter3 carrier1 loc2 loc5) :-26
+1: (fly_carrier_E helicopter3 carrier1 loc2 loc5) :-0.01
+2: (move_S helicopter3 loc5 loc4) :-164
+2: (move_E helicopter3 loc5 loc4) :-0.01
+2: (move_S helicopter3 loc4 loc17) :-113
+2: (move_E helicopter3 loc4 loc17) :-0.01
+3: (move_S helicopter3 loc17 loc1) :-92
+3: (move_E helicopter3 loc17 loc1) :-0.01
+3: (move_E helicopter3 depot loc17) :178
+restart # 11
+Time: 15.324 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    6.7 1779825 4320029 226513      0      0       0      0    0.0  0  642
+c   s   14.7   47680  217782 702216 569077 636180       0      0    0.0  0  428
+c   l   14.7   47680  217782 702216 569077 636180       0   5000    0.0  0  428
+c   R   14.8   47680  217782 702216 569077 636180      10      9 3003.9  2  429c  2R   14.8   47680  217782 702216 569077 636180      20     18 2594.4  3  429c  3R   15.0   47679  217825 702217 569077 636180     175    152 2469.3  1  430c  4R   15.2   47678  217885 702218 569077 636180     525    474 2417.0  8  430
+c   1   15.9   45954  218307 703725 569294 636180     688    610 2428.6  0  443
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+1: (move_S helicopter4 loc14 loc20) :-0.01
+1: (fly_carrier_S helicopter4 carrier1 loc14 loc16) :-108
+1: (fly_carrier_E helicopter4 carrier1 loc14 loc16) :-0.01
+1: (fly_carrier_S helicopter3 carrier1 loc16 loc18) :-167
+1: (fly_carrier_E helicopter3 carrier1 loc16 loc18) :-0.01
+1: (fly_carrier_S helicopter4 carrier1 loc18 loc20) :-129
+1: (fly_carrier_E helicopter4 carrier1 loc18 loc20) :-0.01
+2: (move_S helicopter4 loc20 loc2) :-125
+2: (move_E helicopter4 loc20 loc2) :-0.01
+2: (move_E helicopter4 loc14 loc20) :56
+restart # 12
+Time: 15.92 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    6.4 1780405 4321156 226550      0      0       0      0    0.0  0  642
+c   s   14.9   47694  218201 702323 582537 623110       0      0    0.0  0  428
+c   l   14.9   47694  218201 702323 582537 623110       0   5000    0.0  0  428
+c   R   15.0   47694  218201 702323 582537 623110      11     11 1849.9  2  429c  2R   15.0   47694  218201 702323 582537 623110      21     21 1710.4  2  429c  3R   15.0   47694  218205 702323 582537 623110      86     82 2227.5  4  429c  4R   15.2   47694  218277 702323 582537 623110     251    227 2364.0  3  430
+c   1   15.4   47694  218277 702323 582537 623110     251    227 2457.7  0  438
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter2 loc3 loc4) :-0.01
+0: (move_E helicopter2 loc3 loc7) :-0.01
+0: (move_S helicopter2 loc7 loc9) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc7 loc8) :-48
+0: (fly_carrier_E helicopter2 carrier1 loc7 loc8) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc8 loc9) :-106
+0: (fly_carrier_E helicopter2 carrier1 loc8 loc9) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc9 loc10) :-151
+0: (fly_carrier_E helicopter2 carrier1 loc9 loc10) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc10 loc11) :-132
+0: (fly_carrier_E helicopter2 carrier1 loc10 loc11) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc11 loc16) :-149
+0: (fly_carrier_E helicopter2 carrier1 loc11 loc16) :-0.01
+1: (move_S helicopter2 loc16 loc4) :-132
+1: (move_E helicopter2 loc16 loc4) :-0.01
+2: (move_S helicopter2 loc4 loc2) :-155
+2: (move_E helicopter2 loc4 loc2) :-0.01
+2: (move_S helicopter2 loc2 loc3) :-152
+2: (move_E helicopter2 loc2 loc3) :-0.01
+2: (move_S helicopter2 loc3 loc9) :-34
+2: (move_E helicopter2 loc3 loc9) :-0.01
+2: (fly_carrier_E helicopter2 carrier1 loc20 loc3) :-0.01
+3: (move_S helicopter2 loc3 loc1) :-158
+3: (move_E helicopter2 loc3 loc1) :-0.01
+3: (move_E helicopter2 loc1 loc3) :-0.01
+3: (move_E helicopter2 loc3 loc4) :4
+---------------
+1 event(s) have been removed from negative cycle
+New negative cycle:
+0: (move_S helicopter2 loc3 loc4) :-0.01
+0: (move_E helicopter2 loc3 loc7) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc7 loc8) :-48
+0: (fly_carrier_E helicopter2 carrier1 loc7 loc8) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc8 loc9) :-106
+0: (fly_carrier_E helicopter2 carrier1 loc8 loc9) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc9 loc10) :-151
+0: (fly_carrier_E helicopter2 carrier1 loc9 loc10) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc10 loc11) :-132
+0: (fly_carrier_E helicopter2 carrier1 loc10 loc11) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc11 loc16) :-149
+0: (fly_carrier_E helicopter2 carrier1 loc11 loc16) :-0.01
+1: (move_S helicopter2 loc16 loc4) :-132
+1: (move_E helicopter2 loc16 loc4) :-0.01
+2: (move_S helicopter2 loc4 loc2) :-155
+2: (move_E helicopter2 loc4 loc2) :-0.01
+2: (move_S helicopter2 loc2 loc3) :-152
+2: (move_E helicopter2 loc2 loc3) :-0.01
+2: (move_S helicopter2 loc3 loc9) :-34
+2: (move_E helicopter2 loc3 loc9) :-0.01
+2: (fly_carrier_E helicopter2 carrier1 loc20 loc3) :-0.01
+3: (move_S helicopter2 loc3 loc1) :-158
+3: (move_E helicopter2 loc3 loc1) :-0.01
+3: (move_E helicopter2 loc1 loc3) :-0.01
+3: (move_E helicopter2 loc3 loc4) :4
+restart # 13
+Time: 15.52 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    6.7 1786090 4332489 226651      0      0       0      0    0.0  0  643
+c   s   14.9   47808  220079 702458 581683 628339       0      0    0.0  0  428
+c   l   14.9   47808  220079 702458 581683 628339       0   5000    0.0  0  428
+c   R   14.9   47808  220079 702458 581683 628339      13     13 1323.3  1  429c  2R   14.9   47808  220080 702458 581683 628339      23     23 1134.5  2  429c  3R   14.9   47808  220082 702458 581683 628339      89     87 1495.9  2  429
+c   1   15.5   47806  220127 702460 581683 628339     321    305 2106.3  0  438
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter4 depot loc8) :-0.01
+0: (fly_carrier_S helicopter4 carrier1 depot loc3) :-226
+0: (fly_carrier_E helicopter4 carrier1 depot loc3) :-0.01
+0: (fly_carrier_S helicopter4 carrier1 loc3 loc9) :-34
+0: (fly_carrier_E helicopter4 carrier1 loc3 loc9) :-0.01
+1: (move_S helicopter4 loc9 depot) :-192
+1: (move_E helicopter4 loc9 depot) :-0.01
+1: (move_E helicopter4 depot loc8) :101
+restart # 14
+Time: 15.556 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    6.7 1786205 4332713 226660      0      0       0      0    0.0  0  643
+c   s   14.9   47806  220027 702497 585795 624282       0      0    0.0  0  428
+c   l   14.9   47806  220027 702497 585795 624282       0   5000    0.0  0  428
+c   R   14.9   47806  220027 702497 585795 624282      11     11 1051.0  2  428c  2R   15.0   47806  220027 702497 585795 624282      22     21 2293.0  2  429
+c   1   15.3   47755  220071 702548 585795 624282      88     79 2507.9  0  438
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+1: (move_S helicopter3 loc6 loc3) :-0.01
+1: (move_E helicopter3 loc6 loc4) :-0.01
+1: (move_S helicopter3 loc4 loc5) :-164
+1: (move_E helicopter3 loc4 loc5) :-0.01
+1: (move_S helicopter3 loc5 loc6) :-54
+2: (move_E helicopter3 loc5 loc6) :-0.01
+2: (move_S helicopter3 loc6 loc9) :-0.01
+3: (move_E helicopter3 loc6 loc3) :119
+---------------
+1 event(s) have been removed from negative cycle
+New negative cycle:
+1: (move_S helicopter3 loc6 loc3) :-0.01
+1: (move_E helicopter3 loc6 loc4) :-0.01
+1: (move_S helicopter3 loc4 loc5) :-164
+1: (move_E helicopter3 loc4 loc5) :-0.01
+1: (move_S helicopter3 loc5 loc6) :-54
+2: (move_E helicopter3 loc5 loc6) :-0.01
+3: (move_E helicopter3 loc6 loc3) :119
+restart # 15
+Time: 15.416 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    6.6 1786355 4333006 226671      0      0       0      0    0.0  0  643
+c   s   14.0   47749  219978 702543 600845 609368       0      0    0.0  0  428
+c   l   14.0   47749  219978 702543 600845 609368       0   5000    0.0  0  428
+c   R   14.0   47749  219978 702543 600845 609368      11     11 1051.8  2  429c  2R   14.1   47749  219978 702543 600845 609368      22     21 2293.7  2  429c  3R   14.1   47749  220000 702543 600845 609368      88     85 2421.0  4  430c  4R   14.2   47749  220013 702543 600845 609368     255    239 1971.4  5  430
+c   B   15.0   46044  220383 704008 601085 609368    1002    949 2542.5  5  435
+c   R   15.0   46044  220388 704008 601085 609368    1049    996 2543.5  9  435
+c   1   15.8   46004  220578 704032 601101 609368    1716   1648 2700.7  0  445
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+1: (move_S helicopter3 loc9 loc10) :-0.01
+1: (move_E helicopter3 loc9 loc20) :-0.01
+1: (fly_carrier_E helicopter3 carrier1 loc3 loc9) :-0.01
+1: (fly_carrier_S helicopter3 carrier1 loc9 loc10) :-151
+1: (fly_carrier_E helicopter3 carrier1 loc9 loc10) :-0.01
+1: (fly_carrier_S helicopter1 carrier1 loc10 loc11) :-132
+1: (fly_carrier_E helicopter1 carrier1 loc10 loc11) :-0.01
+1: (fly_carrier_S helicopter1 carrier1 loc11 loc16) :-149
+1: (fly_carrier_E helicopter1 carrier1 loc11 loc16) :-0.01
+1: (fly_carrier_S helicopter1 carrier1 loc16 loc17) :-20
+1: (fly_carrier_E helicopter1 carrier1 loc16 loc17) :-0.01
+1: (fly_carrier_S helicopter3 carrier1 loc17 loc19) :-122
+1: (fly_carrier_E helicopter3 carrier1 loc17 loc19) :-0.01
+2: (move_S helicopter3 loc19 depot) :-172
+2: (move_E helicopter3 loc19 depot) :-0.01
+2: (pick_up_S helicopter3 crate14 depot) :-10
+2: (pick_up_E helicopter3 crate14 depot) :-0.01
+2: (give_S helicopter3 crate14 person3 loc6 food_crate) :-0.01
+2: (fly_carrier_S helicopter3 carrier1 loc19 loc10) :-106
+2: (fly_carrier_E helicopter3 carrier1 loc19 loc10) :-0.01
+3: (move_S helicopter3 loc10 depot) :-165
+3: (move_E helicopter3 loc10 depot) :-0.01
+3: (move_E helicopter3 loc9 loc10) :151
+restart # 16
+Time: 15.856 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    6.8 1868725 4497729 226701      0      0       0      0    0.0  0  658
+c   s   15.0   48435  226639 702484 574298 695235       0      0    0.0  0  429
+c   l   15.0   48435  226639 702484 574298 695235       0   5000    0.0  0  429
+c   R   15.0   48435  226639 702484 574298 695235      11     11 1053.8  2  429c  2R   15.0   48435  226639 702484 574298 695235      22     21 2295.8  2  430c  3R   15.2   48384  226687 702535 574298 695235     117    106 2574.7  4  430c  4R   15.3   48384  226693 702535 574298 695235     286    263 2539.8  4  430
+c   B   16.0   46772  227103 703807 574638 695235    1000    915 2819.3  2  435
+c   1   16.6   46513  227260 704012 574692 695235    1181   1074 2705.2  0  445
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter1 depot loc15) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 depot loc12) :-0.01
+1: (move_E helicopter1 depot loc20) :-0.01
+2: (move_S helicopter1 loc20 depot) :-177
+2: (move_E helicopter1 loc20 depot) :-0.01
+2: (move_E helicopter1 depot loc15) :176
+---------------
+1 event(s) have been removed from negative cycle
+New negative cycle:
+0: (move_S helicopter1 depot loc15) :-0.01
+1: (move_E helicopter1 depot loc20) :-0.01
+2: (move_S helicopter1 loc20 depot) :-177
+2: (move_E helicopter1 loc20 depot) :-0.01
+2: (move_E helicopter1 depot loc15) :176
+restart # 17
+Time: 16.656 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    6.9 1868945 4498162 226715      0      0       0      0    0.0  0  658
+c   s   15.2   48468  226851 702493 574564 695118       0      0    0.0  0  429
+c   l   15.2   48468  226851 702493 574564 695118       0   5000    0.0  0  429
+c   R   15.2   48468  226851 702493 574564 695118      11     11 2828.2  1  429c  2R   15.2   48468  226855 702493 574564 695118      21     20 2736.5  1  429c  3R   15.4   48465  226911 702496 574564 695118     160    146 2490.0  3  430c  4R   15.5   48465  226929 702496 574564 695118     327    305 2568.5  2  430
+c   1   16.4   46617  227353 704004 574904 695118     846    787 2574.7  0  443
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter3 loc6 loc7) :-0.01
+0: (fly_carrier_S helicopter3 carrier1 loc6 loc7) :-68
+0: (fly_carrier_E helicopter3 carrier1 loc6 loc7) :-0.01
+1: (move_S helicopter3 loc7 loc3) :-182
+1: (move_E helicopter3 loc7 loc3) :-0.01
+2: (move_E helicopter3 loc6 loc7) :68
+restart # 18
+Time: 16.464 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    6.8 1869525 4499303 226747      0      0       0      0    0.0  0  658
+c   s   14.8   48426  226774 702607 583815 686367       0      0    0.0  0  429
+c   l   14.8   48426  226774 702607 583815 686367       0   5000    0.0  0  429
+c   R   14.8   48426  226774 702607 583815 686367      11     11 1126.6  1  429c  2R   14.8   48426  226779 702607 583815 686367      21     21 1720.5  1  430c  3R   15.0   48406  226804 702627 583815 686367     233    213 1940.4  3  430c  4R   15.2   48405  226827 702628 583815 686367     617    569 2257.3  6  431
+c   1   15.8   46577  227229 704085 584186 686367     880    825 2532.9  0  443
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter1 depot loc18) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 depot loc1) :-86
+0: (fly_carrier_E helicopter1 carrier1 depot loc1) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc1 loc4) :-160
+0: (fly_carrier_E helicopter1 carrier1 loc1 loc4) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc4 loc5) :-164
+0: (fly_carrier_E helicopter1 carrier1 loc4 loc5) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc5 loc9) :-134
+0: (fly_carrier_E helicopter1 carrier1 loc5 loc9) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc9 loc14) :-51
+0: (fly_carrier_E helicopter1 carrier1 loc9 loc14) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc14 loc15) :-102
+0: (fly_carrier_E helicopter1 carrier1 loc14 loc15) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc15 loc16) :-7
+0: (fly_carrier_E helicopter1 carrier1 loc15 loc16) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc16 loc18) :-167
+0: (fly_carrier_E helicopter1 carrier1 loc16 loc18) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc18 loc19) :-0.01
+1: (move_E helicopter1 depot loc18) :102
+restart # 19
+Time: 15.924 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    9.4 1961470 4683167 226799      0      0       0      0    0.0  0 1049
+c   s   17.9   52010  245436 702585 575733 766577       0      0    0.0  0  810
+c   l   17.9   52010  245436 702585 575733 766577       0   5000    0.0  0  810
+c   R   17.9   52010  245436 702585 575733 766577      10     10 1111.3  1  811c  2R   17.9   52010  245453 702585 575733 766577      20     20  988.2  2  811c  3R   18.0   52010  245456 702585 575733 766577      89     89 1521.8  3  812c  4R   18.3   51998  245539 702597 575733 766577     459    426 2214.5  4  813
+c   1   19.1   50296  245842 703995 576037 766577     741    703 2491.7  0  825
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter2 depot loc19) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 depot loc1) :-86
+0: (fly_carrier_E helicopter2 carrier1 depot loc1) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc1 loc3) :-158
+0: (fly_carrier_E helicopter2 carrier1 loc1 loc3) :-0.01
+1: (move_S helicopter2 loc3 depot) :-226
+1: (move_E helicopter2 loc3 depot) :-0.01
+1: (move_S helicopter2 depot loc18) :-0.01
+1: (move_E helicopter2 depot loc19) :172
+---------------
+1 event(s) have been removed from negative cycle
+New negative cycle:
+0: (move_S helicopter2 depot loc19) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 depot loc1) :-86
+0: (fly_carrier_E helicopter2 carrier1 depot loc1) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc1 loc3) :-158
+0: (fly_carrier_E helicopter2 carrier1 loc1 loc3) :-0.01
+1: (move_S helicopter2 loc3 depot) :-226
+1: (move_E helicopter2 loc3 depot) :-0.01
+1: (move_E helicopter2 depot loc19) :172
+restart # 20
+Time: 19.076 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    9.0 1962135 4684473 226836      0      0       0      0    0.0  0 1049
+c   s   17.3   51930  245232 702623 575013 767941       0      0    0.0  0  810
+c   l   17.3   51930  245232 702623 575013 767941       0   5000    0.0  0  810
+c   R   17.3   51930  245232 702623 575013 767941      10      9 2897.5  2  811c  2R   17.3   51926  245251 702627 575013 767941      41     35 1974.0  3  812
+c   1   17.7   51926  245273 702627 575013 767941      61     55 2654.2  0  820
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter2 depot loc15) :-0.01
+1: (move_E helicopter2 depot loc6) :-0.01
+1: (move_S helicopter2 loc6 loc7) :-0.01
+1: (fly_carrier_S helicopter2 carrier1 loc6 loc2) :-36
+1: (fly_carrier_E helicopter2 carrier1 loc6 loc2) :-0.01
+1: (fly_carrier_S helicopter4 carrier1 loc2 loc3) :-152
+1: (fly_carrier_E helicopter4 carrier1 loc2 loc3) :-0.01
+2: (fly_carrier_S helicopter3 carrier1 loc3 loc9) :-34
+2: (fly_carrier_E helicopter3 carrier1 loc3 loc9) :-0.01
+2: (fly_carrier_S helicopter2 carrier1 loc9 loc13) :-91
+2: (fly_carrier_E helicopter2 carrier1 loc9 loc13) :-0.01
+2: (fly_carrier_S helicopter1 carrier1 loc13 loc14) :-98
+2: (fly_carrier_E helicopter1 carrier1 loc13 loc14) :-0.01
+2: (fly_carrier_S helicopter2 carrier1 loc14 loc15) :-102
+2: (fly_carrier_E helicopter2 carrier1 loc14 loc15) :-0.01
+3: (move_S helicopter2 loc15 loc10) :-223
+3: (move_E helicopter2 loc15 loc10) :-0.01
+3: (move_E helicopter2 depot loc15) :176
+---------------
+1 event(s) have been removed from negative cycle
+New negative cycle:
+0: (move_S helicopter2 depot loc15) :-0.01
+1: (move_E helicopter2 depot loc6) :-0.01
+1: (fly_carrier_S helicopter2 carrier1 loc6 loc2) :-36
+1: (fly_carrier_E helicopter2 carrier1 loc6 loc2) :-0.01
+1: (fly_carrier_S helicopter4 carrier1 loc2 loc3) :-152
+1: (fly_carrier_E helicopter4 carrier1 loc2 loc3) :-0.01
+2: (fly_carrier_S helicopter3 carrier1 loc3 loc9) :-34
+2: (fly_carrier_E helicopter3 carrier1 loc3 loc9) :-0.01
+2: (fly_carrier_S helicopter2 carrier1 loc9 loc13) :-91
+2: (fly_carrier_E helicopter2 carrier1 loc9 loc13) :-0.01
+2: (fly_carrier_S helicopter1 carrier1 loc13 loc14) :-98
+2: (fly_carrier_E helicopter1 carrier1 loc13 loc14) :-0.01
+2: (fly_carrier_S helicopter2 carrier1 loc14 loc15) :-102
+2: (fly_carrier_E helicopter2 carrier1 loc14 loc15) :-0.01
+3: (move_S helicopter2 loc15 loc10) :-223
+3: (move_E helicopter2 loc15 loc10) :-0.01
+3: (move_E helicopter2 depot loc15) :176
+restart # 21
+Time: 17.74 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    9.5 1976335 4712836 226926      0      0       0      0    0.0  0 1051
+c   s   18.4   52466  253846 702672 572111 781589       0      0    0.0  0  811
+c   l   18.4   52466  253846 702672 572111 781589       0   5000    0.0  0  811
+c   R   18.4   52466  253846 702672 572111 781589      10      9 2931.5  2  812c  2R   18.5   52457  253860 702681 572111 781589      51     37 2483.7  2  813
+c   1   18.9   52457  253878 702681 572111 781589      82     68 2711.5  0  821
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter2 depot loc8) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 depot loc1) :-86
+0: (fly_carrier_E helicopter2 carrier1 depot loc1) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc1 loc2) :-87
+0: (fly_carrier_E helicopter2 carrier1 loc1 loc2) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc2 loc3) :-152
+0: (fly_carrier_E helicopter2 carrier1 loc2 loc3) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc3 loc19) :-67
+0: (fly_carrier_E helicopter2 carrier1 loc3 loc19) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc19 loc20) :-77
+0: (fly_carrier_E helicopter2 carrier1 loc19 loc20) :-0.01
+1: (move_S helicopter2 loc20 depot) :-177
+1: (move_E helicopter2 loc20 depot) :-0.01
+1: (move_S helicopter2 depot loc6) :-112
+1: (move_E helicopter2 depot loc6) :-0.01
+2: (move_S helicopter2 loc6 loc8) :-21
+2: (move_E helicopter2 loc6 loc8) :-0.01
+2: (move_S helicopter2 loc8 loc9) :-106
+2: (move_E helicopter2 loc8 loc9) :-0.01
+3: (move_E helicopter2 depot loc8) :101
+restart # 22
+Time: 18.936 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    9.8 1979600 4719343 226992      0      0       0      0    0.0  0 1052
+c   s   18.3   52586  255250 702793 578044 778563       0      0    0.0  0  811
+c   l   18.3   52586  255250 702793 578044 778563       0   5000    0.0  0  811
+c   R   18.3   52586  255250 702793 578044 778563      11     11 1253.2  2  812c  2R   18.3   52586  255254 702793 578044 778563      21     21 1194.6  2  812c  3R   18.4   52586  255257 702793 578044 778563      84     82 1240.0  2  812
+c   1   18.8   52546  255291 702833 578044 778563     234    213 2577.1  0  821
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+1: (move_S helicopter1 loc16 loc3) :-0.01
+1: (move_E helicopter1 loc16 loc14) :-0.01
+1: (move_E helicopter1 loc10 loc16) :-0.01
+1: (move_S helicopter1 loc16 loc20) :-66
+1: (move_E helicopter1 loc16 loc20) :-0.01
+2: (move_S helicopter1 loc20 depot) :-177
+2: (move_E helicopter1 loc20 depot) :-0.01
+2: (move_S helicopter1 depot loc18) :-102
+2: (move_E helicopter1 depot loc18) :-0.01
+3: (move_E helicopter1 loc7 depot) :-0.01
+3: (move_E helicopter1 depot loc2) :-0.01
+3: (move_E helicopter1 loc2 loc3) :-0.01
+3: (move_S helicopter1 loc3 loc10) :-168
+3: (move_E helicopter1 loc3 loc10) :-0.01
+4: (move_E helicopter1 loc16 loc3) :132
+restart # 23
+Time: 18.876 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    9.4 1980925 4721951 227069      0      0       0      0    0.0  0 1052
+c   s   18.5   52614  255744 702971 585163 772172       0      0    0.0  0  811
+c   l   18.5   52614  255744 702971 585163 772172       0   5000    0.0  0  811
+c   R   18.6   52614  255744 702971 585163 772172      11     11 1266.7  2  812c  2R   18.6   52614  255748 702971 585163 772172      21     21 1150.0  2  812c  3R   18.6   52614  255754 702971 585163 772172      81     77 1720.1  1  812
+c   1   19.0   52614  255771 702971 585163 772172      95     91 2203.3  0  821
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter1 depot loc5) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 depot loc1) :-86
+0: (fly_carrier_E helicopter1 carrier1 depot loc1) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc1 loc2) :-87
+0: (fly_carrier_E helicopter1 carrier1 loc1 loc2) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc2 loc4) :-155
+0: (fly_carrier_E helicopter1 carrier1 loc2 loc4) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc4 loc9) :-37
+0: (fly_carrier_E helicopter1 carrier1 loc4 loc9) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc9 loc17) :-91
+0: (fly_carrier_E helicopter1 carrier1 loc9 loc17) :-0.01
+1: (fly_carrier_S helicopter4 carrier1 loc17 loc3) :-113
+1: (fly_carrier_E helicopter4 carrier1 loc17 loc3) :-0.01
+2: (fly_carrier_S helicopter1 carrier1 loc3 depot) :-226
+2: (fly_carrier_E helicopter1 carrier1 loc3 depot) :-0.01
+3: (move_E helicopter1 depot loc5) :105
+restart # 24
+Time: 19.052 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    9.3 1993265 4746610 227123      0      0       0      0    0.0  0 1053
+c   s   17.7   53980  263330 702879 563788 804050       0      0    0.0  0  828
+c   l   17.7   53980  263330 702879 563788 804050       0   5000    0.0  0  828
+c   R   17.7   53980  263330 702879 563788 804050      10     10 1115.4  2  828c  2R   17.7   53980  263333 702879 563788 804050      20     17 1100.8  3  828c  3R   17.8   53980  263375 702879 563788 804050      81     70 1501.9  2  829
+c   1   18.3   53980  263394 702879 563788 804050     134    114 2712.9  0  838
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter3 depot loc8) :-0.01
+0: (fly_carrier_S helicopter3 carrier1 depot loc1) :-86
+0: (fly_carrier_E helicopter3 carrier1 depot loc1) :-0.01
+0: (fly_carrier_S helicopter3 carrier1 loc1 loc3) :-158
+0: (fly_carrier_E helicopter3 carrier1 loc1 loc3) :-0.01
+1: (move_S helicopter3 loc3 depot) :-226
+1: (move_E helicopter3 loc3 depot) :-0.01
+1: (move_S helicopter3 depot loc7) :-0.01
+2: (move_E helicopter3 depot loc19) :-0.01
+3: (move_S helicopter3 loc19 depot) :-172
+3: (move_E helicopter3 loc19 depot) :-0.01
+3: (move_E helicopter3 depot loc8) :101
+---------------
+1 event(s) have been removed from negative cycle
+New negative cycle:
+0: (move_S helicopter3 depot loc8) :-0.01
+0: (fly_carrier_S helicopter3 carrier1 depot loc1) :-86
+0: (fly_carrier_E helicopter3 carrier1 depot loc1) :-0.01
+0: (fly_carrier_S helicopter3 carrier1 loc1 loc3) :-158
+0: (fly_carrier_E helicopter3 carrier1 loc1 loc3) :-0.01
+1: (move_S helicopter3 loc3 depot) :-226
+1: (move_E helicopter3 loc3 depot) :-0.01
+2: (move_E helicopter3 depot loc19) :-0.01
+3: (move_S helicopter3 loc19 depot) :-172
+3: (move_E helicopter3 loc19 depot) :-0.01
+3: (move_E helicopter3 depot loc8) :101
+restart # 25
+Time: 18.296 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    9.5 1994125 4748314 227171      0      0       0      0    0.0  0 1054
+c   s   19.0   53283  260607 704161 583774 784250       0      0    0.0  0  828
+c   l   19.0   53283  260607 704161 583774 784250       0   5000    0.0  0  828
+c   R   19.0   53283  260607 704161 583774 784250      11     11 2228.2  1  828c  2R   19.0   53283  260607 704161 583774 784250      21     21 1889.8  2  828c  3R   19.1   53283  260642 704161 583774 784250      84     77 2801.7  1  829
+c   1   19.5   53283  260643 704161 583774 784250     174    167 2746.3  0  838
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+1: (move_S helicopter1 loc5 loc14) :-0.01
+2: (move_E helicopter1 loc5 loc6) :-0.01
+2: (move_S helicopter1 loc6 loc11) :-67
+2: (move_E helicopter1 loc6 loc11) :-0.01
+2: (move_S helicopter1 loc11 loc12) :-131
+2: (move_E helicopter1 loc11 loc12) :-0.01
+2: (move_S helicopter1 loc12 loc20) :-58
+2: (move_E helicopter1 loc12 loc20) :-0.01
+2: (fly_carrier_S helicopter1 carrier1 loc20 loc18) :-129
+2: (fly_carrier_E helicopter1 carrier1 loc20 loc18) :-0.01
+2: (fly_carrier_S helicopter1 carrier1 loc18 loc20) :-129
+2: (fly_carrier_E helicopter1 carrier1 loc18 loc20) :-0.01
+3: (move_S helicopter1 loc20 loc7) :-157
+3: (move_E helicopter1 loc20 loc7) :-0.01
+3: (move_S helicopter1 loc7 loc17) :-180
+3: (move_E helicopter1 loc7 loc17) :-0.01
+3: (move_S helicopter1 loc17 loc19) :-122
+3: (move_E helicopter1 loc17 loc19) :-0.01
+4: (move_S helicopter1 loc19 loc1) :-122
+4: (move_E helicopter1 loc19 loc1) :-0.01
+4: (move_S helicopter1 loc1 loc5) :-112
+4: (move_E helicopter1 loc1 loc5) :-0.01
+4: (move_S helicopter1 loc5 loc6) :-0.01
+4: (move_E helicopter1 loc5 loc7) :27
+3: (move_S helicopter1 loc5 loc7) :-0.01
+3: (move_E helicopter1 loc5 loc14) :90
+---------------
+3 event(s) have been removed from negative cycle
+New negative cycle:
+1: (move_S helicopter1 loc5 loc14) :-0.01
+2: (move_E helicopter1 loc5 loc6) :-0.01
+2: (move_S helicopter1 loc6 loc11) :-67
+2: (move_E helicopter1 loc6 loc11) :-0.01
+2: (move_S helicopter1 loc11 loc12) :-131
+2: (move_E helicopter1 loc11 loc12) :-0.01
+2: (move_S helicopter1 loc12 loc20) :-58
+2: (move_E helicopter1 loc12 loc20) :-0.01
+2: (fly_carrier_S helicopter1 carrier1 loc20 loc18) :-129
+2: (fly_carrier_E helicopter1 carrier1 loc20 loc18) :-0.01
+2: (fly_carrier_S helicopter1 carrier1 loc18 loc20) :-129
+2: (fly_carrier_E helicopter1 carrier1 loc18 loc20) :-0.01
+3: (move_S helicopter1 loc20 loc7) :-157
+3: (move_E helicopter1 loc20 loc7) :-0.01
+3: (move_S helicopter1 loc7 loc17) :-180
+3: (move_E helicopter1 loc7 loc17) :-0.01
+3: (move_S helicopter1 loc17 loc19) :-122
+3: (move_E helicopter1 loc17 loc19) :-0.01
+4: (move_S helicopter1 loc19 loc1) :-122
+4: (move_E helicopter1 loc19 loc1) :-0.01
+4: (move_S helicopter1 loc1 loc5) :-112
+4: (move_E helicopter1 loc1 loc5) :0
+3: (move_E helicopter1 loc5 loc14) :90
+restart # 26
+Time: 19.576 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    9.3 2002270 4764568 227249      0      0       0      0    0.0  0 1055
+c   s   18.0   54075  266606 703094 576030 798706       0      0    0.0  0  828
+c   l   18.0   54075  266606 703094 576030 798706       0   5000    0.0  0  828
+c   R   18.0   54075  266606 703094 576030 798706      11     11 2238.8  1  829c  2R   18.0   54075  266606 703094 576030 798706      21     21 1897.0  2  829c  3R   18.0   54075  266614 703094 576030 798706      86     80 2465.7  5  829
+c   1   18.5   54073  266655 703096 576030 798706     182    174 2542.0  0  838
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter2 depot loc7) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 depot loc4) :-228
+0: (fly_carrier_E helicopter2 carrier1 depot loc4) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc4 loc6) :-121
+0: (fly_carrier_E helicopter2 carrier1 loc4 loc6) :-0.01
+1: (move_S helicopter2 loc6 depot) :-112
+1: (move_E helicopter2 loc6 depot) :-0.01
+1: (move_E helicopter2 depot loc7) :83
+restart # 27
+Time: 18.508 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    9.4 2002375 4764772 227258      0      0       0      0    0.0  0 1055
+c   s   18.2   54068  266585 703150 578526 796254       0      0    0.0  0  828
+c   l   18.2   54068  266585 703150 578526 796254       0   5000    0.0  0  828
+c   R   18.2   54068  266585 703150 578526 796254      11     11 1149.0  1  828c  2R   18.2   54068  266585 703150 578526 796254      23     20  947.9  1  828c  3R   18.2   54068  266587 703150 578526 796254      85     80 1778.1  2  829
+c   1   18.7   54068  266617 703150 578526 796254     155    147 2877.0  0  838
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter3 depot loc5) :-0.01
+0: (fly_carrier_S helicopter3 carrier1 depot loc2) :-91
+0: (fly_carrier_E helicopter3 carrier1 depot loc2) :-0.01
+0: (fly_carrier_S helicopter3 carrier1 loc2 loc3) :-152
+0: (fly_carrier_E helicopter3 carrier1 loc2 loc3) :-0.01
+0: (fly_carrier_S helicopter3 carrier1 loc3 loc7) :-182
+0: (fly_carrier_E helicopter3 carrier1 loc3 loc7) :-0.01
+0: (fly_carrier_S helicopter4 carrier1 loc7 loc9) :-153
+0: (fly_carrier_E helicopter4 carrier1 loc7 loc9) :-0.01
+0: (fly_carrier_S helicopter4 carrier1 loc9 loc10) :-151
+0: (fly_carrier_E helicopter4 carrier1 loc9 loc10) :-0.01
+0: (fly_carrier_S helicopter4 carrier1 loc10 loc16) :-228
+0: (fly_carrier_E helicopter4 carrier1 loc10 loc16) :-0.01
+0: (fly_carrier_S helicopter4 carrier1 loc16 loc20) :-66
+0: (fly_carrier_E helicopter4 carrier1 loc16 loc20) :-0.01
+1: (move_S helicopter4 loc20 depot) :-177
+1: (move_E helicopter4 loc20 depot) :-0.01
+1: (pick_up_S helicopter4 crate19 depot) :-10
+1: (pick_up_E helicopter4 crate19 depot) :-0.01
+1: (give_S helicopter4 crate19 person20 loc16 medicine_crate) :-0.01
+1: (fly_carrier_S helicopter4 carrier1 loc20 loc3) :-70
+1: (fly_carrier_E helicopter4 carrier1 loc20 loc3) :-0.01
+1: (fly_carrier_S helicopter3 carrier1 loc3 loc5) :-161
+1: (fly_carrier_E helicopter3 carrier1 loc3 loc5) :-0.01
+1: (fly_carrier_S helicopter3 carrier1 loc5 loc6) :-0.01
+2: (move_E helicopter3 loc10 loc5) :-0.01
+2: (move_S helicopter3 loc5 loc9) :-134
+2: (move_E helicopter3 loc5 loc9) :-0.01
+2: (move_S helicopter3 loc9 loc10) :-151
+2: (move_E helicopter3 loc9 loc10) :-0.01
+3: (move_E helicopter3 loc10 depot) :-0.01
+3: (move_E helicopter3 depot loc5) :105
+restart # 28
+Time: 18.744 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    9.4 2077980 4915938 227352      0      0       0      0    0.0  0 1064
+c   s   18.7   54100  266826 703159 578941 849842       0      0    0.0  0  828
+c   l   18.7   54100  266826 703159 578941 849842       0   5000    0.0  0  828
+c   R   18.7   54100  266826 703159 578941 849842      10     10 1124.6  1  828c  2R   18.7   54100  266836 703159 578941 849842      21     17 1017.1  2  829c  3R   18.7   54100  266843 703159 578941 849842      87     82  813.9  2  829
+c   1   19.2   54090  266889 703169 578941 849842     203    188 2031.8  0  838
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter1 depot loc14) :-0.01
+1: (move_E helicopter1 depot loc4) :-0.01
+1: (move_S helicopter1 loc4 loc5) :-164
+1: (move_E helicopter1 loc4 loc5) :-0.01
+1: (move_S helicopter1 loc5 loc10) :-63
+1: (move_E helicopter1 loc5 loc10) :-0.01
+1: (move_S helicopter1 loc10 loc13) :-220
+1: (move_E helicopter1 loc10 loc13) :-0.01
+1: (move_S helicopter1 loc13 loc18) :-164
+1: (move_E helicopter1 loc13 loc18) :-0.01
+2: (move_E helicopter1 loc4 loc13) :-0.01
+2: (fly_carrier_E helicopter1 carrier1 depot loc4) :-0.01
+2: (fly_carrier_S helicopter1 carrier1 loc4 loc5) :-164
+2: (fly_carrier_E helicopter1 carrier1 loc4 loc5) :-0.01
+2: (fly_carrier_S helicopter3 carrier1 loc5 loc6) :-54
+2: (fly_carrier_E helicopter3 carrier1 loc5 loc6) :-0.01
+2: (fly_carrier_S helicopter1 carrier1 loc6 loc9) :-0.01
+3: (move_E helicopter1 loc6 depot) :-0.01
+3: (move_S helicopter1 depot loc2) :-0.01
+3: (move_E helicopter1 depot loc14) :143
+---------------
+1 event(s) have been removed from negative cycle
+New negative cycle:
+0: (move_S helicopter1 depot loc14) :-0.01
+1: (move_E helicopter1 depot loc4) :-0.01
+1: (move_S helicopter1 loc4 loc5) :-164
+1: (move_E helicopter1 loc4 loc5) :-0.01
+1: (move_S helicopter1 loc5 loc10) :-63
+1: (move_E helicopter1 loc5 loc10) :-0.01
+1: (move_S helicopter1 loc10 loc13) :-220
+1: (move_E helicopter1 loc10 loc13) :-0.01
+1: (move_S helicopter1 loc13 loc18) :-164
+1: (move_E helicopter1 loc13 loc18) :-0.01
+2: (move_E helicopter1 loc4 loc13) :-0.01
+2: (fly_carrier_E helicopter1 carrier1 depot loc4) :-0.01
+2: (fly_carrier_S helicopter1 carrier1 loc4 loc5) :-164
+2: (fly_carrier_E helicopter1 carrier1 loc4 loc5) :-0.01
+2: (fly_carrier_S helicopter3 carrier1 loc5 loc6) :-54
+2: (fly_carrier_E helicopter3 carrier1 loc5 loc6) :-0.01
+2: (fly_carrier_S helicopter1 carrier1 loc6 loc9) :-0.01
+3: (move_E helicopter1 loc6 depot) :-0.01
+3: (move_E helicopter1 depot loc14) :143
+restart # 29
+Time: 19.204 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    9.4 2080105 4920171 227393      0      0       0      0    0.0  0 1065
+c   s   18.2   54143  267504 703233 573714 856235       0      0    0.0  0  828
+c   l   18.2   54143  267504 703233 573714 856235       0   5000    0.0  0  828
+c   R   18.2   54143  267504 703233 573714 856235      10     10  667.8  1  829c  2R   18.2   54143  267505 703233 573714 856235      20     20  574.4  2  829c  3R   18.2   54143  267526 703233 573714 856235      84     81 1552.7  4  829c  4R   18.4   54143  267546 703233 573714 856235     250    225 1987.1  4  830
+c   1   18.9   54139  267590 703237 573714 856235     545    487 2389.5  0  839
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+2: (move_S helicopter4 loc16 loc2) :-0.01
+2: (move_E helicopter4 loc16 loc8) :-0.01
+2: (move_S helicopter4 loc8 loc9) :-106
+2: (move_E helicopter4 loc8 loc9) :-0.01
+3: (move_S helicopter4 loc9 loc1) :-125
+3: (move_E helicopter4 loc9 loc1) :-0.01
+3: (move_E helicopter4 loc1 loc2) :-0.01
+3: (move_E helicopter4 loc2 loc4) :-0.01
+4: (move_E helicopter4 loc16 loc2) :160
+restart # 30
+Time: 18.972 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *    9.5 2080615 4921167 227423      0      0       0      0    0.0  0 1065
+c   s   17.9   54194  267486 703226 564181 866118       0      0    0.0  0  828
+c   l   17.9   54194  267486 703226 564181 866118       0   5000    0.0  0  828
+c   R   17.9   54194  267486 703226 564181 866118      11     11 1149.5  1  828c  2R   17.9   54194  267486 703226 564181 866118      23     20  948.4  1  828c  3R   17.9   54194  267488 703226 564181 866118      85     80  962.6  3  829
+c   1   18.4   54193  267533 703227 564181 866118     219    205 2293.1  0  838
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter3 depot loc20) :-0.01
+0: (fly_carrier_S helicopter3 carrier1 depot loc8) :-101
+0: (fly_carrier_E helicopter3 carrier1 depot loc8) :-0.01
+0: (fly_carrier_S helicopter3 carrier1 loc8 loc9) :-106
+0: (fly_carrier_E helicopter3 carrier1 loc8 loc9) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc9 loc14) :-51
+0: (fly_carrier_E helicopter2 carrier1 loc9 loc14) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc14 loc15) :-102
+0: (fly_carrier_E helicopter2 carrier1 loc14 loc15) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc15 loc16) :-7
+0: (fly_carrier_E helicopter2 carrier1 loc15 loc16) :-0.01
+0: (fly_carrier_S helicopter4 carrier1 loc16 loc17) :-20
+0: (fly_carrier_E helicopter4 carrier1 loc16 loc17) :-0.01
+1: (move_S helicopter4 loc17 loc1) :-92
+1: (move_E helicopter4 loc17 loc1) :-0.01
+1: (fly_carrier_S helicopter4 carrier1 loc1 loc4) :-160
+1: (fly_carrier_E helicopter4 carrier1 loc1 loc4) :-0.01
+1: (fly_carrier_S helicopter3 carrier1 loc4 loc5) :-164
+1: (fly_carrier_E helicopter3 carrier1 loc4 loc5) :-0.01
+2: (move_S helicopter3 loc5 loc1) :-0.01
+2: (fly_carrier_S helicopter3 carrier1 loc5 loc6) :-54
+2: (fly_carrier_E helicopter3 carrier1 loc5 loc6) :-0.01
+3: (move_S helicopter3 loc6 depot) :-112
+3: (move_E helicopter3 loc6 depot) :-0.01
+3: (move_S helicopter3 depot loc5) :-0.01
+3: (move_E helicopter3 depot loc20) :177
+---------------
+2 event(s) have been removed from negative cycle
+New negative cycle:
+0: (move_S helicopter3 depot loc20) :-0.01
+0: (fly_carrier_S helicopter3 carrier1 depot loc8) :-101
+0: (fly_carrier_E helicopter3 carrier1 depot loc8) :-0.01
+0: (fly_carrier_S helicopter3 carrier1 loc8 loc9) :-106
+0: (fly_carrier_E helicopter3 carrier1 loc8 loc9) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc9 loc14) :-51
+0: (fly_carrier_E helicopter2 carrier1 loc9 loc14) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc14 loc15) :-102
+0: (fly_carrier_E helicopter2 carrier1 loc14 loc15) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc15 loc16) :-7
+0: (fly_carrier_E helicopter2 carrier1 loc15 loc16) :-0.01
+0: (fly_carrier_S helicopter4 carrier1 loc16 loc17) :-20
+0: (fly_carrier_E helicopter4 carrier1 loc16 loc17) :-0.01
+1: (move_S helicopter4 loc17 loc1) :-92
+1: (move_E helicopter4 loc17 loc1) :-0.01
+1: (fly_carrier_S helicopter4 carrier1 loc1 loc4) :-160
+1: (fly_carrier_E helicopter4 carrier1 loc1 loc4) :-0.01
+1: (fly_carrier_S helicopter3 carrier1 loc4 loc5) :-164
+1: (fly_carrier_E helicopter3 carrier1 loc4 loc5) :-0.01
+2: (fly_carrier_S helicopter3 carrier1 loc5 loc6) :-54
+2: (fly_carrier_E helicopter3 carrier1 loc5 loc6) :-0.01
+3: (move_S helicopter3 loc6 depot) :-112
+3: (move_E helicopter3 loc6 depot) :-0.01
+3: (move_E helicopter3 depot loc20) :177
+restart # 31
+Time: 18.492 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *   10.2 2173260 5106419 227498      0      0       0      0    0.0  0 1077
+c   s   19.6   54424  278243 703314 580835 925050       0      0    0.0  0  833
+c   l   19.6   54424  278243 703314 580835 925050       0   5000    0.0  0  833
+c   R   19.6   54424  278243 703314 580835 925050      11     11 1151.0  1  833c  2R   19.6   54424  278243 703314 580835 925050      23     20  949.6  1  833c  3R   19.7   54424  278245 703314 580835 925050      87     77  960.7  2  834c  4R   19.7   54424  278250 703314 580835 925050     255    233 1318.0  4  834
+c   1   20.5   54370  278292 703368 580835 925050     652    603 2252.6  0  844
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter2 depot loc1) :-0.01
+0: (move_E helicopter2 depot loc5) :-0.01
+0: (move_S helicopter2 loc5 loc12) :-165
+0: (move_E helicopter2 loc5 loc12) :-0.01
+0: (move_S helicopter2 loc12 loc13) :-29
+0: (move_E helicopter2 loc12 loc13) :-0.01
+0: (move_S helicopter2 loc13 loc16) :-23
+0: (move_E helicopter2 loc13 loc16) :-0.01
+0: (move_S helicopter2 loc16 loc18) :-167
+0: (move_E helicopter2 loc16 loc18) :-0.01
+0: (move_S helicopter2 loc18 loc19) :-85
+0: (move_E helicopter2 loc18 loc19) :-0.01
+1: (move_S helicopter2 loc19 depot) :-172
+1: (move_E helicopter2 loc19 depot) :-0.01
+1: (move_E helicopter2 depot loc1) :86
+restart # 32
+Time: 20.62 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *   10.0 2174285 5108441 227560      0      0       0      0    0.0  0 1077
+c   s   18.9   54616  279126 703347 563412 943260       0      0    0.0  0  841
+c   l   18.9   54616  279126 703347 563412 943260       0   5000    0.0  0  841
+c   R   18.9   54616  279126 703347 563412 943260      13     13 1129.4  2  842c  2R   18.9   54616  279126 703347 563412 943260      24     24  941.2  2  842c  3R   19.0   54616  279130 703347 563412 943260      86     83 1730.9  2  842
+c   1   19.4   54616  279147 703347 563412 943260     117    111 2456.7  0  851
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter1 loc9 loc11) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc9 loc15) :-103
+0: (fly_carrier_E helicopter1 carrier1 loc9 loc15) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc15 loc16) :-7
+0: (fly_carrier_E helicopter1 carrier1 loc15 loc16) :-0.01
+0: (fly_carrier_S helicopter1 carrier1 loc16 loc17) :-20
+0: (fly_carrier_E helicopter1 carrier1 loc16 loc17) :-0.01
+0: (fly_carrier_S helicopter4 carrier1 loc17 loc18) :-157
+0: (fly_carrier_E helicopter4 carrier1 loc17 loc18) :-0.01
+0: (fly_carrier_S helicopter3 carrier1 loc18 loc20) :-129
+0: (fly_carrier_E helicopter3 carrier1 loc18 loc20) :-0.01
+1: (fly_carrier_S helicopter4 carrier1 loc20 loc3) :-70
+1: (fly_carrier_E helicopter4 carrier1 loc20 loc3) :-0.01
+2: (fly_carrier_S helicopter1 carrier1 loc3 depot) :-226
+2: (fly_carrier_E helicopter1 carrier1 loc3 depot) :-0.01
+2: (fly_carrier_S helicopter2 carrier1 depot loc4) :-228
+2: (fly_carrier_E helicopter2 carrier1 depot loc4) :-0.01
+2: (fly_carrier_S helicopter4 carrier1 loc4 loc5) :-164
+2: (fly_carrier_E helicopter4 carrier1 loc4 loc5) :-0.01
+2: (fly_carrier_S helicopter4 carrier1 loc5 loc6) :-54
+2: (fly_carrier_E helicopter4 carrier1 loc5 loc6) :-0.01
+2: (fly_carrier_S helicopter1 carrier1 loc6 loc9) :-87
+2: (fly_carrier_E helicopter1 carrier1 loc6 loc9) :-0.01
+3: (move_S helicopter1 loc9 loc7) :-153
+3: (move_E helicopter1 loc9 loc7) :-0.01
+3: (move_E helicopter1 loc20 loc9) :-0.01
+3: (move_E helicopter1 loc9 loc11) :147
+restart # 33
+Time: 19.504 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *   10.9 2266125 5292104 227599      0      0       0      0    0.0  0 1096
+c   s   20.5   54565  279097 703438 566090 1003448       0      0    0.0  0  841
+c   l   20.5   54565  279097 703438 566090 1003448       0   5000    0.0  0  841
+c   R   20.5   54565  279097 703438 566090 1003448      13     13 1133.9  2  842c  2R   20.5   54565  279097 703438 566090 1003448      24     24  965.1  2  842c  3R   20.5   54565  279097 703438 566090 1003448      87     86  951.2  3  842
+c   1   21.1   54552  279150 703451 566090 1003448     425    387 2600.3  0  851
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+1: (move_S helicopter2 depot loc14) :-0.01
+1: (move_E helicopter2 depot loc20) :-0.01
+2: (move_S helicopter2 loc20 depot) :-177
+2: (move_E helicopter2 loc20 depot) :-0.01
+2: (move_S helicopter2 depot loc13) :-0.01
+2: (move_E helicopter2 depot loc14) :143
+---------------
+1 event(s) have been removed from negative cycle
+New negative cycle:
+1: (move_S helicopter2 depot loc14) :-0.01
+1: (move_E helicopter2 depot loc20) :-0.01
+2: (move_S helicopter2 loc20 depot) :-177
+2: (move_E helicopter2 loc20 depot) :-0.01
+2: (move_E helicopter2 depot loc14) :143
+restart # 34
+Time: 21.168 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *   11.5 2266345 5292537 227613      0      0       0      0    0.0  0 1096
+c   s   21.7   54538  279042 703519 573102 996576       0      0    0.0  0  841
+c   l   21.7   54538  279042 703519 573102 996576       0   5000    0.0  0  841
+c   R   21.7   54538  279042 703519 573102 996576      11     11 1145.6  1  842c  2R   21.7   54538  279043 703519 573102 996576      21     19  948.7  1  842c  3R   21.8   54538  279048 703519 573102 996576      85     76 1351.9  3  842c  4R   22.0   54538  279094 703519 573102 996576     257    240 2122.2  4  843c  5R   22.5   52978  279386 704981 573200 996576     668    643 2438.0  2  848
+c   B   22.7   52978  279529 704981 573200 996576    1003    962 2597.7  3  848
+c   1   23.6   52912  279703 705028 573219 996576    1419   1351 2542.0  0  858
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter2 loc3 loc9) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc3 loc6) :-119
+0: (fly_carrier_E helicopter2 carrier1 loc3 loc6) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc6 loc7) :-68
+0: (fly_carrier_E helicopter2 carrier1 loc6 loc7) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 loc7 loc9) :-153
+0: (fly_carrier_E helicopter2 carrier1 loc7 loc9) :-0.01
+1: (move_S helicopter2 loc9 depot) :-192
+1: (move_E helicopter2 loc9 depot) :-0.01
+1: (move_E helicopter2 loc3 loc9) :34
+restart # 35
+Time: 23.616 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *   11.4 2266895 5293616 227646      0      0       0      0    0.0  0 1096
+c   s   21.1   54595  279394 703508 584276 985877       0      0    0.0  0  841
+c   l   21.1   54595  279394 703508 584276 985877       0   5000    0.0  0  841
+c   R   21.1   54595  279394 703508 584276 985877      13     13 1131.4  2  842c  2R   21.1   54595  279394 703508 584276 985877      24     24  962.6  2  842c  3R   21.1   54595  279394 703508 584276 985877      87     86  948.9  3  842
+c   1   22.3   53092  279762 704797 584490 985877     741    694 2344.8  0  856
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+1: (move_S helicopter3 loc14 loc5) :-0.01
+1: (move_E helicopter3 loc14 loc12) :-0.01
+1: (move_S helicopter3 loc12 loc19) :-126
+1: (move_E helicopter3 loc12 loc19) :-0.01
+2: (move_S helicopter3 loc19 loc1) :-122
+2: (move_E helicopter3 loc19 loc1) :-0.01
+2: (fly_carrier_S helicopter3 carrier1 loc1 loc2) :-87
+2: (fly_carrier_E helicopter3 carrier1 loc1 loc2) :-0.01
+2: (fly_carrier_S helicopter4 carrier1 loc2 loc4) :-155
+2: (fly_carrier_E helicopter4 carrier1 loc2 loc4) :-0.01
+2: (fly_carrier_S helicopter1 carrier1 loc4 loc5) :-164
+2: (fly_carrier_E helicopter1 carrier1 loc4 loc5) :-0.01
+2: (fly_carrier_S helicopter1 carrier1 loc5 loc6) :-54
+2: (fly_carrier_E helicopter1 carrier1 loc5 loc6) :-0.01
+2: (fly_carrier_S helicopter1 carrier1 loc6 loc9) :-87
+2: (fly_carrier_E helicopter1 carrier1 loc6 loc9) :-0.01
+2: (fly_carrier_S helicopter4 carrier1 loc9 loc11) :-147
+2: (fly_carrier_E helicopter4 carrier1 loc9 loc11) :-0.01
+2: (fly_carrier_S helicopter3 carrier1 loc11 loc12) :-131
+2: (fly_carrier_E helicopter3 carrier1 loc11 loc12) :-0.01
+2: (fly_carrier_S helicopter1 carrier1 loc12 loc13) :-29
+2: (fly_carrier_E helicopter1 carrier1 loc12 loc13) :-0.01
+2: (fly_carrier_S helicopter2 carrier1 loc13 loc14) :-98
+2: (fly_carrier_E helicopter2 carrier1 loc13 loc14) :-0.01
+2: (fly_carrier_S helicopter3 carrier1 loc14 loc15) :-102
+2: (fly_carrier_E helicopter3 carrier1 loc14 loc15) :-0.01
+3: (move_S helicopter3 loc15 loc5) :-178
+3: (move_E helicopter3 loc15 loc5) :-0.01
+3: (move_S helicopter3 loc5 loc12) :-165
+3: (move_E helicopter3 loc5 loc12) :-0.01
+3: (move_S helicopter3 loc12 loc15) :-16
+3: (move_E helicopter3 loc12 loc15) :-0.01
+3: (move_S helicopter3 loc15 loc16) :-7
+3: (move_E helicopter3 loc15 loc16) :-0.01
+3: (move_S helicopter3 loc16 loc19) :-139
+3: (move_E helicopter3 loc16 loc19) :-0.01
+3: (move_S helicopter3 loc19 loc20) :-77
+3: (move_E helicopter3 loc19 loc20) :-0.01
+3: (fly_carrier_S helicopter3 carrier1 loc20 loc5) :-144
+3: (fly_carrier_E helicopter3 carrier1 loc20 loc5) :-0.01
+4: (move_S helicopter3 loc5 loc4) :-164
+4: (move_E helicopter3 loc5 loc4) :-0.01
+4: (move_E helicopter3 loc14 loc5) :90
+restart # 36
+Time: 22.312 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *   11.9 2373055 5505901 227718      0      0       0      0    0.0  0 1110
+c   s   22.5   57595  294369 703684 573714 1054858       0      0    0.0  0  842
+c   l   22.5   57595  294369 703684 573714 1054858       0   5000    0.0  0  842
+c   R   22.5   57595  294369 703684 573714 1054858      11     11 1157.6  1  843c  2R   22.5   57595  294370 703684 573714 1054858      21     19  958.5  1  843c  3R   22.6   57595  294372 703684 573714 1054858      84     81 1550.4  2  844c  4R   22.9   57592  294405 703687 573714 1054858     446    417 2164.1  7  845c  5R   23.4   55933  294764 705151 573909 1054858     865    829 2280.5  2  849
+c   B   23.4   55933  294765 705151 573909 1054858    1000    963 2355.5  8  849
+c   R   24.0   55892  294924 705173 573928 1054858    1860   1796 2275.3  6  851
+c   B   24.0   55892  294931 705173 573928 1054858    2000   1933 2270.5  5  851
+c   1   24.7   55892  294960 705173 573928 1054858    2387   2305 2255.7  0  864
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter4 loc1 loc2) :-0.01
+0: (fly_carrier_S helicopter4 carrier1 loc1 loc3) :-158
+0: (fly_carrier_E helicopter4 carrier1 loc1 loc3) :-0.01
+0: (fly_carrier_S helicopter4 carrier1 loc3 loc4) :-4
+0: (fly_carrier_E helicopter4 carrier1 loc3 loc4) :-0.01
+0: (fly_carrier_S helicopter4 carrier1 loc4 loc6) :-121
+0: (fly_carrier_E helicopter4 carrier1 loc4 loc6) :-0.01
+0: (fly_carrier_S helicopter4 carrier1 loc6 loc10) :-99
+0: (fly_carrier_E helicopter4 carrier1 loc6 loc10) :-0.01
+1: (move_S helicopter4 loc10 depot) :-165
+1: (move_E helicopter4 loc10 depot) :-0.01
+2: (move_E helicopter4 loc8 loc10) :88
+1: (move_S helicopter4 loc8 loc10) :-0.01
+2: (move_E helicopter4 loc8 loc1) :-0.01
+3: (move_E helicopter4 loc1 loc2) :87
+restart # 37
+Time: 24.684 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *   12.4 2443620 5647022 227744      0      0       0      0    0.0  0 1118
+c   s   22.5   57715  294909 703594 556640 1134522       0      0    0.0  0  842
+c   l   22.5   57715  294909 703594 556640 1134522       0   5000    0.0  0  842
+c   R   22.5   57715  294909 703594 556640 1134522      11     11 1162.5  1  843c  2R   22.5   57715  294910 703594 556640 1134522      21     19  962.7  1  843c  3R   22.5   57715  294917 703594 556640 1134522      83     75 1173.1  2  843
+c   1   23.1   57715  294952 703594 556640 1134522     217    206 2051.8  0  864
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter3 depot loc11) :-0.01
+0: (fly_carrier_S helicopter3 carrier1 depot loc1) :-86
+0: (fly_carrier_E helicopter3 carrier1 depot loc1) :-0.01
+1: (move_S helicopter3 loc1 depot) :-86
+1: (move_E helicopter3 loc1 depot) :-0.01
+1: (move_S helicopter3 depot loc7) :-0.01
+2: (move_E helicopter3 depot loc11) :46
+---------------
+1 event(s) have been removed from negative cycle
+New negative cycle:
+0: (move_S helicopter3 depot loc11) :-0.01
+0: (fly_carrier_S helicopter3 carrier1 depot loc1) :-86
+0: (fly_carrier_E helicopter3 carrier1 depot loc1) :-0.01
+1: (move_S helicopter3 loc1 depot) :-86
+1: (move_E helicopter3 loc1 depot) :-0.01
+2: (move_E helicopter3 depot loc11) :46
+restart # 38
+Time: 23.18 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *   12.6 2444255 5648278 227779      0      0       0      0    0.0  0 1118
+c   s   23.5   57647  294742 703690 583323 1108435       0      0    0.0  0  843
+c   l   23.5   57647  294742 703690 583323 1108435       0   5000    0.0  0  843
+c   R   23.5   57647  294742 703690 583323 1108435      11     11 1164.1  1  843c  2R   23.5   57647  294743 703690 583323 1108435      21     19  964.0  1  843c  3R   23.5   57647  294744 703690 583323 1108435      81     79 1500.8  3  844c  4R   24.3   55905  295187 705112 583643 1108435     829    755 2237.4  2  849
+c   1   24.8   55905  295197 705112 583643 1108435     935    855 2443.3  0  861
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter2 depot loc1) :-0.01
+1: (move_E helicopter2 depot loc2) :-0.01
+1: (fly_carrier_S helicopter2 carrier1 loc2 loc4) :-155
+1: (fly_carrier_E helicopter2 carrier1 loc2 loc4) :-0.01
+1: (fly_carrier_S helicopter3 carrier1 loc4 loc7) :-185
+1: (fly_carrier_E helicopter3 carrier1 loc4 loc7) :-0.01
+2: (fly_carrier_S helicopter1 carrier1 loc7 loc4) :-185
+2: (fly_carrier_E helicopter1 carrier1 loc7 loc4) :-0.01
+2: (fly_carrier_S helicopter1 carrier1 loc4 loc7) :-185
+2: (fly_carrier_E helicopter1 carrier1 loc4 loc7) :-0.01
+2: (fly_carrier_S helicopter1 carrier1 loc7 loc8) :-48
+2: (fly_carrier_E helicopter1 carrier1 loc7 loc8) :-0.01
+2: (fly_carrier_S helicopter2 carrier1 loc8 loc9) :-106
+2: (fly_carrier_E helicopter2 carrier1 loc8 loc9) :-0.01
+2: (fly_carrier_S helicopter3 carrier1 loc9 loc10) :-151
+2: (fly_carrier_E helicopter3 carrier1 loc9 loc10) :-0.01
+2: (fly_carrier_S helicopter1 carrier1 loc10 loc11) :-132
+2: (fly_carrier_E helicopter1 carrier1 loc10 loc11) :-0.01
+2: (fly_carrier_S helicopter4 carrier1 loc11 loc13) :-154
+2: (fly_carrier_E helicopter4 carrier1 loc11 loc13) :-0.01
+2: (fly_carrier_S helicopter3 carrier1 loc13 loc14) :-98
+2: (fly_carrier_E helicopter3 carrier1 loc13 loc14) :-0.01
+2: (fly_carrier_S helicopter2 carrier1 loc14 loc15) :-102
+2: (fly_carrier_E helicopter2 carrier1 loc14 loc15) :-0.01
+2: (fly_carrier_S helicopter1 carrier1 loc15 loc16) :-7
+2: (fly_carrier_E helicopter1 carrier1 loc15 loc16) :-0.01
+2: (fly_carrier_S helicopter2 carrier1 loc16 loc17) :-0.01
+3: (move_E helicopter2 loc16 depot) :-0.01
+3: (move_E helicopter2 depot loc1) :86
+restart # 39
+Time: 24.856 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *   15.2 2551220 5862196 227816      0      0       0      0    0.0  0 1132
+c   s   27.1   65012  326899 703719 566775 1206670       0      0    0.0  0  845
+c   l   27.1   65012  326899 703719 566775 1206670       0   5000    0.0  0  845
+c   R   27.1   65012  326899 703719 566775 1206670      12     12 1161.0  2  846c  2R   27.1   65012  326899 703719 566775 1206670      23     20  954.8  2  846c  3R   27.1   65012  326901 703719 566775 1206670      87     81 1170.1  2  846c  4R   27.2   65012  326907 703719 566775 1206670     250    238 1550.1  4  847c  5R   27.5   65012  326945 703719 566775 1206670     670    641 2192.8  7  848
+c   B   27.9   63279  327270 705179 567048 1206670    1000    942 2271.0  3  852
+c   R   28.4   63218  327458 705205 567083 1206670    1662   1582 2336.7  3  854
+c   B   28.6   63218  327462 705205 567083 1206670    2003   1922 2346.4  3  854
+c   1   29.2   63218  327494 705205 567083 1206670    2537   2433 2411.2  0  874
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter2 depot loc1) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 depot loc2) :-91
+0: (fly_carrier_E helicopter2 carrier1 depot loc2) :-0.01
+0: (fly_carrier_S helicopter4 carrier1 loc2 loc6) :-36
+0: (fly_carrier_E helicopter4 carrier1 loc2 loc6) :-0.01
+0: (fly_carrier_S helicopter4 carrier1 loc6 loc19) :-60
+0: (fly_carrier_E helicopter4 carrier1 loc6 loc19) :-0.01
+0: (fly_carrier_S helicopter4 carrier1 loc19 loc20) :-77
+0: (fly_carrier_E helicopter4 carrier1 loc19 loc20) :-0.01
+1: (move_S helicopter4 loc20 depot) :-177
+1: (move_E helicopter4 loc20 depot) :-0.01
+1: (move_E helicopter4 loc2 loc20) :-0.01
+1: (fly_carrier_S helicopter4 carrier1 loc20 loc2) :-125
+1: (fly_carrier_E helicopter4 carrier1 loc20 loc2) :-0.01
+1: (fly_carrier_S helicopter4 carrier1 loc2 loc9) :-122
+1: (fly_carrier_E helicopter4 carrier1 loc2 loc9) :-0.01
+1: (fly_carrier_S helicopter3 carrier1 loc9 loc14) :-51
+1: (fly_carrier_E helicopter3 carrier1 loc9 loc14) :-0.01
+1: (fly_carrier_S helicopter3 carrier1 loc14 loc16) :-108
+1: (fly_carrier_E helicopter3 carrier1 loc14 loc16) :-0.01
+1: (fly_carrier_S helicopter1 carrier1 loc16 loc17) :-20
+1: (fly_carrier_E helicopter1 carrier1 loc16 loc17) :-0.01
+1: (fly_carrier_S helicopter3 carrier1 loc17 loc19) :-122
+1: (fly_carrier_E helicopter3 carrier1 loc17 loc19) :-0.01
+1: (fly_carrier_S helicopter3 carrier1 loc19 loc20) :-77
+1: (fly_carrier_E helicopter3 carrier1 loc19 loc20) :-0.01
+2: (fly_carrier_S helicopter4 carrier1 loc20 loc1) :-98
+2: (fly_carrier_E helicopter4 carrier1 loc20 loc1) :-0.01
+2: (fly_carrier_S helicopter4 carrier1 loc1 loc8) :-83
+2: (fly_carrier_E helicopter4 carrier1 loc1 loc8) :-0.01
+2: (fly_carrier_S helicopter3 carrier1 loc8 loc14) :-59
+2: (fly_carrier_E helicopter3 carrier1 loc8 loc14) :-0.01
+2: (fly_carrier_S helicopter4 carrier1 loc14 loc16) :-108
+2: (fly_carrier_E helicopter4 carrier1 loc14 loc16) :-0.01
+2: (fly_carrier_S helicopter3 carrier1 loc16 loc18) :-167
+2: (fly_carrier_E helicopter3 carrier1 loc16 loc18) :-0.01
+2: (fly_carrier_S helicopter4 carrier1 loc18 loc19) :-85
+2: (fly_carrier_E helicopter4 carrier1 loc18 loc19) :-0.01
+2: (fly_carrier_S helicopter4 carrier1 loc19 loc20) :-77
+2: (fly_carrier_E helicopter4 carrier1 loc19 loc20) :-0.01
+3: (move_S helicopter4 loc20 loc19) :-77
+3: (move_E helicopter4 loc20 loc19) :-0.01
+3: (move_S helicopter4 loc19 loc20) :-77
+3: (move_E helicopter4 loc19 loc20) :-0.01
+3: (fly_carrier_S helicopter4 carrier1 loc20 loc9) :-44
+3: (fly_carrier_E helicopter4 carrier1 loc20 loc9) :-0.01
+3: (fly_carrier_S helicopter2 carrier1 loc9 loc10) :-151
+3: (fly_carrier_E helicopter2 carrier1 loc9 loc10) :-0.01
+4: (move_S helicopter2 loc10 loc9) :-151
+4: (move_E helicopter2 loc10 loc9) :-0.01
+4: (move_E helicopter2 loc15 loc10) :-0.01
+4: (move_E helicopter2 loc13 loc15) :19
+3: (move_S helicopter2 loc13 loc15) :-0.01
+3: (move_E helicopter2 loc13 loc16) :-0.01
+4: (move_E helicopter2 loc12 loc13) :-0.01
+4: (move_E helicopter2 loc13 loc14) :98
+2: (move_S helicopter2 loc13 loc14) :-0.01
+3: (move_E helicopter2 loc13 loc7) :188
+2: (move_S helicopter2 loc13 loc7) :-0.01
+2: (move_E helicopter2 loc13 loc11) :-0.01
+2: (move_S helicopter2 loc11 loc14) :-98
+2: (move_E helicopter2 loc11 loc14) :-0.01
+3: (move_S helicopter2 loc14 depot) :-143
+3: (move_E helicopter2 loc14 depot) :-0.01
+3: (move_E helicopter2 depot loc1) :86
+---------------
+4 event(s) have been removed from negative cycle
+New negative cycle:
+0: (move_S helicopter2 depot loc1) :-0.01
+0: (fly_carrier_S helicopter2 carrier1 depot loc2) :-91
+0: (fly_carrier_E helicopter2 carrier1 depot loc2) :-0.01
+0: (fly_carrier_S helicopter4 carrier1 loc2 loc6) :-36
+0: (fly_carrier_E helicopter4 carrier1 loc2 loc6) :-0.01
+0: (fly_carrier_S helicopter4 carrier1 loc6 loc19) :-60
+0: (fly_carrier_E helicopter4 carrier1 loc6 loc19) :-0.01
+0: (fly_carrier_S helicopter4 carrier1 loc19 loc20) :-77
+0: (fly_carrier_E helicopter4 carrier1 loc19 loc20) :-0.01
+1: (move_S helicopter4 loc20 depot) :-177
+1: (move_E helicopter4 loc20 depot) :-0.01
+1: (move_E helicopter4 loc2 loc20) :-0.01
+1: (fly_carrier_S helicopter4 carrier1 loc20 loc2) :-125
+1: (fly_carrier_E helicopter4 carrier1 loc20 loc2) :-0.01
+1: (fly_carrier_S helicopter4 carrier1 loc2 loc9) :-122
+1: (fly_carrier_E helicopter4 carrier1 loc2 loc9) :-0.01
+1: (fly_carrier_S helicopter3 carrier1 loc9 loc14) :-51
+1: (fly_carrier_E helicopter3 carrier1 loc9 loc14) :-0.01
+1: (fly_carrier_S helicopter3 carrier1 loc14 loc16) :-108
+1: (fly_carrier_E helicopter3 carrier1 loc14 loc16) :-0.01
+1: (fly_carrier_S helicopter1 carrier1 loc16 loc17) :-20
+1: (fly_carrier_E helicopter1 carrier1 loc16 loc17) :-0.01
+1: (fly_carrier_S helicopter3 carrier1 loc17 loc19) :-122
+1: (fly_carrier_E helicopter3 carrier1 loc17 loc19) :-0.01
+1: (fly_carrier_S helicopter3 carrier1 loc19 loc20) :-77
+1: (fly_carrier_E helicopter3 carrier1 loc19 loc20) :-0.01
+2: (fly_carrier_S helicopter4 carrier1 loc20 loc1) :-98
+2: (fly_carrier_E helicopter4 carrier1 loc20 loc1) :-0.01
+2: (fly_carrier_S helicopter4 carrier1 loc1 loc8) :-83
+2: (fly_carrier_E helicopter4 carrier1 loc1 loc8) :-0.01
+2: (fly_carrier_S helicopter3 carrier1 loc8 loc14) :-59
+2: (fly_carrier_E helicopter3 carrier1 loc8 loc14) :-0.01
+2: (fly_carrier_S helicopter4 carrier1 loc14 loc16) :-108
+2: (fly_carrier_E helicopter4 carrier1 loc14 loc16) :-0.01
+2: (fly_carrier_S helicopter3 carrier1 loc16 loc18) :-167
+2: (fly_carrier_E helicopter3 carrier1 loc16 loc18) :-0.01
+2: (fly_carrier_S helicopter4 carrier1 loc18 loc19) :-85
+2: (fly_carrier_E helicopter4 carrier1 loc18 loc19) :-0.01
+2: (fly_carrier_S helicopter4 carrier1 loc19 loc20) :-77
+2: (fly_carrier_E helicopter4 carrier1 loc19 loc20) :-0.01
+3: (move_S helicopter4 loc20 loc19) :-77
+3: (move_E helicopter4 loc20 loc19) :-0.01
+3: (move_S helicopter4 loc19 loc20) :-77
+3: (move_E helicopter4 loc19 loc20) :-0.01
+3: (fly_carrier_S helicopter4 carrier1 loc20 loc9) :-44
+3: (fly_carrier_E helicopter4 carrier1 loc20 loc9) :-0.01
+3: (fly_carrier_S helicopter2 carrier1 loc9 loc10) :-151
+3: (fly_carrier_E helicopter2 carrier1 loc9 loc10) :-0.01
+4: (move_S helicopter2 loc10 loc9) :-151
+4: (move_E helicopter2 loc10 loc9) :-0.01
+4: (move_E helicopter2 loc15 loc10) :-0.01
+4: (move_E helicopter2 loc13 loc15) :19
+3: (move_S helicopter2 loc13 loc15) :-0.01
+3: (move_E helicopter2 loc13 loc16) :-0.01
+4: (move_E helicopter2 loc12 loc13) :0
+2: (move_E helicopter2 loc13 loc11) :-0.01
+2: (move_S helicopter2 loc11 loc14) :-98
+2: (move_E helicopter2 loc11 loc14) :-0.01
+3: (move_S helicopter2 loc14 depot) :-143
+3: (move_E helicopter2 loc14 depot) :-0.01
+3: (move_E helicopter2 depot loc1) :86
+restart # 40
+Time: 29.232 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *   15.9 2615440 5990550 228010      0      0       0      0    0.0  0 1142
+c   s   27.7   65042  327296 703884 565231 1248904       0      0    0.0  0  845
+c   l   27.7   65042  327296 703884 565231 1248904       0   5000    0.0  0  845
+c   R   27.8   65042  327296 703884 565231 1248904      10     10 1314.9  1  846c  2R   27.8   65042  327296 703884 565231 1248904      21     21 1456.5  2  846c  3R   27.8   65042  327300 703884 565231 1248904      83     79 1196.9  3  846c  4R   28.4   63681  327576 705089 565387 1248904     733    674 2418.0  3  850
+c   B   28.6   63681  327661 705089 565387 1248904    1000    930 2428.9  4  851
+c   R   29.1   63332  327833 705359 565466 1248904    1682   1562 2315.3  6  853
+c   B   29.3   63332  327845 705359 565466 1248904    2000   1873 2429.2  2  853
+c   1   30.1   63291  327957 705391 565475 1248904    2393   2246 2466.4  0  874
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter2 loc6 loc11) :-0.01
+0: (move_E helicopter2 loc6 loc14) :-0.01
+0: (move_S helicopter2 loc14 loc17) :-92
+0: (move_E helicopter2 loc14 loc17) :-0.01
+0: (move_S helicopter2 loc17 loc19) :-122
+0: (move_E helicopter2 loc17 loc19) :-0.01
+1: (move_S helicopter2 loc19 loc2) :-89
+1: (move_E helicopter2 loc19 loc2) :-0.01
+1: (fly_carrier_S helicopter2 carrier1 loc2 loc10) :-86
+1: (fly_carrier_E helicopter2 carrier1 loc2 loc10) :-0.01
+1: (fly_carrier_S helicopter2 carrier1 loc10 loc12) :-211
+1: (fly_carrier_E helicopter2 carrier1 loc10 loc12) :-0.01
+2: (move_S helicopter2 loc12 loc4) :-127
+2: (move_E helicopter2 loc12 loc4) :-0.01
+2: (move_S helicopter2 loc4 loc5) :-164
+2: (move_E helicopter2 loc4 loc5) :-0.01
+2: (move_S helicopter2 loc5 loc20) :-144
+2: (move_E helicopter2 loc5 loc20) :-0.01
+3: (move_S helicopter2 loc20 depot) :-177
+3: (move_E helicopter2 loc20 depot) :-0.01
+3: (move_E helicopter2 depot loc1) :-0.01
+3: (move_S helicopter2 loc1 loc5) :-112
+3: (move_E helicopter2 loc1 loc5) :-0.01
+3: (move_S helicopter2 loc5 loc6) :-54
+3: (move_E helicopter2 loc5 loc6) :-0.01
+3: (move_E helicopter2 loc6 loc11) :67
+restart # 41
+Time: 30.124 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
+Now trying to solve...
+c   .
+c   .       variables          fixed    eliminated       learned     agility
+c   . seconds         clauses      equivalent     conflicts      height      MB
+c   .
+c   *   16.3 2622295 6004223 228089      0      0       0      0    0.0  0 1143
+c   s   28.9   65155  329926 703946 568674 1251867       0      0    0.0  0  845
+c   l   28.9   65155  329926 703946 568674 1251867       0   5000    0.0  0  845
+c   R   28.9   65155  329926 703946 568674 1251867      10     10 1321.9  1  846c  2R   28.9   65155  329926 703946 568674 1251867      21     21 1462.7  2  846c  3R   29.0   65155  329930 703946 568674 1251867      83     79 1259.5  4  846c  4R   29.1   65155  329953 703946 568674 1251867     251    227 1440.5  2  847
+c   1   29.6   65155  329979 703946 568674 1251867     432    398 2433.7  0  867
+Satisfied!
+A plan found with layers = 5
+Trying to find a satisfying timed plan:
+---------------
+NEGATIVE cycle detected:
+0: (move_S helicopter3 depot loc5) :-0.01
+0: (fly_carrier_S helicopter3 carrier1 depot loc1) :-86
+0: (fly_carrier_E helicopter3 carrier1 depot loc1) :-0.01
+1: (move_S helicopter3 loc1 depot) :-86
+1: (move_E helicopter3 loc1 depot) :-0.01
+1: (move_S helicopter3 depot loc7) :-0.01
+1: (move_E helicopter3 depot loc19) :-0.01
+1: (move_S helicopter3 loc19 loc20) :-77
+1: (move_E helicopter3 loc19 loc20) :-0.01
+2: (move_S helicopter3 loc20 depot) :-177
+2: (move_E helicopter3 loc20 depot) :-0.01
+2: (move_E helicopter3 depot loc5) :105
+---------------
+1 event(s) have been removed from negative cycle
+New negative cycle:
+0: (move_S helicopter3 depot loc5) :-0.01
+0: (fly_carrier_S helicopter3 carrier1 depot loc1) :-86
+0: (fly_carrier_E helicopter3 carrier1 depot loc1) :-0.01
+1: (move_S helicopter3 loc1 depot) :-86
+1: (move_E helicopter3 loc1 depot) :-0.01
+1: (move_E helicopter3 depot loc19) :-0.01
+1: (move_S helicopter3 loc19 loc20) :-77
+1: (move_E helicopter3 loc19 loc20) :-0.01
+2: (move_S helicopter3 loc20 depot) :-177
+2: (move_E helicopter3 loc20 depot) :-0.01
+2: (move_E helicopter3 depot loc5) :105
+restart # 42
+Time: 29.724 secs
+
+
+Trying with T=5... 
+Variables: total=788814	prop=6354	action= 782460
+Total Mutex Clauses=3712460	ratio=0.49456
+Total Event Clauses=584380	Total Clauses=7506594
