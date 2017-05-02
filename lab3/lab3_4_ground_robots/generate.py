@@ -166,6 +166,7 @@ if options.maxcarried == None or options.maxcarried < 1:
 
 
 print "helicopters\t\t", options.helicopters
+print "Robots\t\t",options.groundrobots
 print "Carriers\t",options.carriers
 print "Locations\t", options.locations	
 print "Persons\t\t",options.persons
