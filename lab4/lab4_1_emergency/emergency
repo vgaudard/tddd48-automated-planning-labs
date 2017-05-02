@@ -1,0 +1,58 @@
+(defdomain emergency
+    (
+        (:operator (!move ?h ?to)
+            ; Preconditions
+            ((helicopter ?h) (location ?from) (location ?to) (at ?h ?from))
+            ; Negative effects
+            ((at ?h ?from))
+            ; Positive effects
+            ((at ?h ?to))
+        )
+
+        (:operator (!pick_up ?h ?c)
+            ; Preconditions
+            ((helicopter ?h) (crate ?c) (location ?l) (at ?h ?l) (at ?c ?l) (empty ?h) (can_be_picked_up ?c))
+            ; Negative effects
+            ((at ?c ?l) (empty ?h) (can_be_picked_up ?c))
+            ; Positive effects
+            ((carries ?h ?c))
+        )
+
+        (:operator (!give ?h ?v)
+            ; Preconditions
+            ((helicopter ?h) (crate ?c) (victim ?v) (crate_type ?t) (location ?l) (at ?h ?l) (at ?v ?l) (carries ?h ?c) (of_type ?c ?t) (needs ?v ?t))
+            ; Negative effects
+            ((carries ?h ?c) (needs ?v ?t))
+            ; Positive effects
+            ((has_crate ?v ?t) (empty ?h))
+        )
+
+        (:method (search_crate ?h ?t)
+            ; if already near a crate
+            ((helicopter ?h) (crate_type ?t) (crate ?c) (location ?l) (of_type ?c ?t) (at ?h ?l) (at ?c ?l) (empty ?h) (can_be_picked_up ?c))
+            ((!pick_up ?h ?c))
+            ; if not near a crate
+            ((helicopter ?h) (crate_type ?t) (crate ?c) (location ?cra_loc) (of_type ?c ?t) (at ?c ?cra_loc) (empty ?h) (can_be_picked_up ?c))
+            ((!move ?h ?cra_loc) (!pick_up ?h ?c))
+        )
+
+        (:method (go_to_victim ?h ?v)
+            ((helicopter ?h) (victim ?v) (location ?l) (at ?v ?l) (at ?h ?l))
+            ()
+            ((helicopter ?h) (victim ?v) (location ?l) (at ?v ?l))
+            ((!move ?h ?l))
+        )
+
+        (:method (deliver ?h ?v ?t)
+            ((helicopter ?h) (crate_type ?t) (victim ?v))
+            ((search_crate ?h ?t) (go_to_victim ?h ?v) (!give ?h ?v))
+        )
+
+        (:method (help_everyone ?h)
+            ((helicopter ?h) (victim ?v) (crate_type ?t) (needs ?v ?t))
+            ((deliver ?h ?v ?t) (help_everyone ?h))
+            ((helicopter ?h))
+            ()
+        )
+    )
+)

@@ -1,0 +1,41 @@
+1 plan(s) were found:
+
+Plan #1:
+Plan cost: 31.0
+
+(!pick_up supercopter crate01)
+(!move supercopter location1)
+(!give supercopter alice)
+(!move supercopter depot)
+(!pick_up supercopter crate06)
+(!move supercopter location1)
+(!give supercopter alice)
+(!move supercopter depot)
+(!pick_up supercopter crate02)
+(!move supercopter location2)
+(!give supercopter bob)
+(!move supercopter depot)
+(!pick_up supercopter crate07)
+(!move supercopter location1)
+(!give supercopter charlie)
+(!move supercopter depot)
+(!pick_up supercopter crate03)
+(!move supercopter location3)
+(!give supercopter david)
+(!move supercopter depot)
+(!pick_up supercopter crate04)
+(!move supercopter location4)
+(!give supercopter erin)
+(!move supercopter depot)
+(!pick_up supercopter crate08)
+(!move supercopter location4)
+(!give supercopter erin)
+(!move supercopter depot)
+(!pick_up supercopter crate09)
+(!move supercopter location5)
+(!give supercopter frank)
+--------------------
+
+Time Used = 0.057
+
+
