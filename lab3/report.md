@@ -83,28 +83,3 @@ Use `./gen.py | bash` to run them.
 Change `params` in `gen.py` to change the problem variables.
 Use `./extract.sh` to extract execution times into a table.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
