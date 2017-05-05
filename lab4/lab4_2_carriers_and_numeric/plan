@@ -1,0 +1,53 @@
+
+1 plan(s) were found:
+
+Plan #1:
+Plan cost: 43.0
+
+(!load_crates_on_carrier supercopter car food 4.0)
+(!fly_carrier supercopter car location1)
+(!drop_crates_from_carrier supercopter car food 4.0)
+(!fly_carrier supercopter car depot)
+(!load_crates_on_carrier supercopter car food 4.0)
+(!fly_carrier supercopter car location1)
+(!drop_crates_from_carrier supercopter car food 4.0)
+(!fly_carrier supercopter car depot)
+(!load_crates_on_carrier supercopter car food 1.0)
+(!fly_carrier supercopter car location1)
+(!drop_crates_from_carrier supercopter car food 1.0)
+(!fly_carrier supercopter car depot)
+(!load_crates_on_carrier supercopter car drinks 4.0)
+(!fly_carrier supercopter car location2)
+(!drop_crates_from_carrier supercopter car drinks 4.0)
+(!fly_carrier supercopter car depot)
+(!load_crates_on_carrier supercopter car food 2.0)
+(!load_crates_on_carrier supercopter car drinks 2.0)
+(!fly_carrier supercopter car location3)
+(!drop_crates_from_carrier supercopter car food 2.0)
+(!drop_crates_from_carrier supercopter car drinks 2.0)
+(!fly_carrier supercopter car depot)
+(!load_crates_on_carrier supercopter car drinks 2.0)
+(!load_crates_on_carrier supercopter car food 2.0)
+(!fly_carrier supercopter car location4)
+(!drop_crates_from_carrier supercopter car drinks 2.0)
+(!drop_crates_from_carrier supercopter car food 2.0)
+(!fly_carrier supercopter car location1)
+(!load_crates_on_carrier supercopter car food 3.0)
+(!fly_carrier supercopter car location4)
+(!drop_crates_from_carrier supercopter car food 3.0)
+(!fly_carrier supercopter car depot)
+(!load_crates_on_carrier supercopter car food 1.0)
+(!load_crates_on_carrier supercopter car drinks 3.0)
+(!fly_carrier supercopter car location5)
+(!drop_crates_from_carrier supercopter car food 1.0)
+(!drop_crates_from_carrier supercopter car drinks 3.0)
+(!fly_carrier supercopter car location3)
+(!load_crates_on_carrier supercopter car food 2.0)
+(!load_crates_on_carrier supercopter car drinks 1.0)
+(!fly_carrier supercopter car location6)
+(!drop_crates_from_carrier supercopter car food 2.0)
+(!drop_crates_from_carrier supercopter car drinks 1.0)
+--------------------
+
+Time Used = 0.051
+
