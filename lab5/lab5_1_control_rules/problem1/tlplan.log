@@ -1,0 +1,445 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++  Welcome to TLPlan (modified version).                                           +
++  Copyright (c) 1997, 2003, F. Bacchus & Michael Ady                              +
++  This copy can be used only for non-commercial research purposes.                +
++  You may not reverse engineer, decompile, translate or disassemble the Software. +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Loading file: run.tlp
+Loading PDDL file: emergency_problem.pddl
+Loading file: emergency_domain.tlp
+"pick-up-crate" operator successor formula:
+(forall
+  (?u) 
+  (uav ?u) 
+  (implies 
+    (empty ?u) 
+    (forall
+      (?d) 
+      (depot ?d) 
+      (forall
+        (?l) 
+        (location ?l) 
+        (implies 
+          (and 
+            (loc ?d ?l) 
+            (loc ?u ?l)) 
+          (forall
+            (?t) 
+            (type ?t) 
+            (modify-world 
+              (pick-up-crate ?u ?l ?d ?t) 
+              (and 
+                (del 
+                  (empty ?u)) 
+                (add 
+                  (carrying ?u ?t))))))))))
+
+"put-down-crate" operator successor formula:
+(forall
+  (?u) 
+  (uav ?u) 
+  (forall
+    (?l) 
+    (location ?l) 
+    (implies 
+      (loc ?u ?l) 
+      (forall
+        (?t) 
+        (type ?t) 
+        (implies 
+          (and 
+            (carrying ?u ?t) 
+            (not 
+              (= 
+                (cratesundelivered ?t ?l) 0))) 
+          (modify-world 
+            (put-down-crate ?u ?l ?t) 
+            (and 
+              (del 
+                (carrying ?u ?t)) 
+              (add 
+                (-= 
+                  (cratesundelivered ?t ?l) 1) 
+                (empty ?u)))))))))
+
+"pick-up-carrier" operator successor formula:
+(forall
+  (?u) 
+  (uav ?u) 
+  (implies 
+    (empty ?u) 
+    (forall
+      (?c) 
+      (carrier ?c) 
+      (forall
+        (?l) 
+        (location ?l) 
+        (implies 
+          (and 
+            (loc ?c ?l) 
+            (loc ?u ?l)) 
+          (modify-world 
+            (pick-up-carrier ?u ?c ?l) 
+            (and 
+              (del 
+                (empty ?u) 
+                (loc ?c ?l)) 
+              (add 
+                (carrying ?u ?c)))))))))
+
+"put-down-carrier" operator successor formula:
+(forall
+  (?u) 
+  (uav ?u) 
+  (forall
+    (?c) 
+    (carrier ?c) 
+    (implies 
+      (carrying ?u ?c) 
+      (forall
+        (?l) 
+        (location ?l) 
+        (implies 
+          (loc ?u ?l) 
+          (modify-world 
+            (put-down-carrier ?u ?c ?l) 
+            (and 
+              (del 
+                (carrying ?u ?c)) 
+              (add 
+                (loc ?c ?l) 
+                (empty ?u)))))))))
+
+"load-carrier" operator successor formula:
+(forall
+  (?u) 
+  (uav ?u) 
+  (forall
+    (?c) 
+    (carrier ?c) 
+    (implies 
+      (not 
+        (= 
+          (unused ?c) 0)) 
+      (forall
+        (?l) 
+        (location ?l) 
+        (implies 
+          (and 
+            (loc ?c ?l) 
+            (loc ?u ?l)) 
+          (forall
+            (?t) 
+            (type ?t) 
+            (implies 
+              (carrying ?u ?t) 
+              (modify-world 
+                (load-carrier ?u ?c ?l ?t) 
+                (and 
+                  (del 
+                    (carrying ?u ?t)) 
+                  (add 
+                    (+= 
+                      (used ?c) 1) 
+                    (-= 
+                      (unused ?c) 1) 
+                    (+= 
+                      (boxcount ?c ?t) 1) 
+                    (empty ?u)))))))))))
+
+"unload-carrier" operator successor formula:
+(forall
+  (?u) 
+  (uav ?u) 
+  (implies 
+    (empty ?u) 
+    (forall
+      (?c) 
+      (carrier ?c) 
+      (forall
+        (?l) 
+        (location ?l) 
+        (implies 
+          (and 
+            (loc ?c ?l) 
+            (loc ?u ?l)) 
+          (forall
+            (?t) 
+            (type ?t) 
+            (implies 
+              (not 
+                (= 
+                  (boxcount ?c ?t) 0)) 
+              (modify-world 
+                (unload-carrier ?u ?c ?l ?t) 
+                (and 
+                  (del 
+                    (empty ?u)) 
+                  (add 
+                    (-= 
+                      (used ?c) 1) 
+                    (+= 
+                      (unused ?c) 1) 
+                    (-= 
+                      (boxcount ?c ?t) 1) 
+                    (carrying ?u ?t)))))))))))
+
+"fly-to" operator successor formula:
+(forall
+  (?u) 
+  (uav ?u) 
+  (forall
+    (?from) 
+    (location ?from) 
+    (implies 
+      (loc ?u ?from) 
+      (forall
+        (?to) 
+        (location ?to) 
+        (modify-world 
+          (fly-to ?u ?from ?to) 
+          (and 
+            (del 
+              (loc ?u ?from)) 
+            (add 
+              (loc ?u ?to))))))))
+
+Planning "emergency_problem.pddl"
+--------------------------------------------------------------------------------
+Initial control formula is: 
+(always 
+  (and 
+    (forall
+      (?u) 
+      (uav ?u) 
+      (forall
+        (?t) 
+        (type ?t) 
+        (implies 
+          (not 
+            (exists
+              (?x) 
+              (location ?x) 
+              (not 
+                (= 
+                  (cratesundelivered ?t ?x) 0)))) 
+          (next 
+            (not 
+              (carrying ?u ?t))))))))
+
+Goal formula is: 
+(= 
+  (cratesundelivered food p0) 0)
+
+
+Expanding world 2 at depth 0, priority 0.000000 action: ()
+
+[uav, 1 entry]
+(uav heli0)
+
+[depot, 1 entry]
+(depot depot0)
+
+[location, 2 entries]
+(location p0) 
+(location depotloc)
+
+[type, 1 entry]
+(type food)
+
+[carrier, 0 entries]
+
+[loc, 2 entries]
+(loc heli0 depotloc) 
+(loc depot0 depotloc)
+
+[empty, 1 entry]
+(empty heli0)
+
+[carrying, 0 entries]
+
+[boxcount, 0 entries]
+
+[used, 0 entries]
+
+[unused, 0 entries]
+
+[cratesundelivered, 2 entries]
+(= 
+  (cratesundelivered food p0) 1) 
+(= 
+  (cratesundelivered food depotloc) 0)
+
+Progression successful world successors generated.
+
+Expanding world 3 at depth 1, priority 0.000000 action: (pick-up-crate heli0 depotloc depot0 food)
+
+[uav, 1 entry]
+(uav heli0)
+
+[depot, 1 entry]
+(depot depot0)
+
+[location, 2 entries]
+(location p0) 
+(location depotloc)
+
+[type, 1 entry]
+(type food)
+
+[carrier, 0 entries]
+
+[loc, 2 entries]
+(loc heli0 depotloc) 
+(loc depot0 depotloc)
+
+[empty, 0 entries]
+
+[carrying, 1 entry]
+(carrying heli0 food)
+
+[boxcount, 0 entries]
+
+[used, 0 entries]
+
+[unused, 0 entries]
+
+[cratesundelivered, 2 entries]
+(= 
+  (cratesundelivered food p0) 1) 
+(= 
+  (cratesundelivered food depotloc) 0)
+
+Progression successful world successors generated.
+
+Expanding world 6 at depth 2, priority 0.000000 action: (fly-to heli0 depotloc p0)
+
+[uav, 1 entry]
+(uav heli0)
+
+[depot, 1 entry]
+(depot depot0)
+
+[location, 2 entries]
+(location p0) 
+(location depotloc)
+
+[type, 1 entry]
+(type food)
+
+[carrier, 0 entries]
+
+[loc, 2 entries]
+(loc heli0 p0) 
+(loc depot0 depotloc)
+
+[empty, 0 entries]
+
+[carrying, 1 entry]
+(carrying heli0 food)
+
+[boxcount, 0 entries]
+
+[used, 0 entries]
+
+[unused, 0 entries]
+
+[cratesundelivered, 2 entries]
+(= 
+  (cratesundelivered food p0) 1) 
+(= 
+  (cratesundelivered food depotloc) 0)
+
+Progression successful world successors generated.
+
+Expanding world 8 at depth 3, priority 0.000000 action: (put-down-crate heli0 p0 food)
+
+[uav, 1 entry]
+(uav heli0)
+
+[depot, 1 entry]
+(depot depot0)
+
+[location, 2 entries]
+(location p0) 
+(location depotloc)
+
+[type, 1 entry]
+(type food)
+
+[carrier, 0 entries]
+
+[loc, 2 entries]
+(loc heli0 p0) 
+(loc depot0 depotloc)
+
+[empty, 1 entry]
+(empty heli0)
+
+[carrying, 0 entries]
+
+[boxcount, 0 entries]
+
+[used, 0 entries]
+
+[unused, 0 entries]
+
+[cratesundelivered, 2 entries]
+(= 
+  (cratesundelivered food p0) 0) 
+(= 
+  (cratesundelivered food depotloc) 0)
+
+--------------------------------------------------------------------------------
+Plan found.  Elapsed CPU time 0.000 sec.
+Final world:
+
+[uav, 1 entry]
+(uav heli0)
+
+[depot, 1 entry]
+(depot depot0)
+
+[location, 2 entries]
+(location p0) 
+(location depotloc)
+
+[type, 1 entry]
+(type food)
+
+[carrier, 0 entries]
+
+[loc, 2 entries]
+(loc heli0 p0) 
+(loc depot0 depotloc)
+
+[empty, 1 entry]
+(empty heli0)
+
+[carrying, 0 entries]
+
+[boxcount, 0 entries]
+
+[used, 0 entries]
+
+[unused, 0 entries]
+
+[cratesundelivered, 2 entries]
+(= 
+  (cratesundelivered food p0) 0) 
+(= 
+  (cratesundelivered food depotloc) 0)
+
+Worlds generated = 10
+Worlds searched = 4
+Worlds pruned by temporal control = 0
+Worlds discarded by cycle check = 0
+Worlds unexamined = 5
+Plan length = 3
+At time 0.000000: 3 (pick-up-crate heli0 depotloc depot0 food)
+At time 1.000000: 6 (fly-to heli0 depotloc p0)
+At time 2.000000: 8 (put-down-crate heli0 p0 food)
+At time 3.000000: Plan completed
+Plan cost: 3.000000
+--------------------------------------------------------------------------------

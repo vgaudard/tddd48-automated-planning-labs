@@ -1,0 +1,4 @@
+;Time 0
+1.000000: (pick-up-crate heli0 depotloc depot0 food)
+2.000000: (fly-to heli0 depotloc p0)
+3.000000: (put-down-crate heli0 p0 food)
