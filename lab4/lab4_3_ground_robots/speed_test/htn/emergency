@@ -1,0 +1,377 @@
+(defdomain emergency
+    (
+        (:operator (!move ?h ?to)
+            ; Preconditions
+            (
+                ; Parameter types
+                (or (helicopter ?h) (robot ?h))
+                (location ?to)
+                ; Hidden parameter types
+                (location ?from)
+                ; Other preconditions
+                (at ?h ?from)
+            )
+            ; Negative effects
+            (
+                (at ?h ?from)
+            )
+            ; Positive effects
+            (
+                (at ?h ?to)
+            )
+        )
+
+        (:operator (!pick_up ?h ?t)
+            ; Preconditions
+            (
+                ; Parameter types
+                (or (helicopter ?h) (robot ?h))
+                (crate_type ?t)
+                ; Hidden parameter types
+                (location ?l)
+                ; Other preconditions
+                (at ?h ?l)
+                (empty ?h)
+                (has ?l ?t ?n)
+                (call >= ?n 1)
+            )
+            ; Negative effects
+            (
+                (empty ?h)
+                (has ?l ?t ?n)
+            )
+            ; Positive effects
+            (
+                (carries ?h ?t)
+                (has ?l ?t (call - ?n 1))
+            )
+        )
+
+        (:operator (!give ?h)
+            ; Preconditions
+            (
+                ; Parameter types
+                (or (helicopter ?h) (robot ?h))
+                ; Hidden parameter types
+                (crate_type ?t)
+                (location ?l)
+                ; Other preconditions
+                (at ?h ?l)
+                (carries ?h ?t)
+            )
+            ; Negative effects
+            (
+                (carries ?h ?t)
+                (needs ?l ?t 1)
+            )
+            ; Positive effects
+            (
+                (empty ?h)
+                (needs ?l ?t 0)
+            )
+        )
+
+        (:operator (!load_crates_on_carrier ?h ?r ?t ?n)
+            ; Preconditions
+            (
+                ; Parameter types
+                (or (helicopter ?h) (robot ?h))
+                (carrier ?r)
+                (crate_type ?t)
+                ; Hidden parameter types
+                (location ?l)
+                ; Other preconditions
+                (at ?h ?l)
+                (at ?r ?l)
+                (has ?l ?t ?nbr_at_l)
+                (call <= ?n ?nbr_at_l)
+                (contains ?r ?t ?nbr_contained)
+                (total_contains ?r ?tc)
+                (can_carry ?r ?max_carried)
+                (call <= (call + ?tc ?n) ?max_carried)
+            )
+            ; Negative effects
+            (
+                (has ?l ?t ?nbr_at_l)
+                (contains ?r ?t ?nbr_contained)
+                (total_contains ?r ?tc)
+            )
+            ; Positive effects
+            (
+                (has ?l ?t (call - ?nbr_at_l ?n))
+                (contains ?r ?t (call + ?nbr_contained ?n))
+                (total_contains ?r (call + ?tc ?n))
+            )
+        )
+
+        (:operator (!move_carrier ?h ?r ?to)
+            ; Preconditions
+            (
+                ; Parameter types
+                (or (helicopter ?h) (robot ?h))
+                (carrier ?r)
+                (location ?to)
+                ; Hidden parameter types
+                (location ?from)
+                ; Other preconditions
+                (at ?h ?from)
+                (at ?r ?from)
+                (empty ?h)
+            )
+            ; Negative effects
+            (
+                (at ?h ?from)
+                (at ?r ?from)
+            )
+            ; Positive effects
+            (
+                (at ?h ?to)
+                (at ?r ?to)
+            )
+        )
+
+        (:operator (!drop_crates_from_carrier ?h ?r ?t ?n)
+            ; Preconditions
+            (
+                ; Parameter types
+                (or (helicopter ?h) (robot ?h))
+                (carrier ?r)
+                ; Hidden parameter types
+                (location ?l)
+                ; Other preconditions
+                (at ?h ?l)
+                (at ?r ?l)
+                (empty ?h)
+                (needs ?l ?t ?nbr_needed)
+                (contains ?r ?t ?nbr_contained)
+                (total_contains ?r ?tc)
+                (has ?l ?t ?nbr_at_l)
+                (call <= ?n ?nbr_contained)
+                (call >= ?nbr_needed ?n)
+            )
+            ; Negative effects
+            (
+                (needs ?l ?t ?nbr_needed)
+                (contains ?r ?t ?nbr_contained)
+                (total_contains ?r ?tc)
+                (has ?l ?t ?nbr_at_l)
+            )
+            ; Positive effects
+            (
+                (needs ?l ?t (call - ?nbr_needed ?n))
+                (contains ?r ?t (call - ?nbr_contained ?n))
+                (total_contains ?r (call - ?tc ?n))
+                (has ?l ?t (call + ?nbr_at_l ?n))
+            )
+        )
+
+        ; Use move only if not at the destination
+        (:method (go_to ?h ?to)
+            (
+                ; Parameter types
+                (or (helicopter ?h) (robot ?h))
+                (location ?to)
+                ; Other preconditions
+                (at ?h ?to)
+            )
+            ()
+            (
+                ; Parameter types
+                (or (helicopter ?h) (robot ?h))
+                (location ?to)
+            )
+            (
+                (!move ?h ?to)
+            )
+        )
+
+        ; Use move_carrier only if not at the destination
+        (:method (go_with_carrier_to ?h ?r ?to)
+            (
+                ; Parameter types
+                (or (helicopter ?h) (robot ?h))
+                (carrier ?r)
+                (location ?to)
+                ; Other preconditions
+                (at ?h ?to)
+                (at ?r ?to)
+            )
+            ()
+            (
+                ; Parameter types
+                (or (helicopter ?h) (robot ?h))
+                (carrier ?r)
+                (location ?to)
+                ; Hidden parameter types
+                (location ?from)
+                ; Other preconditions
+                (at ?h ?from)
+                (at ?r ?from)
+            )
+            (
+                (!move_carrier ?h ?r ?to)
+            )
+        )
+
+        ; Recursively load crates needed in ?dest  on carrier ?r
+        (:method (load_carrier_for_dest ?h ?r ?dest)
+            ; Case 1: Can carry all needed crates of type ?t -> take needed, and try to load other crates
+            (
+                ; Parameter types
+                (helicopter ?h)
+                (carrier ?r)
+                (location ?dest)
+                ; Hidden parameter types
+                (robot ?g)
+                (location ?l)
+                ; Other preconditions
+                (at ?h ?l)
+                (needs ?dest ?t ?nbr_needed)
+                (total_contains ?r ?tc)
+                (can_carry ?r ?max_carried)
+                (call <= (call + ?tc ?nbr_needed) ?max_carried)
+                (call <= ?nbr_loaded ?nbr_needed)
+                (call != ?nbr_needed 0)
+                (contains ?r ?t 0)
+            )
+            (
+                (go_to ?g ?l)
+                (!load_crates_on_carrier ?g ?r ?t ?nbr_needed)
+                (load_carrier_for_dest ?g ?r ?dest)
+            )
+            ; Case 2: Needs more crates of type ?t than it can carry -> take the maximum
+            (
+                ; Parameter types
+                (helicopter ?h)
+                (carrier ?r)
+                (location ?dest)
+                ; Hidden parameter types
+                (robot ?g)
+                (location ?l)
+                ; Other preconditions
+                (at ?h ?l)
+                (needs ?dest ?t ?nbr_needed)
+                (total_contains ?r ?tc)
+                (can_carry ?r ?max_carried)
+                (call >= (call + ?tc ?nbr_needed) ?max_carried)
+                (call != ?tc ?max_carried)
+                (contains ?r ?t 0)
+            )
+            (
+                (go_to ?h ?l)
+                (!load_crates_on_carrier ?h ?r ?t (call - ?max_carried ?tc))
+            )
+            ; Case 3: Cannot or does not need to load more crates
+            (
+                ; Parameter types
+                (or (helicopter ?h) (robot ?h))
+                (carrier ?r)
+                (location ?dest)
+            )
+            ()
+        )
+
+        ; Recursively drop all crates from ?r
+        (:method (unload_carrier ?h ?r)
+            (
+                ; Parameter types
+                (or (helicopter ?h) (robot ?h))
+                (carrier ?r)
+                ; Other preconditions
+                (contains ?r ?t ?nbr_contained)
+                (call != 0 ?nbr_contained)
+            )
+            (
+                (!drop_crates_from_carrier ?h ?r ?t ?nbr_contained)
+                (unload_carrier ?h ?r)
+            )
+            (
+                ; Parameter types
+                (or (helicopter ?h) (robot ?h))
+                (carrier ?r)
+                (forall (?t) (crate_type ?t) (contains ?r ?t 0))
+            )
+            ()
+        )
+
+        ; Deliver all needed crates to ?to
+        (:method (deliver_to_location ?h ?to)
+            ; Case 1 : Location ?to only needs a single crate of a single type
+            (
+                ; Parameter types
+                (helicopter ?h)
+                (location ?to)
+                ; Hidden parameter types
+                (crate_type ?t)
+                ; Other preconditions
+                (needs ?to ?t 1)
+                (forall (?ct)
+                    (crate_type ?ct)
+                    (implies (call != ?t ?ct)
+                        (needs ?to ?t 0)
+                    )
+                )
+                (has ?crate_location ?t ?nbr_at_loc)
+                (call > ?nbr_at_loc 0)
+                (empty ?h)
+            )
+            (
+                (go_to ?h ?crate_location)
+                (!pick_up ?h ?t)
+                (!move ?h ?to)
+                (!give ?h)
+            )
+            ; Case 2 : Location ?to needs more than one crate
+            (
+                ; Parameter types
+                (helicopter ?h)
+                (location ?to)
+                ; Hidden parameter types
+                (carrier ?r)
+                (at ?r ?carrier_location)
+                ; Other preconditions
+                (needs ?to ?t ?nbr_needed)
+                (has ?crate_location ?t ?nbr_at_loc)
+                (call != ?nbr_at_loc 0)
+                (call > ?nbr_needed 0)
+            )
+            (
+                (go_to ?h ?carrier_location)
+                (go_with_carrier_to ?h ?r ?crate_location)
+                (load_carrier_for_dest ?h ?r ?to)
+                (!move_carrier ?h ?r ?to)
+                (unload_carrier ?h ?r)
+                (deliver_to_location ?h ?to)
+            )
+            (
+                ; Parameter types
+                (helicopter ?h)
+                (location ?to)
+                (forall (?t) (crate_type ?t) (needs ?to ?t 0))
+            )
+            ()
+        )
+
+        (:method (help_everyone ?h)
+            (
+                ; Parameter types
+                (helicopter ?h)
+                ; Hidden parameter types
+                (location ?l)
+                (crate_type ?t)
+                ; Other preconditions
+                (needs ?l ?t ?nbr_needed)
+                (call > ?nbr_needed 0)
+            )
+            (
+                (deliver_to_location ?h ?l)
+                (help_everyone ?h)
+            )
+            (
+                ; Parameter types
+                (helicopter ?h)
+            )
+            ()
+        )
+    )
+)
