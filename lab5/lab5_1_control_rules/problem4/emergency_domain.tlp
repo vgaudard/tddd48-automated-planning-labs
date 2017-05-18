@@ -25,6 +25,7 @@
   (function used 1)
   (function unused 1)
   (function cratesUndelivered 2)
+  (function totalCratesUndelivered 1)
   )
 
 (set-tl-control
@@ -50,67 +51,140 @@
                         (loc ?r ?car_loc)
                         (not (exists (?dep) (depot ?dep) (loc ?dep ?car_loc)))
                         )
-                       (exists (?dep) (depot ?dep) (?dep_loc) (location ?dep_loc)
-                               (and
-                                 (loc ?dep ?dep_loc)
-                                 (eventually (loc ?r ?dep_loc))
-                                 )
-                               )
-                      )
-                    )
+                      (exists (?dep) (depot ?dep) (?dep_loc) (location ?dep_loc)
+                              (and
+                                (loc ?dep ?dep_loc)
+                                (eventually (loc ?r ?dep_loc))
+                                )
+                              )
+                      ))
 
-              ;Fly to where carried crate is needed
-              (forall (?u) (uav ?u) (?from) (location ?from) (?to) (location ?to) (?t) (type ?t)
-                      (implies (and (loc ?u ?from) (carrying ?u ?t) (next (loc ?u ?to)) (not (= ?from ?to)))
-                               (> (cratesUndelivered ?t ?to) 0)))
+            ;Fly to where carried crate is needed
+            (forall (?u) (uav ?u) (?from) (location ?from) (?to) (location ?to) (?t) (type ?t)
+                    (implies (and (loc ?u ?from) (carrying ?u ?t) (next (loc ?u ?to)) (not (= ?from ?to)))
+                             (> (cratesUndelivered ?t ?to) 0)))
 
-            (or
-              ;Load available carrier if needed
-              ;if a carrier and an uav are at a depot, and the carrier can be loaded
-              (exists (?dest) (location ?dest) (?dep) (depot ?dep) (?u) (uav ?u) (?dep_loc) (location ?dep_loc) (?dest) (location ?dest) (?t) (type ?t) (?r) (carrier ?r) (?uav_loc) (location ?uav_loc)
+            ;Load available carrier if needed
+            (forall (?u) (uav ?u) (?c) (carrier ?c) (?dep) (depot ?dep) (?dep_loc) (location ?dep_loc) (?t) (type ?t)
+                    (implies
                       (and
                         (loc ?dep ?dep_loc)
-                        (loc ?u ?uav_loc)
-                        (loc ?r ?uav_loc)
-                        (> (cratesUndelivered ?t ?dest) 1)
-                        (= (boxcount ?r ?t) 0)
-                        (or
-                          (next (not (= (boxcount ?r ?t) 0)))
-                          (next (= (used ?r) 4))
-                          (and
-                            (empty ?u)
-                            (next (not (empty ?u)))
-                            )
-                          )
+                        (loc ?u ?dep_loc)
+                        (loc ?c ?dep_loc)
+                        (carrying ?u ?t)
+                        (exists (?l) (location ?l)
+                                  (> (totalCratesUndelivered ?l) 1) ;If a location needs multiple crates
+                                  )
+                        (not (= (unused ?c) 0)) ;If there is space on the carrier
                         )
-                      )
-
-              ;Deliver carrier if needed
-              (exists (?u) (uav ?u) (?r) (carrier ?r) (?uav_loc) (location ?uav_loc) (?dest) (location ?dest)
                       (and
-                        (loc ?u ?uav_loc)
-                        (carrying ?u ?r)
-                        (= (used ?r) 4)
-                        (or ; Dirty t-eventually 6, because not implemented
-                          (next (carrying ?u ?r))
-                          (next (next (carrying ?u ?r)))
-                          (next (next (next (carrying ?u ?r))))
-                          (next (next (next (next (carrying ?u ?r)))))
-                          (next (next (next (next (next (carrying ?u ?r))))))
-                          (next (next (next (next (next (next (carrying ?u ?r)))))))
-                          )
+                        (next (not (carrying ?u ?t)))
                         )
-                      )
-              (not (exists (?u) (uav ?u) (?r) (carrier ?r) (?uav_loc) (location ?uav_loc) (?dest) (location ?dest) (?t) (type ?t)
-                           (and
-                             (loc ?u ?uav_loc)
-                             (loc ?r ?uav_loc)
-                             (not (= (cratesUndelivered ?t ?dest) 0))
-                             (not (= (boxcount ?r ?t) 0))
-                             )
-                           )
-                   )
-              )
+                      ))
+
+            ;Don't load unneeded crates
+            ;(There is no carrier loaded with more crates than is needed at any single location)
+            (not (exists (?c) (carrier ?c) (?t) (type ?t)
+                         (forall (?l) (location ?l)
+                                 (> (boxcount ?c ?t) (cratesUndelivered ?t ?l)))))
+
+            ;Pick up carrier if needed
+            (forall (?u) (uav ?u) (?c) (carrier ?c) (?from) (location ?from)
+                    (implies
+                      (and
+                        (loc ?u ?from)
+                        (loc ?c ?from)
+                        (= (totalCratesUndelivered ?from) 0)
+                        (exists (?to) (location ?to)
+                                (or
+                                  (and
+                                    (forall (?t) (type ?t)
+                                            (and
+                                              (<= (boxcount ?c ?t) (cratesUndelivered ?t ?to))
+                                              (> (totalCratesUndelivered ?to) 0)
+                                              ))
+                                    (= (used ?c) 4)
+                                    )
+                                  (and
+                                    (forall (?t) (type ?t)
+                                            (and
+                                              (= (boxcount ?c ?t) (cratesUndelivered ?t ?to))
+                                              (> (cratesUndelivered ?t ?to) 0)
+                                              ))
+                                    (< (used ?c) 4)
+                                    )
+                                  )
+                                )
+                        )
+                      (next (carrying ?u ?c))
+                      ))
+
+            ;Deliver carrier if needed
+            (forall (?u) (uav ?u) (?c) (carrier ?c) (?from) (location ?from)
+                    (implies
+                      (and
+                        (loc ?u ?from)
+                        (= (totalCratesUndelivered ?from) 0)
+                        (carrying ?u ?c)
+                        (exists (?to) (location ?to)
+                                (or
+                                  (and
+                                    (forall (?t) (type ?t) (<= (boxcount ?c ?t) (cratesUndelivered ?t ?to)))
+                                    (= (used ?c) 4)
+                                    )
+                                  (and
+                                    (forall (?t) (type ?t) (= (boxcount ?c ?t) (cratesUndelivered ?t ?to)))
+                                    (< (used ?c) 4)
+                                    )
+                                  )
+                                )
+                        )
+                      (exists (?to) (location ?to)
+                              (and
+                                (or
+                                  (and
+                                    (forall (?t) (type ?t) (<= (boxcount ?c ?t) (cratesUndelivered ?t ?to)))
+                                    (= (used ?c) 4)
+                                    )
+                                  (and
+                                    (forall (?t) (type ?t) (= (boxcount ?c ?t) (cratesUndelivered ?t ?to)))
+                                    (< (used ?c) 4)
+                                    )
+                                  )
+                                (next (loc ?u ?to))
+                                (next (next (not (carrying ?u ?c))))
+                                )
+                              )
+                      ))
+
+            ;Unload crates from carrier
+            (forall (?u) (uav ?u) (?c) (carrier ?c) (?t) (type ?t) (?l) (location ?l)
+                    (implies
+                      (and
+                        (loc ?u ?l)
+                        (loc ?c ?l)
+                        (not (exists (?t) (type ?t) (carrying ?u ?t)))
+                        (> (cratesUndelivered ?t ?l) 0)
+                        (> (boxcount ?c ?t) 0)
+                        )
+                      (and
+                        (next (carrying ?u ?t))
+                        (next (next (not (carrying ?u ?t))))
+                        )
+                      ))
+
+            ;Only put down an empty carrier in a depot
+            (forall (?u) (uav ?u) (?c) (carrier ?c) (?l) (location ?l)
+                    (implies
+                      (and
+                        (loc ?u ?l)
+                        (carrying ?u ?c)
+                        (= (used ?c) 0)
+                        (not (exists (?dep) (depot ?dep) (loc ?dep ?l)))
+                        )
+                      (next(carrying ?u ?c))
+                    ))
+
 
             )))
 
@@ -144,6 +218,7 @@
                             (not (= (cratesUndelivered ?t ?l) 0))))
 
                   (add	(-= (cratesUndelivered ?t ?l) 1)
+                        (-= (totalCratesUndelivered ?l) 1)
                         (empty ?u))
 
                   (del 	(carrying ?u ?t))
