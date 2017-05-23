@@ -1,0 +1,72 @@
+The value of parameter 'range' is now: '0'
+The value of parameter 'goal_bias' is now: '0.050000000000000003'
+The value of parameter 'delay_collision_checking' is now: '1'
+The value of parameter 'prune' is now: '0'
+The value of parameter 'prune_states_threshold' is now: '0.94999999999999996'
+Loaded environment model with 1100 triangles.
+Robot piece with 416 triangles loaded
+RRTstar: Planner range detected to be 28.598431
+Properties of the state space 'SE2CompoundSpace113'
+  - signature: 6 4 3 1 2 2 1 
+  - dimension: 3
+  - extent: 142.992
+  - sanity checks for state space passed
+  - probability of valid states: 0.44
+  - average length of a valid motion: 5.3867
+  - average number of samples drawn per second: sampleUniform()=1.53846e+07 sampleUniformNear()=1.07527e+07 sampleGaussian()=3.14465e+06
+Settings for the state space 'SE2CompoundSpace113'
+  - state validity check resolution: 1%
+  - valid segment count factor: 1
+  - state space:
+Compound state space 'SE2CompoundSpace113' of dimension 3 (locked) [
+Real vector state space 'RealVectorSpace114' of dimension 2 with bounds: 
+  - min: -50.3622 -49.7931 
+  - max: 49.6378 50.2069 
+ of weight 1
+SO2 state space 'SO2Space115'
+ of weight 0.5
+]
+Registered projections:
+  - <default>
+Projection of dimension 2
+Cell sizes (computed defaults): [5 5]
+
+Declared parameters:
+longest_valid_segment_fraction = 0.01
+projection.cellsize.0 = 5
+projection.cellsize.1 = 5
+projection.cellsize_factor = 
+valid_segment_count_factor = 1
+Valid state sampler named uniform with parameters:
+nr_attempts = 100
+Planner RRTstar specs:
+Multithreaded:                 No
+Reports approximate solutions: Yes
+Can optimize solutions:        Yes
+Aware of the following parameters: delay_collision_checking goal_bias prune prune_states_threshold range
+Declared parameters for planner RRTstar:
+delay_collision_checking = 1
+goal_bias = 0.050000000000000003
+prune = 0
+prune_states_threshold = 0.94999999999999996
+range = 28.598430512820883
+Start states:
+Compound state [
+RealVectorState [-43.95 -42.75]
+SO2State [0]
+]
+Goal state, threshold = 1e-06, memory address = 0x2922fe0, state = 
+Compound state [
+RealVectorState [44 44]
+SO2State [0]
+]
+Average state cost: 0
+There are 0 solutions
+
+RRTstar: Starting planning with 1 states already in datastructure
+RRTstar: Initial k-nearest value of 3
+RRTstar: Created 1889 new states. Checked 45792 rewire options. 1 goal states in tree.
+Solution found in 3.185892 seconds
+The solution path was slightly touching on an invalid region of the state space, but it was successfully fixed.
+SimpleSetup: Path simplification took 0.130920 seconds and changed from 46 to 125 states
+Interpolating solution path to 200 states

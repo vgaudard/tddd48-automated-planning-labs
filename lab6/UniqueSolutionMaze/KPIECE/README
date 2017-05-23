@@ -1,0 +1,5 @@
+Results are organized in folders containing the different parameters.
+
+Folder name format is `usm_kpiece_bf[Border fraction]_gb[Goal bias]_r[Range]`.
+
+Subfolders named after a number represent successive runs with the same parameters, to show randomness.

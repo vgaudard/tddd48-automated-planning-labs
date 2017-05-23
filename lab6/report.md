@@ -57,6 +57,16 @@ from the start and end poses.
 
 Those were chosen to understand the interests of those two attributes.
 
+## Tests organization
+
+Results are organized in folders named after the problem, the planner and the
+different parameters.
+
+Folder name format is `[problem]_[planner]_[parameters]`.
+
+Sub folders named after a number represent successive runs with the same
+parameters to show randomness of the solution.
+
 ## Unique Solution Maze
 
 ## Barriers

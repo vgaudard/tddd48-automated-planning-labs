@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "/sw/omplapp-1.0.0/bin/ompl_app", line 539, in solve
+    self.configureApp()
+  File "/sw/omplapp-1.0.0/bin/ompl_app", line 512, in configureApp
+    self.omplSetup.setPlanner(self.createPlanner())
+  File "/sw/omplapp-1.0.0/bin/ompl_app", line 490, in createPlanner
+    params[param].setValue(str(widget.value()))
+RuntimeError: The fraction of time spent selecting border cells must be in the range (0,1]
+Traceback (most recent call last):
+  File "/sw/omplapp-1.0.0/bin/ompl_app", line 539, in solve
+    self.configureApp()
+  File "/sw/omplapp-1.0.0/bin/ompl_app", line 512, in configureApp
+    self.omplSetup.setPlanner(self.createPlanner())
+  File "/sw/omplapp-1.0.0/bin/ompl_app", line 490, in createPlanner
+    params[param].setValue(str(widget.value()))
+RuntimeError: The fraction of time spent selecting border cells must be in the range (0,1]
+Traceback (most recent call last):
+  File "/sw/omplapp-1.0.0/bin/ompl_app", line 539, in solve
+    self.configureApp()
+  File "/sw/omplapp-1.0.0/bin/ompl_app", line 512, in configureApp
+    self.omplSetup.setPlanner(self.createPlanner())
+  File "/sw/omplapp-1.0.0/bin/ompl_app", line 490, in createPlanner
+    params[param].setValue(str(widget.value()))
+RuntimeError: The fraction of time spent selecting border cells must be in the range (0,1]
+Traceback (most recent call last):
+  File "/sw/omplapp-1.0.0/bin/ompl_app", line 539, in solve
+    self.configureApp()
+  File "/sw/omplapp-1.0.0/bin/ompl_app", line 512, in configureApp
+    self.omplSetup.setPlanner(self.createPlanner())
+  File "/sw/omplapp-1.0.0/bin/ompl_app", line 490, in createPlanner
+    params[param].setValue(str(widget.value()))
+RuntimeError: The fraction of time spent selecting border cells must be in the range (0,1]
