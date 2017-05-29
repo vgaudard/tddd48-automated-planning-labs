@@ -177,5 +177,14 @@ them).
 However, solutions were found approximately as fast and were of the same
 quality.
 
-## Conclusion
+### Multi-query planner tests
+
+To test the usefulness of multi-query, successive tests were made using the
+`RandomPolygons_planar` problem. Logs and screenshots are available in the
+`multi_query` folder.
+
+Time taken to give a solution did not seem to decrease after the first attempt,
+despite having already constructed the road map. It might be because `ompl.app`
+does not use this property or because the time given by `ompl.app` does not
+include the time taken to construct the road map.
 

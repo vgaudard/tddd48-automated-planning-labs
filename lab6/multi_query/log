@@ -1,0 +1,475 @@
+Loading /home/vicga263/courses/planning/lab6/resources/RandomPolygons_planar.cfg
+The value of parameter 'max_nearest_neighbors' was set to: '8'
+Loaded environment model with 1644 triangles.
+Robot piece with 40 triangles loaded
+Properties of the state space 'SE2CompoundSpace113'
+  - signature: 6 4 3 1 2 2 1 
+  - dimension: 3
+  - extent: 157.134
+  - sanity checks for state space passed
+  - probability of valid states: 0.406
+  - average length of a valid motion: 14.7333
+  - average number of samples drawn per second: sampleUniform()=1.51515e+07 sampleUniformNear()=1.11111e+07 sampleGaussian()=3.21543e+06
+Settings for the state space 'SE2CompoundSpace113'
+  - state validity check resolution: 1%
+  - valid segment count factor: 1
+  - state space:
+Compound state space 'SE2CompoundSpace113' of dimension 3 (locked) [
+Real vector state space 'RealVectorSpace114' of dimension 2 with bounds: 
+  - min: -55 -55.0006 
+  - max: 55 54.9993 
+ of weight 1
+SO2 state space 'SO2Space115'
+ of weight 0.5
+]
+Registered projections:
+  - <default>
+Projection of dimension 2
+Cell sizes (computed defaults): [5.5 5.5]
+
+Declared parameters:
+longest_valid_segment_fraction = 0.01
+projection.cellsize.0 = 5.5
+projection.cellsize.1 = 5.4999950408900009
+projection.cellsize_factor = 
+valid_segment_count_factor = 1
+Valid state sampler named uniform with parameters:
+nr_attempts = 100
+Planner PRM specs:
+Multithreaded:                 No
+Reports approximate solutions: No
+Can optimize solutions:        Yes
+Aware of the following parameters: max_nearest_neighbors
+Declared parameters for planner PRM:
+max_nearest_neighbors = 
+Start states:
+Compound state [
+RealVectorState [-32.99 42.85]
+SO2State [0]
+]
+Goal state, threshold = 1e-06, memory address = 0x1e83ff0, state = 
+Compound state [
+RealVectorState [14.01 -43.15]
+SO2State [0.802851]
+]
+Average state cost: 0
+There are 0 solutions
+
+Starting with 2 states
+Created 61 states
+Solution found in 0.102567 seconds
+SimpleSetup: Path simplification took 0.005585 seconds and changed from 6 to 41 states
+Interpolating solution path to 79 states
+The value of parameter 'max_nearest_neighbors' was set to: '8'
+Properties of the state space 'SE2CompoundSpace113'
+  - signature: 6 4 3 1 2 2 1 
+  - dimension: 3
+  - extent: 157.134
+  - sanity checks for state space passed
+  - probability of valid states: 0.424
+  - average length of a valid motion: 11.2259
+  - average number of samples drawn per second: sampleUniform()=1.31579e+07 sampleUniformNear()=9.80392e+06 sampleGaussian()=2.8169e+06
+Settings for the state space 'SE2CompoundSpace113'
+  - state validity check resolution: 1%
+  - valid segment count factor: 1
+  - state space:
+Compound state space 'SE2CompoundSpace113' of dimension 3 (locked) [
+Real vector state space 'RealVectorSpace114' of dimension 2 with bounds: 
+  - min: -55 -55.0006 
+  - max: 55 54.9993 
+ of weight 1
+SO2 state space 'SO2Space115'
+ of weight 0.5
+]
+Registered projections:
+  - <default>
+Projection of dimension 2
+Cell sizes (computed defaults): [5.5 5.5]
+
+Declared parameters:
+longest_valid_segment_fraction = 0.01
+projection.cellsize.0 = 5.5
+projection.cellsize.1 = 5.4999950408900009
+projection.cellsize_factor = 
+valid_segment_count_factor = 1
+Valid state sampler named uniform with parameters:
+nr_attempts = 100
+Planner PRM specs:
+Multithreaded:                 No
+Reports approximate solutions: No
+Can optimize solutions:        Yes
+Aware of the following parameters: max_nearest_neighbors
+Declared parameters for planner PRM:
+max_nearest_neighbors = 
+Start states:
+Compound state [
+RealVectorState [-32.99 42.85]
+SO2State [0]
+]
+Goal state, threshold = 1e-06, memory address = 0x1e83ff0, state = 
+Compound state [
+RealVectorState [14.01 -43.15]
+SO2State [0.802851]
+]
+Average state cost: 0
+There are 0 solutions
+
+Starting with 2 states
+Created 61 states
+Solution found in 0.101633 seconds
+SimpleSetup: Path simplification took 0.003449 seconds and changed from 6 to 21 states
+Interpolating solution path to 70 states
+The value of parameter 'max_nearest_neighbors' was set to: '8'
+Properties of the state space 'SE2CompoundSpace113'
+  - signature: 6 4 3 1 2 2 1 
+  - dimension: 3
+  - extent: 157.134
+  - sanity checks for state space passed
+  - probability of valid states: 0.384
+  - average length of a valid motion: 12.7126
+  - average number of samples drawn per second: sampleUniform()=1.49254e+07 sampleUniformNear()=1.0989e+07 sampleGaussian()=3.19489e+06
+Settings for the state space 'SE2CompoundSpace113'
+  - state validity check resolution: 1%
+  - valid segment count factor: 1
+  - state space:
+Compound state space 'SE2CompoundSpace113' of dimension 3 (locked) [
+Real vector state space 'RealVectorSpace114' of dimension 2 with bounds: 
+  - min: -55 -55.0006 
+  - max: 55 54.9993 
+ of weight 1
+SO2 state space 'SO2Space115'
+ of weight 0.5
+]
+Registered projections:
+  - <default>
+Projection of dimension 2
+Cell sizes (computed defaults): [5.5 5.5]
+
+Declared parameters:
+longest_valid_segment_fraction = 0.01
+projection.cellsize.0 = 5.5
+projection.cellsize.1 = 5.4999950408900009
+projection.cellsize_factor = 
+valid_segment_count_factor = 1
+Valid state sampler named uniform with parameters:
+nr_attempts = 100
+Planner PRM specs:
+Multithreaded:                 No
+Reports approximate solutions: No
+Can optimize solutions:        Yes
+Aware of the following parameters: max_nearest_neighbors
+Declared parameters for planner PRM:
+max_nearest_neighbors = 
+Start states:
+Compound state [
+RealVectorState [-32.99 42.85]
+SO2State [0]
+]
+Goal state, threshold = 1e-06, memory address = 0x1e83ff0, state = 
+Compound state [
+RealVectorState [14.01 -43.15]
+SO2State [0.802851]
+]
+Average state cost: 0
+There are 0 solutions
+
+Starting with 2 states
+Created 58 states
+Solution found in 0.102512 seconds
+SimpleSetup: Path simplification took 0.010352 seconds and changed from 7 to 25 states
+Interpolating solution path to 71 states
+The value of parameter 'max_nearest_neighbors' was set to: '8'
+Properties of the state space 'SE2CompoundSpace113'
+  - signature: 6 4 3 1 2 2 1 
+  - dimension: 3
+  - extent: 157.134
+  - sanity checks for state space passed
+  - probability of valid states: 0.379
+  - average length of a valid motion: 11.0432
+  - average number of samples drawn per second: sampleUniform()=1.51515e+07 sampleUniformNear()=1.11111e+07 sampleGaussian()=3.18471e+06
+Settings for the state space 'SE2CompoundSpace113'
+  - state validity check resolution: 1%
+  - valid segment count factor: 1
+  - state space:
+Compound state space 'SE2CompoundSpace113' of dimension 3 (locked) [
+Real vector state space 'RealVectorSpace114' of dimension 2 with bounds: 
+  - min: -55 -55.0006 
+  - max: 55 54.9993 
+ of weight 1
+SO2 state space 'SO2Space115'
+ of weight 0.5
+]
+Registered projections:
+  - <default>
+Projection of dimension 2
+Cell sizes (computed defaults): [5.5 5.5]
+
+Declared parameters:
+longest_valid_segment_fraction = 0.01
+projection.cellsize.0 = 5.5
+projection.cellsize.1 = 5.4999950408900009
+projection.cellsize_factor = 
+valid_segment_count_factor = 1
+Valid state sampler named uniform with parameters:
+nr_attempts = 100
+Planner PRM specs:
+Multithreaded:                 No
+Reports approximate solutions: No
+Can optimize solutions:        Yes
+Aware of the following parameters: max_nearest_neighbors
+Declared parameters for planner PRM:
+max_nearest_neighbors = 
+Start states:
+Compound state [
+RealVectorState [-32.99 42.85]
+SO2State [0]
+]
+Goal state, threshold = 1e-06, memory address = 0x1e83ff0, state = 
+Compound state [
+RealVectorState [14.01 -43.15]
+SO2State [0.802851]
+]
+Average state cost: 0
+There are 0 solutions
+
+Starting with 2 states
+Created 63 states
+Solution found in 0.102571 seconds
+SimpleSetup: Path simplification took 0.005394 seconds and changed from 6 to 41 states
+Interpolating solution path to 70 states
+The value of parameter 'max_nearest_neighbors' was set to: '8'
+Properties of the state space 'SE2CompoundSpace113'
+  - signature: 6 4 3 1 2 2 1 
+  - dimension: 3
+  - extent: 157.134
+  - sanity checks for state space passed
+  - probability of valid states: 0.425
+  - average length of a valid motion: 14.9925
+  - average number of samples drawn per second: sampleUniform()=1.47059e+07 sampleUniformNear()=9.52381e+06 sampleGaussian()=3.0303e+06
+Settings for the state space 'SE2CompoundSpace113'
+  - state validity check resolution: 1%
+  - valid segment count factor: 1
+  - state space:
+Compound state space 'SE2CompoundSpace113' of dimension 3 (locked) [
+Real vector state space 'RealVectorSpace114' of dimension 2 with bounds: 
+  - min: -55 -55.0006 
+  - max: 55 54.9993 
+ of weight 1
+SO2 state space 'SO2Space115'
+ of weight 0.5
+]
+Registered projections:
+  - <default>
+Projection of dimension 2
+Cell sizes (computed defaults): [5.5 5.5]
+
+Declared parameters:
+longest_valid_segment_fraction = 0.01
+projection.cellsize.0 = 5.5
+projection.cellsize.1 = 5.4999950408900009
+projection.cellsize_factor = 
+valid_segment_count_factor = 1
+Valid state sampler named uniform with parameters:
+nr_attempts = 100
+Planner PRM specs:
+Multithreaded:                 No
+Reports approximate solutions: No
+Can optimize solutions:        Yes
+Aware of the following parameters: max_nearest_neighbors
+Declared parameters for planner PRM:
+max_nearest_neighbors = 
+Start states:
+Compound state [
+RealVectorState [-32.99 42.85]
+SO2State [0]
+]
+Goal state, threshold = 1e-06, memory address = 0x1e83ff0, state = 
+Compound state [
+RealVectorState [14.01 -43.15]
+SO2State [0.802851]
+]
+Average state cost: 0
+There are 0 solutions
+
+Starting with 2 states
+Created 60 states
+Solution found in 0.101497 seconds
+SimpleSetup: Path simplification took 0.004485 seconds and changed from 8 to 29 states
+Interpolating solution path to 80 states
+The value of parameter 'max_nearest_neighbors' was set to: '8'
+Properties of the state space 'SE2CompoundSpace113'
+  - signature: 6 4 3 1 2 2 1 
+  - dimension: 3
+  - extent: 157.134
+  - sanity checks for state space passed
+  - probability of valid states: 0.416
+  - average length of a valid motion: 11.1955
+  - average number of samples drawn per second: sampleUniform()=1.49254e+07 sampleUniformNear()=1.0989e+07 sampleGaussian()=3.20513e+06
+Settings for the state space 'SE2CompoundSpace113'
+  - state validity check resolution: 1%
+  - valid segment count factor: 1
+  - state space:
+Compound state space 'SE2CompoundSpace113' of dimension 3 (locked) [
+Real vector state space 'RealVectorSpace114' of dimension 2 with bounds: 
+  - min: -55 -55.0006 
+  - max: 55 54.9993 
+ of weight 1
+SO2 state space 'SO2Space115'
+ of weight 0.5
+]
+Registered projections:
+  - <default>
+Projection of dimension 2
+Cell sizes (computed defaults): [5.5 5.5]
+
+Declared parameters:
+longest_valid_segment_fraction = 0.01
+projection.cellsize.0 = 5.5
+projection.cellsize.1 = 5.4999950408900009
+projection.cellsize_factor = 
+valid_segment_count_factor = 1
+Valid state sampler named uniform with parameters:
+nr_attempts = 100
+Planner PRM specs:
+Multithreaded:                 No
+Reports approximate solutions: No
+Can optimize solutions:        Yes
+Aware of the following parameters: max_nearest_neighbors
+Declared parameters for planner PRM:
+max_nearest_neighbors = 
+Start states:
+Compound state [
+RealVectorState [30 42.85]
+SO2State [0]
+]
+Goal state, threshold = 1e-06, memory address = 0x1e83ff0, state = 
+Compound state [
+RealVectorState [14.01 -43.15]
+SO2State [0.802851]
+]
+Average state cost: 0
+There are 0 solutions
+
+Starting with 2 states
+Created 187 states
+Solution found in 0.304068 seconds
+SimpleSetup: Path simplification took 0.008782 seconds and changed from 17 to 41 states
+Interpolating solution path to 92 states
+The value of parameter 'max_nearest_neighbors' was set to: '8'
+Properties of the state space 'SE2CompoundSpace113'
+  - signature: 6 4 3 1 2 2 1 
+  - dimension: 3
+  - extent: 157.134
+  - sanity checks for state space passed
+  - probability of valid states: 0.423
+  - average length of a valid motion: 11.0401
+  - average number of samples drawn per second: sampleUniform()=9.34579e+06 sampleUniformNear()=6.80272e+06 sampleGaussian()=1.9802e+06
+Settings for the state space 'SE2CompoundSpace113'
+  - state validity check resolution: 1%
+  - valid segment count factor: 1
+  - state space:
+Compound state space 'SE2CompoundSpace113' of dimension 3 (locked) [
+Real vector state space 'RealVectorSpace114' of dimension 2 with bounds: 
+  - min: -55 -55.0006 
+  - max: 55 54.9993 
+ of weight 1
+SO2 state space 'SO2Space115'
+ of weight 0.5
+]
+Registered projections:
+  - <default>
+Projection of dimension 2
+Cell sizes (computed defaults): [5.5 5.5]
+
+Declared parameters:
+longest_valid_segment_fraction = 0.01
+projection.cellsize.0 = 5.5
+projection.cellsize.1 = 5.4999950408900009
+projection.cellsize_factor = 
+valid_segment_count_factor = 1
+Valid state sampler named uniform with parameters:
+nr_attempts = 100
+Planner PRM specs:
+Multithreaded:                 No
+Reports approximate solutions: No
+Can optimize solutions:        Yes
+Aware of the following parameters: max_nearest_neighbors
+Declared parameters for planner PRM:
+max_nearest_neighbors = 
+Start states:
+Compound state [
+RealVectorState [30 42.85]
+SO2State [0]
+]
+Goal state, threshold = 1e-06, memory address = 0x1e83ff0, state = 
+Compound state [
+RealVectorState [14.01 -43.15]
+SO2State [0.802851]
+]
+Average state cost: 0
+There are 0 solutions
+
+Starting with 2 states
+Created 58 states
+Solution found in 0.102385 seconds
+SimpleSetup: Path simplification took 0.011118 seconds and changed from 7 to 49 states
+Interpolating solution path to 80 states
+The value of parameter 'max_nearest_neighbors' was set to: '8'
+Properties of the state space 'SE2CompoundSpace113'
+  - signature: 6 4 3 1 2 2 1 
+  - dimension: 3
+  - extent: 157.134
+  - sanity checks for state space passed
+  - probability of valid states: 0.388
+  - average length of a valid motion: 13.3895
+  - average number of samples drawn per second: sampleUniform()=1.36986e+07 sampleUniformNear()=1.0989e+07 sampleGaussian()=3.19489e+06
+Settings for the state space 'SE2CompoundSpace113'
+  - state validity check resolution: 1%
+  - valid segment count factor: 1
+  - state space:
+Compound state space 'SE2CompoundSpace113' of dimension 3 (locked) [
+Real vector state space 'RealVectorSpace114' of dimension 2 with bounds: 
+  - min: -55 -55.0006 
+  - max: 55 54.9993 
+ of weight 1
+SO2 state space 'SO2Space115'
+ of weight 0.5
+]
+Registered projections:
+  - <default>
+Projection of dimension 2
+Cell sizes (computed defaults): [5.5 5.5]
+
+Declared parameters:
+longest_valid_segment_fraction = 0.01
+projection.cellsize.0 = 5.5
+projection.cellsize.1 = 5.4999950408900009
+projection.cellsize_factor = 
+valid_segment_count_factor = 1
+Valid state sampler named uniform with parameters:
+nr_attempts = 100
+Planner PRM specs:
+Multithreaded:                 No
+Reports approximate solutions: No
+Can optimize solutions:        Yes
+Aware of the following parameters: max_nearest_neighbors
+Declared parameters for planner PRM:
+max_nearest_neighbors = 
+Start states:
+Compound state [
+RealVectorState [30 42.85]
+SO2State [0]
+]
+Goal state, threshold = 1e-06, memory address = 0x1e83ff0, state = 
+Compound state [
+RealVectorState [14.01 -43.15]
+SO2State [0.802851]
+]
+Average state cost: 0
+There are 0 solutions
+
+Starting with 2 states
+Created 58 states
+Solution found in 0.105710 seconds
+SimpleSetup: Path simplification took 0.010318 seconds and changed from 9 to 57 states
+Interpolating solution path to 108 states
