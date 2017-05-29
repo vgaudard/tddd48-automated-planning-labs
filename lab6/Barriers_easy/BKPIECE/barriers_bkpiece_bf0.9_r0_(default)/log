@@ -1,0 +1,67 @@
+The value of parameter 'border_fraction' is now: '0.90000000000000002'
+The value of parameter 'range' is now: '0'
+Loaded environment model with 632 triangles.
+Robot piece with 100 triangles loaded
+BKPIECE1: Attempting to use default projection.
+BKPIECE1: Planner range detected to be 159.208122
+Properties of the state space 'SE2CompoundSpace113'
+  - signature: 6 4 3 1 2 2 1 
+  - dimension: 3
+  - extent: 796.041
+  - sanity checks for state space passed
+  - probability of valid states: 0.266
+  - average length of a valid motion: 31.3637
+  - average number of samples drawn per second: sampleUniform()=1.42857e+07 sampleUniformNear()=1.04167e+07 sampleGaussian()=3.19489e+06
+Settings for the state space 'SE2CompoundSpace113'
+  - state validity check resolution: 1%
+  - valid segment count factor: 1
+  - state space:
+Compound state space 'SE2CompoundSpace113' of dimension 3 (locked) [
+Real vector state space 'RealVectorSpace114' of dimension 2 with bounds: 
+  - min: 0 -440.23 
+  - max: 661.022 0.487427 
+ of weight 1
+SO2 state space 'SO2Space115'
+ of weight 0.5
+]
+Registered projections:
+  - <default>
+Projection of dimension 2
+Cell sizes (computed defaults): [33.0511 22.0359]
+
+Declared parameters:
+longest_valid_segment_fraction = 0.01
+projection.cellsize.0 = 33.05111389160156
+projection.cellsize.1 = 22.035870361328126
+projection.cellsize_factor = 
+valid_segment_count_factor = 1
+Valid state sampler named uniform with parameters:
+nr_attempts = 100
+Planner BKPIECE1 specs:
+Multithreaded:                 No
+Reports approximate solutions: No
+Can optimize solutions:        No
+Aware of the following parameters: border_fraction failed_expansion_score_factor min_valid_path_fraction range
+Declared parameters for planner BKPIECE1:
+border_fraction = 0.90000000000000002
+failed_expansion_score_factor = 0.5
+min_valid_path_fraction = 0.5
+range = 159.2081219980885
+Start states:
+Compound state [
+RealVectorState [65 -156]
+SO2State [-0.523599]
+]
+Goal state, threshold = 1e-06, memory address = 0x220a220, state = 
+Compound state [
+RealVectorState [550 -287]
+SO2State [1.5708]
+]
+Average state cost: 0
+There are 0 solutions
+
+BKPIECE1: Starting planning with 1 states already in datastructure
+BKPIECE1: Created 2629 (1098 start + 1531 goal) states in 235 cells (76 start (56 on boundary) + 159 goal (116 on boundary))
+Solution found in 1.867933 seconds
+SimpleSetup: Path simplification took 0.050479 seconds and changed from 79 to 117 states
+Interpolating solution path to 267 states

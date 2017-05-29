@@ -1,0 +1,64 @@
+The value of parameter 'border_fraction' is now: '0.94999999999999996'
+The value of parameter 'range' is now: '0'
+LBKPIECE1: Attempting to use default projection.
+LBKPIECE1: Planner range detected to be 159.208031
+Properties of the state space 'SE2CompoundSpace113'
+  - signature: 6 4 3 1 2 2 1 
+  - dimension: 3
+  - extent: 796.04
+  - sanity checks for state space passed
+  - probability of valid states: 0.231
+  - average length of a valid motion: 30.7074
+  - average number of samples drawn per second: sampleUniform()=1.42857e+07 sampleUniformNear()=1.05263e+07 sampleGaussian()=3.11526e+06
+Settings for the state space 'SE2CompoundSpace113'
+  - state validity check resolution: 1%
+  - valid segment count factor: 1
+  - state space:
+Compound state space 'SE2CompoundSpace113' of dimension 3 (locked) [
+Real vector state space 'RealVectorSpace114' of dimension 2 with bounds: 
+  - min: 0 -440.23 
+  - max: 661.02 0.49 
+ of weight 1
+SO2 state space 'SO2Space115'
+ of weight 0.5
+]
+Registered projections:
+  - <default>
+Projection of dimension 2
+Cell sizes (computed defaults): [33.051 22.036]
+
+Declared parameters:
+longest_valid_segment_fraction = 0.01
+projection.cellsize.0 = 33.051000000000002
+projection.cellsize.1 = 22.036000000000001
+projection.cellsize_factor = 
+valid_segment_count_factor = 1
+Valid state sampler named uniform with parameters:
+nr_attempts = 100
+Planner LBKPIECE1 specs:
+Multithreaded:                 No
+Reports approximate solutions: No
+Can optimize solutions:        No
+Aware of the following parameters: border_fraction min_valid_path_fraction range
+Declared parameters for planner LBKPIECE1:
+border_fraction = 0.94999999999999996
+min_valid_path_fraction = 0.5
+range = 159.20803061350131
+Start states:
+Compound state [
+RealVectorState [65 -156]
+SO2State [-0.523599]
+]
+Goal state, threshold = 1e-06, memory address = 0x18e2970, state = 
+Compound state [
+RealVectorState [550 -287]
+SO2State [1.5708]
+]
+Average state cost: 0
+There are 0 solutions
+
+LBKPIECE1: Starting planning with 1 states already in datastructure
+LBKPIECE1: Created 1306 (506 start + 800 goal) states in 258 cells (151 start (103 on boundary) + 107 goal (81 on boundary))
+Solution found in 0.582350 seconds
+SimpleSetup: Path simplification took 0.053277 seconds and changed from 81 to 97 states
+Interpolating solution path to 189 states

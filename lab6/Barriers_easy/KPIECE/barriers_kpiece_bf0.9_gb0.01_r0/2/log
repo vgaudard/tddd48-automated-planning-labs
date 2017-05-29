@@ -1,0 +1,67 @@
+The value of parameter 'border_fraction' is now: '0.90000000000000002'
+The value of parameter 'goal_bias' is now: '0.01'
+The value of parameter 'range' is now: '0'
+KPIECE1: Attempting to use default projection.
+KPIECE1: Planner range detected to be 159.208122
+Properties of the state space 'SE2CompoundSpace113'
+  - signature: 6 4 3 1 2 2 1 
+  - dimension: 3
+  - extent: 796.041
+  - sanity checks for state space passed
+  - probability of valid states: 0.241
+  - average length of a valid motion: 28.9146
+  - average number of samples drawn per second: sampleUniform()=1.51515e+07 sampleUniformNear()=1.06383e+07 sampleGaussian()=3.16456e+06
+Settings for the state space 'SE2CompoundSpace113'
+  - state validity check resolution: 1%
+  - valid segment count factor: 1
+  - state space:
+Compound state space 'SE2CompoundSpace113' of dimension 3 (locked) [
+Real vector state space 'RealVectorSpace114' of dimension 2 with bounds: 
+  - min: 0 -440.23 
+  - max: 661.022 0.487427 
+ of weight 1
+SO2 state space 'SO2Space115'
+ of weight 0.5
+]
+Registered projections:
+  - <default>
+Projection of dimension 2
+Cell sizes (computed defaults): [33.0511 22.0359]
+
+Declared parameters:
+longest_valid_segment_fraction = 0.01
+projection.cellsize.0 = 33.05111389160156
+projection.cellsize.1 = 22.035870361328126
+projection.cellsize_factor = 
+valid_segment_count_factor = 1
+Valid state sampler named uniform with parameters:
+nr_attempts = 100
+Planner KPIECE1 specs:
+Multithreaded:                 No
+Reports approximate solutions: Yes
+Can optimize solutions:        No
+Aware of the following parameters: border_fraction failed_expansion_score_factor goal_bias min_valid_path_fraction range
+Declared parameters for planner KPIECE1:
+border_fraction = 0.90000000000000002
+failed_expansion_score_factor = 0.5
+goal_bias = 0.01
+min_valid_path_fraction = 0.20000000000000001
+range = 159.2081219980885
+Start states:
+Compound state [
+RealVectorState [65 -156]
+SO2State [-0.523599]
+]
+Goal state, threshold = 1e-06, memory address = 0x2a75350, state = 
+Compound state [
+RealVectorState [550 -287]
+SO2State [1.5708]
+]
+Average state cost: 0
+There are 0 solutions
+
+KPIECE1: Starting planning with 1 states already in datastructure
+KPIECE1: Created 7864 states in 307 cells (169 internal + 138 external)
+Solution found in 3.545590 seconds
+SimpleSetup: Path simplification took 0.045610 seconds and changed from 82 to 125 states
+Interpolating solution path to 235 states

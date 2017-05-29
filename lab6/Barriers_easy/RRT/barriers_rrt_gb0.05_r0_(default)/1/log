@@ -1,0 +1,65 @@
+The value of parameter 'goal_bias' is now: '0.050000000000000003'
+The value of parameter 'range' is now: '0'
+Loaded environment model with 632 triangles.
+Robot piece with 100 triangles loaded
+RRT: Planner range detected to be 159.208122
+Properties of the state space 'SE2CompoundSpace113'
+  - signature: 6 4 3 1 2 2 1 
+  - dimension: 3
+  - extent: 796.041
+  - sanity checks for state space passed
+  - probability of valid states: 0.238
+  - average length of a valid motion: 26.9564
+  - average number of samples drawn per second: sampleUniform()=1.51515e+07 sampleUniformNear()=1.05263e+07 sampleGaussian()=3.1746e+06
+Settings for the state space 'SE2CompoundSpace113'
+  - state validity check resolution: 1%
+  - valid segment count factor: 1
+  - state space:
+Compound state space 'SE2CompoundSpace113' of dimension 3 (locked) [
+Real vector state space 'RealVectorSpace114' of dimension 2 with bounds: 
+  - min: 0 -440.23 
+  - max: 661.022 0.487427 
+ of weight 1
+SO2 state space 'SO2Space115'
+ of weight 0.5
+]
+Registered projections:
+  - <default>
+Projection of dimension 2
+Cell sizes (computed defaults): [33.0511 22.0359]
+
+Declared parameters:
+longest_valid_segment_fraction = 0.01
+projection.cellsize.0 = 33.05111389160156
+projection.cellsize.1 = 22.035870361328126
+projection.cellsize_factor = 
+valid_segment_count_factor = 1
+Valid state sampler named uniform with parameters:
+nr_attempts = 100
+Planner RRT specs:
+Multithreaded:                 No
+Reports approximate solutions: Yes
+Can optimize solutions:        No
+Aware of the following parameters: goal_bias range
+Declared parameters for planner RRT:
+goal_bias = 0.050000000000000003
+range = 159.2081219980885
+Start states:
+Compound state [
+RealVectorState [65 -156]
+SO2State [-0.523599]
+]
+Goal state, threshold = 1e-06, memory address = 0x2ca3f40, state = 
+Compound state [
+RealVectorState [550 -287]
+SO2State [1.5708]
+]
+Average state cost: 0
+There are 0 solutions
+
+RRT: Starting planning with 1 states already in datastructure
+ProblemDefinition: Adding approximate solution from planner RRT
+RRT: Created 23394 states
+Solution found in 10.088858 seconds
+SimpleSetup: Path simplification took 0.032636 seconds and changed from 35 to 85 states
+Interpolating solution path to 195 states
